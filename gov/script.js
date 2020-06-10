@@ -20,6 +20,17 @@ var simpleSlider = function(){
     cycleSlides();
   });
 
+  $(document).on('click', '.js-slide-toggle1', function(){
+    currentSlide -= 1;
+    if (currentSlide > slideTotal - 1) {
+      currentSlide = 1;
+    }
+    if(currentSlide < 0){
+      currentSlide = slideTotal - 1;
+    }
+    cycleSlides();
+  });
+
 };
 
 simpleSlider();
