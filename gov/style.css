@@ -15,8 +15,6 @@ body {
   position: relative;
   width: 566px;
   height: 800px;
-  /* width: 600px;
-  height: 400px; */
   background-color: #f1f1f1;
   overflow: hidden;
   z-index: 1;
@@ -32,23 +30,8 @@ body {
   background-size: cover;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  /* animation: .1s ani forwards; */
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-}
-
-@keyframes ani {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
 
 .slider__slide img {
@@ -62,17 +45,16 @@ body {
 .slider__slide.is-active:after {
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  /* animation: .1s ani forwards; */
 }
 
 .button {
   position: absolute;
   bottom: 0px;
   color: #ffffff;
-  line-height: 40px;
+  line-height: 25px;
   border: 2px solid #2eb891;
   background-color: #2eb891;
-  font-size: 18px;
+  font-size: 14px;
   padding: 0 30px;
   outline: none;
   -webkit-transition: all .25s ease;
@@ -80,7 +62,7 @@ body {
   border-radius: 25px;
   z-index: 99999;
   cursor: pointer;
-  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .button.prv {
@@ -101,6 +83,6 @@ body {
 
   .button {
     position: fixed;
-    bottom: 0
+    bottom: 5px
   }
 }
