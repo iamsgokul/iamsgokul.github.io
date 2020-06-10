@@ -28,9 +28,10 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
   opacity: 0;
+  -webkit-transition: .5s all  ease-out;
+  transition: .5s all  ease-out;
+
 }
 
 @keyframes ani {
@@ -71,6 +72,8 @@ body {
 .slider__slide.is-active:before,
 .slider__slide.is-active:after {
   opacity: 1;
+  -webkit-transition: 1.5s all  ease-out;
+  transition: 1.5s all  ease-out;
 }
 
 .button {
