@@ -43,12 +43,65 @@
     <div class="slider__slide slider__slide--11">
       <img src='11.jpg' />
     </div>
-    <button class="button js-slide-toggle">Next Page</button>
+    <button class="button js-slide-toggle1 prv">Go Prev </button>
+    <button class="button js-slide-toggle nxt">Go Next</button>
   </div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="./script.js"></script>
 
+  <!-- <audio preload="auto" src="Mental-Manadhil.mp3" loop="true" autobuffer>
+    Unsupported in Firefox
+    </audio>
+    
+    <script>
+    
+    function setCookie(c_name,value,exdays)
+    {
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+        document.cookie=c_name + "=" + c_value;
+    }
+    
+    function getCookie(c_name)
+    {
+        var i,x,y,ARRcookies=document.cookie.split(";");
+        for (i=0;i<ARRcookies.length;i++)
+        {
+          x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+          y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+          x=x.replace(/^\s+|\s+$/g,"");
+          if (x==c_name)
+            {
+            return unescape(y);
+            }
+          }
+    }
+    
+    var song = document.getElementsByTagName('audio')[0];
+    var played = false;
+    var tillPlayed = getCookie('timePlayed');
+    function update()
+    {
+        if(!played){
+            if(tillPlayed){
+            song.currentTime = tillPlayed;
+            song.play();
+            played = true;
+            }
+            else {
+                    song.play();
+                    played = true;
+            }
+        }
+    
+        else {
+        setCookie('timePlayed', song.currentTime);
+        }
+    }
+    setInterval(update,1000);
+    </script> -->
 </body>
 
 </html>
