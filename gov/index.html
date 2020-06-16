@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Covid 19 - Let us be Careful - Let us be Fearless</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="slider">
+    <div class="slider__slide slider__slide--1">
+      <img src='1.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--2">
+      <img src='2.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--3">
+      <img src='3.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--4">
+      <img src='4.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--5">
+      <img src='5.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--6">
+      <img src='6.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--7">
+      <img src='7.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--8">
+      <img src='8.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--9">
+      <img src='9.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--10">
+      <img src='10.jpg' />
+    </div>
+    <div class="slider__slide slider__slide--11">
+      <img src='11.jpg' />
+    </div>
+    <button class="button js-slide-toggle1 prv">Go Prev </button>
+    <button class="button js-slide-toggle nxt">Go Next</button>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="./script.js"></script>
+  <audio preload="auto" src="Touching_Moment.mp3" loop="true" autobuffer controls>
+    Unsupported in Firefox
+    </audio>
+    
+    <script>
+    
+    function setCookie(c_name,value,exdays)
+    {
+        var exdate=new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+        document.cookie=c_name + "=" + c_value;
+    }
+    
+    function getCookie(c_name)
+    {
+        var i,x,y,ARRcookies=document.cookie.split(";");
+        for (i=0;i<ARRcookies.length;i++)
+        {
+          x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+          y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+          x=x.replace(/^\s+|\s+$/g,"");
+          if (x==c_name)
+            {
+            return unescape(y);
+            }
+          }
+    }
+    
+    var song = document.getElementsByTagName('audio')[0];
+    var played = false;
+    var tillPlayed = getCookie('timePlayed');
+    function update()
+    {
+        if(!played){
+            if(tillPlayed){
+            song.currentTime = tillPlayed;
+            song.play();
+            played = true;
+            }
+            else {
+                    song.play();
+                    played = true;
+            }
+        }
+    
+        else {
+        setCookie('timePlayed', song.currentTime);
+        }
+    }
+    setInterval(update,1000);
+    </script>
+</body>
+
+</html>
