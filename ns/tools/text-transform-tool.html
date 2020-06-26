@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <meta name="google-site-verification" content="WWBgdbkjJ9Pig_bdgsXs2bm4-Kzy3iG-Ugf0PC7zOTw" />
+  <meta name="p:domain_verify" content="5051136b8e9076deeb77a4b1b9d33860" />
+
+
+</head>
+
+<body style='background-color: #f6f7fb;'>
+  <header>
+    <div class='logo'>
+      <img src='../images/logo.svg' />
+    </div>
+    <nav>
+      <ul>
+        <li><a href=''>Home</a></li>
+        <li><a href=''>Tools</a></li>
+        <li><a href=''>Videos</a></li>
+        <li><a href=''>Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class='banner htmlbg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Text Transform Tool</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dignissimos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='mt30 breadcrum'>
+            <a href='index.html'>Home</a> <i class='gwicon-chevron-right'></i> <a href='tools.html'>Tools</a> <i
+              class='gwicon-chevron-right'></i> <span>Text Transform Tool</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='txtcontent'>
+            <p>The text transformation tool is very usefull to convert your text to uppercase, lowercase and capitalize
+              formation easily. If you have very big paragraph you want to transfer your text to uppercase full are
+              transferred to lower case or first letter of the world to uppercase you can do it here very easily.</p>
+            <p>Just copy the text and paste the text in the textarea and click the button to transfer the text to your
+              needed format.</p>
+          </div>
+          <div class="labtool">
+            <div class="labtoolfield"><textarea id="txt-box" placeholder="Enter your text here..."></textarea></div>
+            <div class="labtoolfield"><button class="submit" onclick=initalCas()>Initial</button><button class="submit"
+                onclick=lowCasTran()>Lowercase</button><button class="submit"
+                onclick=uprCasTran()>Uppercase</button><button class="submit"
+                onclick=capCasTran()>Captalization</button><button class="reset" onclick=clearbtn()>Clear</button></div>
+          </div>
+          <script>
+            function lowCasTran() {
+              $('#txt-box').css('text-transform', 'lowercase');
+            }
+            function uprCasTran() {
+              $('#txt-box').css('text-transform', 'uppercase');
+            }
+            function capCasTran() {
+              $('#txt-box').css('text-transform', 'capitalize');
+            }
+            function initalCas() {
+              $('#txt-box').css('text-transform', 'initial');
+            }
+            function clearbtn() {
+              $('#txt-box').val('');
+            }
+          </script>
+
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12'>
+            <div class='flogo'>
+              <img src='../images/logo-w.svg' />
+            </div>
+            <ul class='fmenu'>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="https://twitter.com/iamsgokul">Twitter</a></li>
+              <li><a href="https://instagram.com/iamsgokul">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+  <script src='../js/jquery-3.5.1.slim.min.js'></script>
+</body>
+
+</html>
