@@ -12,7 +12,6 @@
   <script src='js/jquery.min.js'></script>
   <script src='js/app.js'></script>
 </head>
-
 <body>
   <div id="navbar">
   </div>
@@ -27,7 +26,7 @@
             <a class='btn lg' href='https://www.gokul.work/profile'>My Profile</a>
           </div>
           <div class='col-lg-6 col-sm-12'>
-            <img src='images/gokul.png' />
+            <img src='images/gl.png' alt='gokul.work'/>
           </div>
         </div>
       </div>
@@ -78,7 +77,7 @@
             <p class='secprag'>What we working on and our resource available for your.</p>
           </div>
           <div class='col-lg-4 col-sm-12 mb30'>
-            <a href='https://iconbasket.blogspot.in'>
+            <a href='https://iconbasket.blogspot.in' target='_blank'>
               <div class='woklnk'>
                 <i class='gwicon-vector-curve ico'></i>
                 <h2>Icons</h2>
@@ -89,7 +88,7 @@
             </a>
           </div>
           <div class='col-lg-4 col-sm-12 mb30'>
-            <a href='https://www.tricksschool.com'>
+            <a href='https://www.tricksschool.com' target='_blank'>
               <div class='woklnk'>
                 <i class='gwicon-blogger cod'></i>
                 <h2>Tech</h2>
@@ -100,7 +99,7 @@
             </a>
           </div>
           <div class='col-lg-4 col-sm-12 mb30'>
-            <a href='https://labw3.blogspot.in'>
+            <a href='https://labw3.blogspot.in' target='_blank'>
               <div class='woklnk'>
                 <i class='gwicon-code-braces-box teh'></i>
                 <h2>Code</h2>
@@ -120,7 +119,7 @@
             <p class='secprag'>My work on the public forum for your display.</p>
           </div>
           <div class='col-lg-4 col-sm-12 mb30'>
-            <a href='https://www.dribbble.com/iamsgokul'>
+            <a href='https://www.dribbble.com/iamsgokul' target='_blank'>
               <div class='woklnk'>
                 <i class='gwicon-dribbble drib'></i>
                 <h2>Dribbble</h2>
@@ -128,7 +127,7 @@
             </a>
           </div>
           <div class='col-lg-4 col-sm-12 mb30'>
-            <a href='https://www.behance.net/iamsgokul'>
+            <a href='https://www.behance.net/iamsgokul' target='_blank'>
               <div class='woklnk'>
                 <i class='gwicon-behance beh'></i>
                 <h2>Behance</h2>
@@ -136,7 +135,7 @@
             </a>
           </div>
           <div class='col-lg-4 col-sm-12 mb30'>
-            <a href='https://www.codepen.io/iamsgokul'>
+            <a href='https://www.codepen.io/iamsgokul' target='_blank'>
               <div class='woklnk'>
                 <i class='gwicon-codepen codp'></i>
                 <h2>CodePen</h2>
@@ -210,6 +209,21 @@
   </main>
   <div id='watchread'></div>
   <div id='footerbar'></div>
+  <script>
+    function showMenu() {
+      var menuopen = document.getElementById('aside');
+      menuopen.style.display = "block";
+      document.getElementById('body').style.overflow = "hidden";
+    }
+
+    function hideMenu() {
+      var menuclose = document.getElementById('aside');
+      menuclose.style.display = "none";
+      document.getElementById('body').style.overflow = "auto";
+    }
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116784342-1"></script>
 </body>
 
 </html>
