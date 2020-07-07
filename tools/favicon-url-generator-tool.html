@@ -12,6 +12,7 @@
   <script src='../js/jquery.min.js'></script>
   <script src='../js/app.js'></script>
 </head>
+
 <body>
   <div id="navbar">
   </div>
@@ -30,8 +31,9 @@
       <div class='container'>
         <div class='row mt20'>
           <div class='mt30 breadcrum'>
-            <a href='index.html'>Home</a> <i class='gwicon-chevron-right'></i> <a href='tools.html'>Tools</a> <i
-              class='gwicon-chevron-right'></i> <span>Favicon Url Generator Tool</span>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Favicon Url
+              Generator Tool</span>
           </div>
         </div>
       </div>
@@ -39,39 +41,42 @@
     <section class='section'>
       <div class='container'>
         <div class='row mt20'>
-          <div class='txtcontent'>
-            <p> Favicon Url Generator Tool is used to Generate the Url link for the Favicon for your Website are Web
-              App.It’s used to place the your Logo icon in the Browser Tab.</p>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p> Favicon Url Generator Tool is used to Generate the Url link for the Favicon for your Website are Web
+                App.It’s used to place the your Logo icon in the Browser Tab.</p>
 
+            </div>
+
+            <form action="" class="labtool">
+              <div class="labtoolfield"><input type="text" name="visitor_name" size="20"
+                  placeholder="Favicon Image Name with Extension Like cat.png" autofocus> <br />
+              </div>
+              <div class="labtoolfield select"><select name="exten"><br />
+                  <option value=''>Select Icon Extension</option><br />
+                  <option value="image/ico">ico</option><br />
+                  <option value="image/gif">gif</option><br />
+                  <option value="image/png">png</option><br />
+                  <option value="image/jpeg">jpeg</option><br />
+                </select><br />
+              </div>
+              <div class="labtoolfield"><textarea name="showMeArea" readonly="true"
+                  placeholder="Copy Your Favicon Url Here"></textarea> <br />
+              </div>
+              <div class="labtoolfield"><input class="submit" type="button" value="Generate Link"
+                  OnClick="checkName(visitor_name,exten,showMeArea);"> <input class="reset" type="reset"
+                  value="Clear"><br />
+              </div>
+            </form><br />
+            <div class="infomsg">After Generate the Image Url copy the Link address and past in between the
+              &lt;head&gt;&lt;title&gt; Your Code Here&lt;/title&gt;&lt;/head&gt;&nbsp; tag in your html page.</div>
+            <br />
+            <b>Follow the Instruction How to Use:</b>
+            <a href="https://3.bp.blogspot.com/-jmXxOo4pIXA/VQAOGYIG-XI/AAAAAAAAAKg/S4XaU5g5pfg/s1600/Favicon-Url.gif"
+              imageanchor="1"><img border="0"
+                src="https://3.bp.blogspot.com/-jmXxOo4pIXA/VQAOGYIG-XI/AAAAAAAAAKg/S4XaU5g5pfg/s1600/Favicon-Url.gif"
+                alt="Favicon Image Url Generator Tool Instruction" /></a>
           </div>
-
-          <form action="" class="labtool">
-            <div class="labtoolfield"><input type="text" name="visitor_name" size="20"
-                placeholder="Favicon Image Name with Extension Like cat.png" autofocus> <br />
-            </div>
-            <div class="labtoolfield select"><select name="exten"><br />
-                <option value=''>Select Icon Extension</option><br />
-                <option value="image/ico">ico</option><br />
-                <option value="image/gif">gif</option><br />
-                <option value="image/png">png</option><br />
-                <option value="image/jpeg">jpeg</option><br />
-              </select><br />
-            </div>
-            <div class="labtoolfield"><textarea name="showMeArea" readonly="true"
-                placeholder="Copy Your Favicon Url Here"></textarea> <br />
-            </div>
-            <div class="labtoolfield"><input class="submit" type="button" value="Generate Link"
-                OnClick="checkName(visitor_name,exten,showMeArea);"> <input class="reset" type="reset"
-                value="Clear"><br />
-            </div>
-          </form><br />
-          <div class="infomsg">After Generate the Image Url copy the Link address and past in between the
-            &lt;head&gt;&lt;title&gt; Your Code Here&lt;/title&gt;&lt;/head&gt;&nbsp; tag in your html page.</div><br />
-          <b>Follow the Instruction How to Use:</b>
-          <a href="https://3.bp.blogspot.com/-jmXxOo4pIXA/VQAOGYIG-XI/AAAAAAAAAKg/S4XaU5g5pfg/s1600/Favicon-Url.gif"
-            imageanchor="1"><img border="0"
-              src="https://3.bp.blogspot.com/-jmXxOo4pIXA/VQAOGYIG-XI/AAAAAAAAAKg/S4XaU5g5pfg/s1600/Favicon-Url.gif"
-              alt="Favicon Image Url Generator Tool Instruction" /></a>
         </div>
       </div>
     </section>

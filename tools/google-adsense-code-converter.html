@@ -12,6 +12,7 @@
   <script src='../js/jquery.min.js'></script>
   <script src='../js/app.js'></script>
 </head>
+
 <body>
   <div id="navbar">
   </div>
@@ -30,8 +31,9 @@
       <div class='container'>
         <div class='row mt20'>
           <div class='mt30 breadcrum'>
-            <a href='index.html'>Home</a> <i class='gwicon-chevron-right'></i> <a href='tools.html'>Tools</a> <i
-              class='gwicon-chevron-right'></i> <span>Google Ad sense Code Converter</span>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Google Ad sense
+              Code Converter</span>
           </div>
         </div>
       </div>
@@ -39,17 +41,20 @@
     <section class='section'>
       <div class='container'>
         <div class='row mt20'>
-          <div class='txtcontent'>
-            <p> Google Ad sense Code Converter for your Blogger, Web Site and CMS sites. This Tool convert the Ad sense
-              Ads Unit raw code to understandable code for adding inside the post page and in between the body part of
-              the page.</p>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p> Google Ad sense Code Converter for your Blogger, Web Site and CMS sites. This Tool convert the Ad
+                sense
+                Ads Unit raw code to understandable code for adding inside the post page and in between the body part of
+                the page.</p>
+            </div>
+            <form class="labtool">
+              <div class="labtoolfield"><textarea name="data1"
+                  placeholder="Past you code here and click the convert button"></textarea></div>
+              <div class="labtoolfield"><input type="button" onClick="adsensconvert(this.form.data1)" value="Convert"
+                  class="submit"> <input value="Clear" type="reset" class="reset"></div>
+            </form>
           </div>
-          <form class="labtool">
-            <div class="labtoolfield"><textarea name="data1"
-                placeholder="Past you code here and click the convert button"></textarea></div>
-            <div class="labtoolfield"><input type="button" onClick="adsensconvert(this.form.data1)" value="Convert"
-                class="submit"> <input value="Clear" type="reset" class="reset"></div>
-          </form>
         </div>
       </div>
     </section>

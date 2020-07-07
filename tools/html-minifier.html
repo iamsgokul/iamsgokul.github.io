@@ -12,6 +12,7 @@
   <script src='../js/jquery.min.js'></script>
   <script src='../js/app.js'></script>
 </head>
+
 <body>
   <div id="navbar">
   </div>
@@ -30,8 +31,9 @@
       <div class='container'>
         <div class='row mt20'>
           <div class='mt30 breadcrum'>
-            <a href='index.html'>Home</a> <i class='gwicon-chevron-right'></i> <a href='tools.html'>Tools</a> <i
-              class='gwicon-chevron-right'></i> <span>HTML Minifier</span>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>HTML
+              Minifier</span>
           </div>
         </div>
       </div>
@@ -39,26 +41,31 @@
     <section class='section'>
       <div class='container'>
         <div class='row mt20'>
-          <div class='txtcontent'>
-            <p>Compress your html file to small by cut the unwanted space, tabs, line break easily by html compressor.
-              Using
-              this compressor tool you can reduce your html file line code to reduce to 75% from your original code. You
-              code have 100 lines means you can be reduced to 30 line code for this tool.</p>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>Compress your html file to small by cut the unwanted space, tabs, line break easily by html compressor.
+                Using
+                this compressor tool you can reduce your html file line code to reduce to 75% from your original code.
+                You
+                code have 100 lines means you can be reduced to 30 line code for this tool.</p>
 
-            <p>Just copy your code and past in the box and if you want to reduce code in the head section also mean you
-              can check the check box otherwise not needed. All ok mean just click the compressed button after click the
-              compress button code will be compress and output code will open in the new box below the button.</p>
-          </div>
-          <div class="labtool">
-            <div class="labtoolfield"><textarea id="inputCode" placeholder="Past your html code here..."></textarea>
+              <p>Just copy your code and past in the box and if you want to reduce code in the head section also mean
+                you
+                can check the check box otherwise not needed. All ok mean just click the compressed button after click
+                the
+                compress button code will be compress and output code will open in the new box below the button.</p>
             </div>
-            <div class="labtoolfield">
-              <div class="labtoolcheckbox"><input type="checkbox" class="opt1" id="headstatus"><label></label></div>
-              <span class="labtoolchspan">Dont Compress Head Section</span>
+            <div class="labtool">
+              <div class="labtoolfield"><textarea id="inputCode" placeholder="Past your html code here..."></textarea>
+              </div>
+              <div class="labtoolfield">
+                <div class="labtoolcheckbox"><input type="checkbox" class="opt1" id="headstatus"><label></label></div>
+                <span class="labtoolchspan">Dont Compress Head Section</span>
+              </div>
+              <div class="labtoolfield"><input type="button" value="Compress HTML" id="labHtlCompr"
+                  class="submit"><input type="button" id="clearText" value="Reset" class="reset"></div>
+              <div class="labtoolfield"><textarea id="outputCode" style="display:none"></textarea></div>
             </div>
-            <div class="labtoolfield"><input type="button" value="Compress HTML" id="labHtlCompr" class="submit"><input
-                type="button" id="clearText" value="Reset" class="reset"></div>
-            <div class="labtoolfield"><textarea id="outputCode" style="display:none"></textarea></div>
           </div>
         </div>
       </div>
@@ -66,7 +73,7 @@
   </main>
   <div id='watchread'></div>
   <div id='footerbar'></div>
-  <script  src='../js/html-min.js'></script>
+  <script src='../js/html-min.js'></script>
 </body>
 
 </html>

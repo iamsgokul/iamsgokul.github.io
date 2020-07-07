@@ -12,6 +12,7 @@
   <script src='../js/jquery.min.js'></script>
   <script src='../js/app.js'></script>
 </head>
+
 <body>
   <div id="navbar">
   </div>
@@ -30,8 +31,9 @@
       <div class='container'>
         <div class='row mt20'>
           <div class='mt30 breadcrum'>
-            <a href='index.html'>Home</a> <i class='gwicon-chevron-right'></i> <a href='tools.html'>Tools</a> <i
-              class='gwicon-chevron-right'></i> <span>YouTube Thumbnail Generator</span>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>YouTube Thumbnail
+              Generator</span>
           </div>
         </div>
       </div>
@@ -39,37 +41,40 @@
     <section class='section'>
       <div class='container'>
         <div class='row mt20'>
-          <div class='txtcontent'>
-            <p> YouTube Thumb line Generator used to get the thumb line image for your video. If you embed the YouTube
-              video in your Webpage
-              or blog you need the Image show to the user what that video contains. That time you need the image you can
-              generate the image
-              from YouTube video itself.</p>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p> YouTube Thumb line Generator used to get the thumb line image for your video. If you embed the YouTube
+                video in your Webpage
+                or blog you need the Image show to the user what that video contains. That time you need the image you
+                can
+                generate the image
+                from YouTube video itself.</p>
+            </div>
+            <form name="ytfom" class="labtool">
+              <div class="labtoolfield"><input type="text" name="ytbUrl" class="input-val"
+                  placeholder="Past your YouTube URL here..."></div>
+              <div class="labtoolfield"><button type="button" class="submit" onclick=getThumb(document.ytfom.ytbUrl)>Get
+                  Thumbnail</button><button type="reset" class="reset" onclick=rest()>Reset</button></div>
+              <div class="labtoolfield"><textarea id="thumblin" style="display:none;height:80px;"></textarea></div><img
+                id="thumImg1" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg1" style="display:none;float:left">Download Image</a></div><img id="thumImg2" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg2" style="display:none;float:left">Download Image</a></div><img id="thumImg3" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg3" style="display:none;float:left">Download Image</a></div><img id="thumImg4" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg4" style="display:none;float:left">Download Image</a></div><img id="thumImg5" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg5" style="display:none;float:left">Download Image</a></div><img id="thumImg6" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg6" style="display:none;float:left">Download Image</a></div><img id="thumImg7" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg7" style="display:none;float:left">Download Image</a></div>
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+                  id="downImg8" style="display:none;float:left">Download Image</a></div>
+            </form>
           </div>
-          <form name="ytfom" class="labtool">
-            <div class="labtoolfield"><input type="text" name="ytbUrl" class="input-val"
-                placeholder="Past your YouTube URL here..."></div>
-            <div class="labtoolfield"><button type="button" class="submit" onclick=getThumb(document.ytfom.ytbUrl)>Get
-                Thumbnail</button><button type="reset" class="reset" onclick=rest()>Reset</button></div>
-            <div class="labtoolfield"><textarea id="thumblin" style="display:none;height:80px;"></textarea></div><img
-              id="thumImg1" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg1" style="display:none;float:left">Download Image</a></div><img id="thumImg2" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg2" style="display:none;float:left">Download Image</a></div><img id="thumImg3" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg3" style="display:none;float:left">Download Image</a></div><img id="thumImg4" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg4" style="display:none;float:left">Download Image</a></div><img id="thumImg5" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg5" style="display:none;float:left">Download Image</a></div><img id="thumImg6" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg6" style="display:none;float:left">Download Image</a></div><img id="thumImg7" src="" />
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg7" style="display:none;float:left">Download Image</a></div>
-            <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                id="downImg8" style="display:none;float:left">Download Image</a></div>
-          </form>
         </div>
       </div>
     </section>
