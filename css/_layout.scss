@@ -260,6 +260,34 @@ main {
     }
 }
 
+.pripol {
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 5px;
+
+    h1 {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 10px 0;
+        text-align: left;
+        line-height: 28px;
+
+        b {
+            font-weight: 600;
+        }
+    }
+}
+
 .woklnk {
     background-color: #ffffff;
     border-radius: 5px;
