@@ -26,6 +26,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-menu:before {
+  content: "\e923";
+}
+
 .gwicon-tablet-ipad:before {
   content: "\e91f";
 }
