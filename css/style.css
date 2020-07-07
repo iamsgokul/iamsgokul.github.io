@@ -4580,6 +4580,11 @@ html {
   padding: 0 32px;
 }
 
+.btn:hover {
+  -webkit-box-shadow: 0px 0px 4px 0px #dadada;
+          box-shadow: 0px 0px 4px 0px #dadada;
+}
+
 .probnr {
   padding: 50px 0 50px 20px;
 }
@@ -5139,6 +5144,11 @@ main {
   padding: 25px;
   float: left;
   width: 100%;
+}
+
+.woklnk:hover {
+  -webkit-box-shadow: 0px 0px 4px 0px #dadada;
+          box-shadow: 0px 0px 4px 0px #dadada;
 }
 
 .woklnk i {
