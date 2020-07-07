@@ -12,6 +12,7 @@
   <script src='../js/jquery.min.js'></script>
   <script src='../js/app.js'></script>
 </head>
+
 <body>
   <div id="navbar">
   </div>
@@ -30,8 +31,9 @@
       <div class='container'>
         <div class='row mt20'>
           <div class='mt30 breadcrum'>
-            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a href='https://www.gokul.work/tools'>Tools</a> <i
-              class='gwicon-chevron-right'></i> <span>XML UnMinifier</span>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>XML
+              UnMinifier</span>
           </div>
         </div>
       </div>
@@ -40,24 +42,26 @@
       <div class='container'>
         <div class='row mt20'>
           <div class='col-lg-12'>
-          <div class='txtcontent'>
-            <p>XML De-Compressor is used to get back your XML file to original format. On the development time,
-              developers want to reduce the XML file size by removing the unwanted space, comment from the file. Remove
-              the space between one tag to another tag all the tag come from one another. Total file will in single
-              line. From starting to ending total file in the single line.</p>
+            <div class='txtcontent'>
+              <p>XML De-Compressor is used to get back your XML file to original format. On the development time,
+                developers want to reduce the XML file size by removing the unwanted space, comment from the file.
+                Remove
+                the space between one tag to another tag all the tag come from one another. Total file will in single
+                line. From starting to ending total file in the single line.</p>
 
-            <p>After compress, you not easy to understand because it has no formatting. So you can use this to format
-              your XML file. Copy your XML code and past in the below text area and click the un-minify button. Now you
-              will get the XML Decompressor (Unminify)</p>
+              <p>After compress, you not easy to understand because it has no formatting. So you can use this to format
+                your XML file. Copy your XML code and past in the below text area and click the un-minify button. Now
+                you
+                will get the XML Decompressor (Unminify)</p>
+            </div>
+            <div class="labtool">
+              <div class="labtoolfield"><textarea id='textarea' name='code'
+                  placeholder='Paste XML code here to unminify or format...'></textarea></div>
+              <div class="labtoolfield"><button onclick="unminify();return false"
+                  class="submit">Unminify</button><button onclick="javascript:eraseText();"
+                  class="reset">Reset</button><button id='copybtn' class="copy">Copy</button></div>
+            </div>
           </div>
-          <div class="labtool">
-            <div class="labtoolfield"><textarea id='textarea' name='code'
-                placeholder='Paste XML code here to unminify or format...'></textarea></div>
-            <div class="labtoolfield"><button onclick="unminify();return false" class="submit">Unminify</button><button
-                onclick="javascript:eraseText();" class="reset">Reset</button><button id='copybtn'
-                class="copy">Copy</button></div>
-          </div>
-        </div>
         </div>
       </div>
     </section>
