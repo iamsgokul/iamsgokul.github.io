@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url(/Users/gokul-5978/GokulFiles/Me/Gokul-Work/iamsgokul.github.io/css/bootstrap-grid.css);
-@import url(/Users/gokul-5978/GokulFiles/Me/Gokul-Work/iamsgokul.github.io/css/icon.css);
+@import url(bootstrap-grid.css);
+@import url(icon.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
