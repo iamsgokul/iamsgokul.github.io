@@ -358,7 +358,6 @@ footer {
   float: left;
   padding: 20px;
   background-color: #202430;
-  margin-top: 40px;
 }
 
 footer .flogo {
@@ -427,6 +426,7 @@ header nav ul li a {
 
 main {
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .banner {
