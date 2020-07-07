@@ -28,7 +28,7 @@
     padding-bottom: 56.23%;
     height: 0;
     overflow: hidden;
-    width:100%;
+    width: 100%;
     max-width: 100%;
     background: #313131;
     margin: 5px;
@@ -81,6 +81,10 @@
 
 .center {
     text-align: center;
+}
+
+.left {
+    float: left;
 }
 
 .mt5 {
@@ -259,11 +263,11 @@ footer {
 
         li {
             padding: 18.5px 10px;
-            float:left;
+            float: left;
 
             a {
                 text-decoration: none;
-                color:#ffffff;
+                color: #ffffff;
                 font-size: 12px;
             }
         }
