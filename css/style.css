@@ -7097,6 +7097,9 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .labtoolfield input[type="button"].submit,
