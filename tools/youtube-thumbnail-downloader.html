@@ -56,21 +56,24 @@
                   Thumbnail</button><button type="reset" class="reset" onclick=rest()>Reset</button></div>
               <div class="labtoolfield"><textarea id="thumblin" style="display:none;height:80px;"></textarea></div><img
                 id="thumImg1" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
-                  id="downImg1" style="display:none;float:left">Download Image</a></div><img id="thumImg2" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield">
+                <a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
+                  id="downImg1" style="display:none;float:left">Download Image</a>
+                </div>
+                <img id="thumImg2" src="" />
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg2" style="display:none;float:left">Download Image</a></div><img id="thumImg3" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg3" style="display:none;float:left">Download Image</a></div><img id="thumImg4" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg4" style="display:none;float:left">Download Image</a></div><img id="thumImg5" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg5" style="display:none;float:left">Download Image</a></div><img id="thumImg6" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg6" style="display:none;float:left">Download Image</a></div><img id="thumImg7" src="" />
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg7" style="display:none;float:left">Download Image</a></div>
-              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" title="ImageName"
+              <div class="labtoolfield"><a download="" href="/path/to/image" class="submit" target='_blank' title="ImageName"
                   id="downImg8" style="display:none;float:left">Download Image</a></div>
             </form>
           </div>
@@ -82,17 +85,14 @@
   <div id='footerbar'></div>
   <script src='../js/jas.js'></script>
   <script>
-    function showMenu() {
-      var menuopen = document.getElementById('aside');
-      menuopen.style.display = "block";
-      document.getElementById('body').style.overflow = "hidden";
-    }
+    window.dataLayer = window.dataLayer || [];
 
-    function hideMenu() {
-      var menuclose = document.getElementById('aside');
-      menuclose.style.display = "none";
-      document.getElementById('body').style.overflow = "auto";
+    function gtag() {
+      dataLayer.push(arguments);
     }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116784342-1');
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116784342-1"></script>

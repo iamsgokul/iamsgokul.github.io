@@ -210,17 +210,14 @@
   <div id='watchread'></div>
   <div id='footerbar'></div>
   <script>
-    function showMenu() {
-      var menuopen = document.getElementById('aside');
-      menuopen.style.display = "block";
-      document.getElementById('body').style.overflow = "hidden";
-    }
+    window.dataLayer = window.dataLayer || [];
 
-    function hideMenu() {
-      var menuclose = document.getElementById('aside');
-      menuclose.style.display = "none";
-      document.getElementById('body').style.overflow = "auto";
+    function gtag() {
+      dataLayer.push(arguments);
     }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116784342-1');
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116784342-1"></script>

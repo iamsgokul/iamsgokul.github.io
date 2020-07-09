@@ -7104,6 +7104,7 @@ main {
 .labtoolfield a.submit {
   background-color: #3056de;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .labtoolfield input[type="button"].submit:hover,
