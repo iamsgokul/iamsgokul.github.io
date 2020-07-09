@@ -80,7 +80,7 @@ var hc = get("highlightCode"),
   rt = document.getElementsByTagName("h2")[1];
 /*-CSS Mini End-*/
 /*- Fav Icon Start -*/
-function checkName(visitor_name, exten, displayObj) {
+function checkfavi(visitor_name, exten, displayObj) {
   displayObj.value = '<link href="' + visitor_name.value + '" rel="shortcut icon" type="' + exten.value + '">';
 }
 /*- Fav Icon End -*/

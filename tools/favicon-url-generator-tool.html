@@ -21,7 +21,7 @@
         <div class='row'>
           <div class='col-lg-12 toptil'>
             <h1>Favicon Url Generator Tool</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, dignissimos.</p>
+            <p>Generate the Web Page Favi Icon link code.</p>
           </div>
         </div>
       </div>
@@ -47,26 +47,18 @@
 
             </div>
 
-            <form action="" class="labtool">
-              <div class="labtoolfield"><input type="text" name="visitor_name" size="20"
-                  placeholder="Favicon Image Name with Extension Like cat.png" autofocus> 
-              </div>
-              <div class="labtoolfield select"><select name="exten">
-                  <option value=''>Select Icon Extension</option>
-                  <option value="image/ico">ico</option>
-                  <option value="image/gif">gif</option>
-                  <option value="image/png">png</option>
-                  <option value="image/jpeg">jpeg</option>
-                </select>
-              </div>
-              <div class="labtoolfield"><textarea name="showMeArea" readonly="true"
-                  placeholder="Copy Your Favicon Url Here"></textarea> 
-              </div>
-              <div class="labtoolfield"><input class="submit" type="button" value="Generate Link"
-                  OnClick="checkName(visitor_name,exten,showMeArea);"> <input class="reset" type="reset"
-                  value="Clear">
-              </div>
-            </form>
+            <form action="" class="labtool" >
+              <div class="labtoolfield"><input type="text" name="visitor_name" size="20" placeholder="Favicon Image Name with Extension Like cat.png" autofocus> 
+            </div><div class="labtoolfield select"><select name="exten">
+            <option value=''>Select Icon Extension</option>
+            <option value="image/ico">ico</option>
+            <option value="image/gif">gif</option>
+            <option value="image/png">png</option>
+            <option value="image/jpeg">jpeg</option>
+            </select>
+            </div><div class="labtoolfield"><textarea name="showMeArea" readonly="true" placeholder="Copy Your Favicon Url Here"></textarea> 
+            </div><div class="labtoolfield"><input class="submit" type="button" value="Generate Link" OnClick="checkfavi(visitor_name,exten,showMeArea);" > <input class="reset" type="reset" value="Clear" >
+            </div></form>
             <div class="infomsg">After Generate the Image Url copy the Link address and past in between the
               &lt;head&gt;&lt;title&gt; Your Code Here&lt;/title&gt;&lt;/head&gt;&nbsp; tag in your html page.</div>
             
