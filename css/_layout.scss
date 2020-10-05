@@ -46,6 +46,7 @@ header {
 
 main {
     width: 100%;
+    float:left;
     margin-bottom: 40px;
 }
 
@@ -215,6 +216,9 @@ main {
 
         &.ytube {
             color: #FF0000;
+        }
+        &.blog {
+            color: #fe8100;
         }
 
         &.drive {

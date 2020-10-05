@@ -64,6 +64,11 @@
         font-family: monospace;
     }
 
+
+    textarea.sm {
+        height: 100px;
+    }
+
     select {
         width: 100%;
         height: 35px;
@@ -113,7 +118,7 @@
     a.submit {
         background-color: #3056de;
         color: #ffffff;
-        text-decoration:none;
+        text-decoration: none;
     }
 
     input[type="button"].submit:hover,
@@ -215,4 +220,79 @@
     float: left;
     margin: 3px 20px 3px 5px;
     display: inline-block
+}
+
+.toolbar {
+    width: 100%;
+    float: left;
+    margin-bottom: 8px;
+
+    label {
+        padding: 1px 6px;
+        cursor: pointer;
+    }
+
+    button,
+    label {
+        border: 1px solid #dddddd;
+        border-radius: 2px;
+        background-color: #ffffff;
+        cursor: pointer;
+        height: 30px;
+        float: left;
+        margin-right: 5px;
+        outline: none;
+
+        i {
+            color: #000000;
+            font-size: 20px;
+            line-height: 27px;
+        }
+    }
+
+
+    .select {
+        position: relative;
+        float: left;
+        margin-right: 5px;
+
+        &.hed {
+            width: 100px;
+        }
+
+        &.fmly {
+            width: 115px;
+        }
+
+        select {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #dddddd;
+            border-radius: 2px;
+            outline: none;
+            transition: .4s ease;
+            background-color: #ffffff;
+            appearance: none;
+            text-shadow: 0 0 0 #000;
+            color: rgba(0, 0, 0, 0);
+            position: relative;
+            z-index: 99;
+            font-size: 14px;
+            box-sizing: border-box;
+            font-family: inherit;
+            padding: 5px 8px;
+            color: #202420;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 8px;
+            top: 13px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #000;
+            z-index: 999;
+        }
+    }
 }

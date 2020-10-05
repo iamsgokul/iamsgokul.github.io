@@ -137,6 +137,16 @@ function AddText(form, Action) {
 }
 /*- Meta Tag End -*/
 
+
+/*- Blogger Site Map Start-*/
+function blogSiteMap(form) {
+
+  var txt = '' + form.siteurl.value + '/sitemap.xml\r\n';
+  form.source.value = txt;
+  form.source.display = 'block';
+}
+/*- Blogger Site Map End -*/
+
 /*- Social Media Meta Tag Start-*/
 function genrate(facebookProfile, facebookPage, googleProfile, googlePage, twitterAcc, exte) {
   exte.value = "<meta content='" + facebookProfile.value + "' property='article:author'/>\r\n" + "<meta content='" + facebookPage.value + "' property='article:publisher'/>\r\n" + "<link href='" + googleProfile.value + "' rel='article:author'/>\r\n" + "<link href='" + googlePage.value + "' rel='article:author'/>\r\n" + "<meta content='" + twitterAcc.value + "' rel='article:author'/>\r\n";

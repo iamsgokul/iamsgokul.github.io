@@ -26,6 +26,95 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-printer:before {
+  content: "\e938";
+}
+
+.gwicon-format-clear:before {
+  content: "\e939";
+}
+
+.gwicon-format-underline:before {
+  content: "\e937";
+}
+
+.gwicon-content-cut:before {
+  content: "\e924";
+}
+
+.gwicon-content-copy:before {
+  content: "\e925";
+}
+
+.gwicon-redo:before {
+  content: "\e926";
+}
+
+.gwicon-undo:before {
+  content: "\e927";
+}
+
+.gwicon-format-paragraph:before {
+  content: "\e928";
+}
+
+.gwicon-link:before {
+  content: "\e929";
+}
+
+.gwicon-image:before {
+  content: "\e92a";
+}
+
+.gwicon-format-header-6:before {
+  content: "\e92b";
+}
+
+.gwicon-format-header-5:before {
+  content: "\e92c";
+}
+
+.gwicon-format-header-4:before {
+  content: "\e92d";
+}
+
+.gwicon-format-header-3:before {
+  content: "\e92e";
+}
+
+.gwicon-format-header-2:before {
+  content: "\e92f";
+}
+
+.gwicon-format-header-1:before {
+  content: "\e930";
+}
+
+.gwicon-format-align-right:before {
+  content: "\e931";
+}
+
+.gwicon-format-align-left:before {
+  content: "\e932";
+}
+
+.gwicon-format-align-justify:before {
+  content: "\e933";
+}
+
+.gwicon-format-align-center:before {
+  content: "\e934";
+}
+
+.gwicon-format-italic:before {
+  content: "\e935";
+}
+
+.gwicon-format-bold:before {
+  content: "\e936";
+}
+
+
 .gwicon-menu:before {
   content: "\e923";
 }
