@@ -21,8 +21,8 @@
       <div class='container'>
         <div class='row'>
           <div class='col-lg-12 toptil'>
-            <h1>Base64 File Encoder</h1>
-            <p>Just enter your blogger blog URL and generate SiteMap URL.</p>
+            <h1>Image to Base64</h1>
+            <p>Convert PNG, Jpeg, SVG image to Base64 online.</p>
           </div>
         </div>
       </div>
@@ -32,7 +32,8 @@
         <div class='row mt20'>
           <div class='col-lg-12 mt30 breadcrum'>
             <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
-              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Base64 File Encoder</span>
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Base64 File
+              Encoder</span>
           </div>
         </div>
       </div>
@@ -42,15 +43,12 @@
         <div class='row mt20'>
           <div class='col-lg-12'>
             <div class='txtcontent'>
-              <p>Blogger Site Map generator is a useful tool to generate the Site Map URL for your blogger blog. This
-                site map URL is useful for SEO purposes. Using this you can submit the more entire blog URL to search
-                engines like Google and Bing.</p>
-              <p>Enter your blogger url below input box and generate sitemap url for your blogger.</p>
+              <p>Convert image to Base64 online and use the result string as data URI, img src, CSS background-url, and others.</p><p>Sometimes you have to send or output an image within a text document (for example, HTML, CSS, JSON, XML), but you cannot do this because binary characters will damage the syntax of the text document.</p>
             </div>
             <div class="labtool">
               <div id="dropper"><span>Drop the Image here and Wait Few Mints Big Image it Take Time </span></div>
             </div>
-            
+
             <div id="results"></div>
             <script>
               if (typeof window.FileReader === 'undefined')
@@ -90,16 +88,15 @@
                 div.appendChild(remove);
 
                 var name = document.createElement("div");
+                name.className = "base64name";
                 name.innerHTML = filename;
                 div.appendChild(name);
 
                 if (/^data:image/.test(dataUri)) {
                   var imgDiv = document.createElement("div");
+                  imgDiv.className = "base64img";
                   var img = document.createElement("img");
                   img.src = dataUri;
-                  img.style['max-width'] = '200px';
-                  img.style['height-width'] = '100px';
-                  img.style['margin-bottom'] = '50px';
                   imgDiv.appendChild(img);
                   div.appendChild(imgDiv);
                 }
@@ -124,21 +121,26 @@
               .item-blk {
                 position: relative;
                 margin: 10px;
-                background: #FAFAFA;
                 padding: 20px;
+                float: left;
+                background-color: #ffffff;
+                border-radius: 5px;
+                box-sizing: border-box;
+                width: 100%;
               }
-
-              .item-blk teatarea {}
 
               .remove {
                 position: absolute;
                 right: 10px;
                 top: 10px;
-                background-color: #C9C9C9;
+                background-color: #ffffff;
                 border: 1px solid #4E4E4E;
-                padding: 10px;
-                line-height: 5px;
                 border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                box-sizing: border-box;
+                color: #4E4E4E;
+                cursor: pointer;
               }
 
               textarea {
@@ -184,6 +186,24 @@
 
               .entry-content {
                 width: 100%;
+              }
+
+              .base64name {
+                line-height: 2;
+                font-size: 18px;
+                margin-bottom: 10px;
+                font-weight: 600;
+              }
+
+              .base64img {
+                width: 100%;
+                float: left;
+              }
+
+              .base64img img {
+                max-width: 200px;
+                margin: 0 auto;
+                display: block;
               }
             </style>
           </div>
