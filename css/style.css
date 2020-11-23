@@ -7168,6 +7168,43 @@ textarea {
   display: block;
 }
 
+.srchbox {
+  width: 100%;
+  float: left;
+}
+
+.srchbox .srchlogo {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+
+.srchbox .srchlogo img {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.srchbox .srchlogo h1 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 20px 0 0;
+}
+
+.srchbox .srchbox {
+  width: 100%;
+  float: left;
+}
+
+.srchbox .srchbox input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  margin: 4% 20%;
+  font-size: 16px;
+  outline: none;
+}
+
 .labtool {
   width: 100%;
   float: left;
