@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Tag Generator - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <meta name="google-site-verification" content="WWBgdbkjJ9Pig_bdgsXs2bm4-Kzy3iG-Ugf0PC7zOTw" />
+  <meta name="p:domain_verify" content="5051136b8e9076deeb77a4b1b9d33860" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner toltit'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Base64 File Encoder</h1>
+            <p>Just enter your blogger blog URL and generate SiteMap URL.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Base64 File Encoder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>Blogger Site Map generator is a useful tool to generate the Site Map URL for your blogger blog. This
+                site map URL is useful for SEO purposes. Using this you can submit the more entire blog URL to search
+                engines like Google and Bing.</p>
+              <p>Enter your blogger url below input box and generate sitemap url for your blogger.</p>
+            </div>
+            <div class="labtool">
+              <div id="dropper"><span>Drop the Image here and Wait Few Mints Big Image it Take Time </span></div>
+            </div>
+            
+            <div id="results"></div>
+            <script>
+              if (typeof window.FileReader === 'undefined')
+                alert('File API & FileReader not supported');
+
+              var dropper = document.getElementById("dropper");
+              var results = document.getElementById("results");
+
+              dropper.ondragover = function () { dropper.className = 'hover'; return false; };
+              dropper.ondragend = function () { dropper.className = ''; return false; };
+              dropper.ondrop = function (e) {
+                e.preventDefault();
+                var files = [].slice.call(e.dataTransfer.files);
+                files.forEach(function (file) {
+                  var reader = new FileReader();
+                  reader.onload = function (event) {
+                    fileLoaded(file.name, event.target.result);
+                  };
+                  reader.readAsDataURL(file);
+                  dropper.className = '';
+                });
+                return false;
+              };
+
+              function fileLoaded(filename, dataUri) {
+
+                var div = document.createElement("div");
+                div.className = 'item-blk';
+
+                var remove = document.createElement("button");
+                remove.className = 'remove';
+                remove.innerHTML = 'x';
+                remove.onclick = function () {
+                  if (localStorage) localStorage.removeItem("b64-" + filename);
+                  results.removeChild(div);
+                };
+                div.appendChild(remove);
+
+                var name = document.createElement("div");
+                name.innerHTML = filename;
+                div.appendChild(name);
+
+                if (/^data:image/.test(dataUri)) {
+                  var imgDiv = document.createElement("div");
+                  var img = document.createElement("img");
+                  img.src = dataUri;
+                  img.style['max-width'] = '200px';
+                  img.style['height-width'] = '100px';
+                  img.style['margin-bottom'] = '50px';
+                  imgDiv.appendChild(img);
+                  div.appendChild(imgDiv);
+                }
+
+                var ta = document.createElement("textarea");
+                ta.onclick = function () {
+                  ta.select();
+                };
+                ta.value = dataUri;
+                div.appendChild(ta);
+
+                results.appendChild(div);
+                if (localStorage) localStorage.setItem("b64-" + filename, dataUri);
+              }
+
+              if (localStorage)
+                for (var filename in localStorage)
+                  if (filename.indexOf("b64-") === 0)
+                    fileLoaded(filename.replace("b64-", ""), localStorage.getItem(filename));
+            </script>
+            <style>
+              .item-blk {
+                position: relative;
+                margin: 10px;
+                background: #FAFAFA;
+                padding: 20px;
+              }
+
+              .item-blk teatarea {}
+
+              .remove {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                background-color: #C9C9C9;
+                border: 1px solid #4E4E4E;
+                padding: 10px;
+                line-height: 5px;
+                border-radius: 50%;
+              }
+
+              textarea {
+                background-color: #ffffff;
+                padding: 10px;
+                line-height: 18px;
+                font-size: 12px;
+                font-family: Courier;
+                width: 100%;
+                margin: 2px 0px;
+                height: 120px;
+              }
+
+              #results {
+                padding: 50px 0;
+                position: relative;
+                float: left;
+                width: 100%;
+                box-sizing: border-box;
+              }
+
+              #dropper {
+                width: 100%;
+                height: 150px;
+                margin: 1% 0%;
+                border: 2px dashed #3e3e3e;
+                float: left;
+              }
+
+              #dropper.hover {
+                opacity: 0.5;
+                background: lightblue;
+                z-index: 100;
+              }
+
+              #dropper span {
+                margin: 65px 0;
+                display: block;
+                font-size: 16px;
+                color: #3e3e3e;
+                text-align: center;
+              }
+
+              .entry-content {
+                width: 100%;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/jas.js'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116784342-1');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116784342-1"></script>
+</body>
+
+</html>
