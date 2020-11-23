@@ -46,7 +46,7 @@ header {
 
 main {
     width: 100%;
-    float:left;
+    float: left;
     margin-bottom: 40px;
 }
 
@@ -217,6 +217,7 @@ main {
         &.ytube {
             color: #FF0000;
         }
+
         &.blog {
             color: #fe8100;
         }
@@ -2167,5 +2168,95 @@ main {
         font-weight: 600;
         color: #494B55;
         text-align: center;
+    }
+}
+
+
+
+.item-blk {
+    position: relative;
+    margin: 10px;
+    padding: 20px;
+    float: left;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.remove {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: #ffffff;
+    border: 1px solid #4E4E4E;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    color: #4E4E4E;
+    cursor: pointer;
+}
+
+textarea {
+    background-color: #ffffff;
+    padding: 10px;
+    line-height: 18px;
+    font-size: 12px;
+    font-family: Courier;
+    width: 100%;
+    margin: 2px 0px;
+    height: 120px;
+}
+
+#results {
+    padding: 10px 0;
+    position: relative;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#dropper {
+    width: 100%;
+    height: 150px;
+    margin: 1% 0%;
+    border: 2px dashed #3e3e3e;
+    float: left;
+
+    &.hover {
+        opacity: 0.5;
+        background: lightblue;
+        z-index: 100;
+    }
+
+    span {
+        margin: 65px 0;
+        display: block;
+        font-size: 16px;
+        color: #3e3e3e;
+        text-align: center;
+    }
+}
+
+.entry-content {
+    width: 100%;
+}
+
+.base64name {
+    line-height: 2;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.base64img {
+    width: 100%;
+    float: left;
+
+    img {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
     }
 }
