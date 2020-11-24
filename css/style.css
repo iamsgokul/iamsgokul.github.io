@@ -7198,41 +7198,43 @@ textarea {
   display: block;
 }
 
-.srchbox {
-  width: 100%;
-  float: left;
+.srchboxcnt {
+  margin: 0 auto 220px;
 }
 
-.srchbox .srchlogo {
+.srchboxcnt .srchlogo {
   width: 100%;
   float: left;
   text-align: center;
 }
 
-.srchbox .srchlogo img {
+.srchboxcnt .srchlogo img {
   width: 100px;
   margin: 0 auto;
 }
 
-.srchbox .srchlogo h1 {
+.srchboxcnt .srchlogo h1 {
   font-size: 18px;
   font-weight: 400;
   margin: 20px 0 0;
 }
 
-.srchbox .srchbox {
+.srchboxcnt .srchbox {
   width: 100%;
   float: left;
 }
 
-.srchbox .srchbox input {
-  width: 60%;
+.srchboxcnt .srchbox input {
+  width: 100%;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #dddddd;
-  margin: 4% 20%;
+  margin: 4% 0;
   font-size: 16px;
   outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .srchresult {

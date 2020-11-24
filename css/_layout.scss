@@ -2285,9 +2285,8 @@ textarea {
     }
 }
 
-.srchbox {
-    width: 100%;
-    float: left;
+.srchboxcnt {
+    margin: 0 auto 220px;
 
     .srchlogo {
         width: 100%;
@@ -2311,13 +2310,14 @@ textarea {
         float: left;
 
         input {
-            width: 60%;
+            width: 100%;
             padding: 10px;
             border-radius: 4px;
             border: 1px solid #dddddd;
-            margin: 4% 20%;
+            margin: 4% 0;
             font-size: 16px;
             outline: none;
+            appearance: none;
         }
     }
 }
