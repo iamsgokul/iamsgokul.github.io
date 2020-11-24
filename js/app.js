@@ -4,7 +4,7 @@ $(function () {
     $('#watchread').load('watchread.html');
 })
 
-$(document).ready(function(){
+$(document).delegate(function(){
     $('i.gwicon-menu').on('click', function () {
         $('header nav ul').toggleClass('open');
     })
