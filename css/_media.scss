@@ -5,5 +5,19 @@
 
     header nav ul {
         display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 99;
+
+        &.open {
+            display: block;
+        }
+
+        li{
+            width: 100%;
+        }
     }
 }
