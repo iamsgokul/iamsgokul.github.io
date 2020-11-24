@@ -4951,6 +4951,11 @@ footer .fmenu li a {
   font-size: 12px;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: 'object_sans', Arial, Helvetica, sans-serif;
   background-color: #f6f7fb;
@@ -4997,7 +5002,7 @@ header nav ul {
 }
 
 header nav ul li {
-  padding-left: 30px;
+  padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
   display: inline-block;
@@ -5009,6 +5014,12 @@ header nav ul li a {
   color: #000;
   text-decoration: none;
   font-weight: 400;
+}
+
+header nav ul li a i {
+  font-size: 18px;
+  position: relative;
+  top: 2px;
 }
 
 main {
