@@ -4,7 +4,7 @@ $(function () {
     $('#watchread').load('watchread.html');
 })
 $(document).ready(function () {
-    $('header nav > a').click(function () {
+    $('header nav > a i').click(function () {
         debugger
         $('header nav ul').toggleClass('open');
     })
