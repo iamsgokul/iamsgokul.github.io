@@ -3,7 +3,7 @@ $(function () {
     $('#footerbar').load('footer.html');
     $('#watchread').load('watchread.html');
 
-    $('header nav > a i').click(function () {
+    $('i.gwicon-menu').click(function () {
         debugger
         $('header nav ul').toggleClass('open');
     })
