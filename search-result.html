@@ -64,6 +64,8 @@
 
     input.gsc-input {
       height: 35px !important;
+      position: relative !important;
+      z-index: 99 !important;
     }
 
     .gsc-search-button-v2 {
@@ -73,6 +75,12 @@
     .gsst_a {
       z-index: 999 !important;
       position: relative !important;
+    }
+
+    @media (min-width: 992px) {
+      .srchresult {
+        padding: 0 5px;
+      }
     }
   </style>
 </head>
