@@ -2261,32 +2261,32 @@ textarea {
     }
 }
 
-.srchbox{
-    width:100%;
-    float:left;
+.srchbox {
+    width: 100%;
+    float: left;
 
-    .srchlogo{
-        width:100%;
-        float:left;
+    .srchlogo {
+        width: 100%;
+        float: left;
         text-align: center;
 
-        img{
-            width:100px;
-            margin:0 auto;
+        img {
+            width: 100px;
+            margin: 0 auto;
         }
 
-        h1{
+        h1 {
             font-size: 18px;
             font-weight: 400;
-            margin:20px 0 0;
+            margin: 20px 0 0;
         }
     }
 
-    .srchbox{
-        width:100%;
-        float:left;
+    .srchbox {
+        width: 100%;
+        float: left;
 
-        input{
+        input {
             width: 60%;
             padding: 10px;
             border-radius: 4px;
@@ -2296,4 +2296,9 @@ textarea {
             outline: none;
         }
     }
+}
+
+.srchresult {
+    padding: 0 70px;
+    background-color: #ffffff;
 }

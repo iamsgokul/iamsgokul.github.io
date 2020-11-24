@@ -7205,6 +7205,11 @@ textarea {
   outline: none;
 }
 
+.srchresult {
+  padding: 0 70px;
+  background-color: #ffffff;
+}
+
 .labtool {
   width: 100%;
   float: left;
