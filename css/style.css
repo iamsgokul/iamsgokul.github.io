@@ -4977,7 +4977,6 @@ header nav {
 }
 
 header nav > a {
-  display: block;
   float: left;
   text-decoration: none;
   color: #000000;
@@ -7538,5 +7537,14 @@ textarea {
   border-right: 5px solid transparent;
   border-top: 5px solid #000;
   z-index: 999;
+}
+
+@media (max-width: 992px) {
+  nav > a {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
