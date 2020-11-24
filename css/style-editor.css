@@ -4349,6 +4349,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-home:before {
+  content: "\e93a";
+}
+
 .gwicon-printer:before {
   content: "\e938";
 }
