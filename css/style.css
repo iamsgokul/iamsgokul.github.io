@@ -7540,10 +7540,10 @@ textarea {
 }
 
 @media (max-width: 992px) {
-  nav > a {
+  header nav > a {
     display: block;
   }
-  nav ul {
+  header nav ul {
     display: none;
   }
 }
