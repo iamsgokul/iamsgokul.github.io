@@ -7538,25 +7538,4 @@ textarea {
   border-top: 5px solid #000;
   z-index: 999;
 }
-
-@media (max-width: 992px) {
-  header nav > a {
-    display: block;
-  }
-  header nav ul {
-    display: none;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    z-index: 99;
-  }
-  header nav ul.open {
-    display: block;
-  }
-  header nav ul li {
-    width: 100%;
-  }
-}
 /*# sourceMappingURL=style.css.map */
