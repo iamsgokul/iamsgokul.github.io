@@ -12,9 +12,16 @@
   <script src='js/jquery.min.js'></script>
   <script src='js/app.js'></script>
   <style>
-
-    .gcsc-branding-img-noclear,.gcsc-more-maybe-branding-root,.gsib_a input {
+    .gcsc-branding-img-noclear {
       display: none !important;
+    }
+
+    .gcsc-more-maybe-branding-root,.gsc-above-wrapper-area {
+      display: none !important;
+    }
+
+    .gsib_a input {
+  background:none !important;
     }
 
     .gs-title {
@@ -43,7 +50,7 @@
       text-align: center;
       font-size: 18px;
       background-color: #ddd;
-      border-radius:25px;
+      border-radius: 25px;
     }
   </style>
 </head>
@@ -62,7 +69,9 @@
 
             <div class="">
               <script async src="https://cse.google.com/cse.js?cx=ede1b4f3c4aac36ac"></script>
-              <div class="gcse-search"></div>
+              <div class="gcse-searchbox"></div>
+
+              <div class="gcse-searchresults"></div>
             </div>
 
             <div class="">
