@@ -1,0 +1,9 @@
+@media (max-width: 992px) {
+  nav > a {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+/*# sourceMappingURL=media.css.map */

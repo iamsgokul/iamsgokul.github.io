@@ -4976,6 +4976,23 @@ header nav {
   float: right;
 }
 
+header nav > a {
+  display: block;
+  float: left;
+  text-decoration: none;
+  color: #000000;
+  padding: 19.5px 10px;
+  display: none;
+}
+
+header nav > a i {
+  font-size: 25px;
+}
+
+header nav ul {
+  float: left;
+}
+
 header nav ul li {
   padding-left: 30px;
   padding-top: 20px;

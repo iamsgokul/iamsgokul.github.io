@@ -26,10 +26,21 @@ header {
         float: right;
 
         >a {
-            
+            display: block;
+            float: left;
+            text-decoration: none;
+            color: #000000;
+            padding: 19.5px 10px;
+            display: none;
+
+            i {
+                font-size: 25px;
+            }
         }
 
         ul {
+            float: left;
+
             li {
                 padding-left: 30px;
                 padding-top: 20px;
@@ -2305,3 +2316,4 @@ textarea {
     padding: 0 70px;
     background-color: #ffffff;
 }
+
