@@ -5,6 +5,7 @@ $(function () {
 })
 $(document).ready(function () {
     $('header nav > a').click(function () {
+        debugger
         $('header nav ul').toggleClass('open');
     })
 })
