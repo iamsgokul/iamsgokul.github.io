@@ -5050,6 +5050,7 @@ header nav ul li a i {
 main {
   width: 100%;
   float: left;
+  min-height: calc(100% - 160px);
 }
 
 .banner {
