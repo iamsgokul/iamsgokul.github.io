@@ -7286,7 +7286,7 @@ textarea {
 }
 
 .labtoolfield.select:after {
-  content: '';
+  content: "";
   position: absolute;
   right: 15px;
   top: 15px;
@@ -7346,8 +7346,8 @@ textarea {
   border: 1px solid #dddddd;
   border-radius: 2px;
   outline: none;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   background-color: #ffffff;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -7461,8 +7461,8 @@ textarea {
   border: 2px solid #8c8c8c;
   border-radius: 2px;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .labtoolcheckbox input[type="checkbox"] {
@@ -7553,8 +7553,8 @@ textarea {
   border: 1px solid #dddddd;
   border-radius: 2px;
   outline: none;
-  -webkit-transition: .4s ease;
-  transition: .4s ease;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
   background-color: #ffffff;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -7572,7 +7572,7 @@ textarea {
 }
 
 .toolbar .select:after {
-  content: '';
+  content: "";
   position: absolute;
   right: 8px;
   top: 13px;
@@ -7580,5 +7580,33 @@ textarea {
   border-right: 5px solid transparent;
   border-top: 5px solid #000;
   z-index: 999;
+}
+
+.calout {
+  background-color: #ffffff;
+  border-radius: 15px;
+  display: none;
+  padding: 10px;
+}
+
+.calout.open {
+  display: block;
+}
+
+.calout .calfld {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.calout .calfld p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #3e3e3e;
+}
+
+.calout .calfld p span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #583692;
 }
 /*# sourceMappingURL=style-editor.css.map */

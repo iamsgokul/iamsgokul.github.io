@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate the Average Stock Price - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <meta name="google-site-verification" content="WWBgdbkjJ9Pig_bdgsXs2bm4-Kzy3iG-Ugf0PC7zOTw" />
+  <meta name="p:domain_verify" content="5051136b8e9076deeb77a4b1b9d33860" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner toltit'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Calculate the Average Stock Price</h1>
+            <p>Using our tool you can calculate the stock average price for your trades
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Average Stock Price</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>Stock Average Calculator helps you to calculate the average share price you paid for a stock. Enter your purchase price for each buy to get your average stock price.</p>
+              <p>Take an example, you bought 10 stocks of ITC at a price of 200. Now they are moving downwards. Now the stock price has gone down to 150. But you have faith that it will go upwards in future. You want to reduce the average stock price by buying more stocks but you need to calculate how many stocks you need to buy to make the average closer to the current price. </p>
+            </div>
+
+
+            <div class="calout mb20">
+              <div class="calfld">
+                <p>Total Investment 1st Buy <span id="oldinv"></span></p>
+              </div>
+
+              <div class="calfld">
+                <p>Total Investment 2nd Buy <span id="newinv"></span></p>
+              </div>
+              <div class="calfld">
+                <p>Your total quantity is <span id="totalQat"></span> at average price of <span id="avgPric"></span> and with total investment of <span id="totalAmt"></span></p>
+              </div>
+            </div>
+
+
+            <form action="">
+              <div class="labtool mb20">
+                <div class="labtoolfield"><input type="number" id="cquantity" size="20" placeholder="Current Quantity">
+                </div>
+                <div class="labtoolfield"><input type="number" id="cprice" size="20"
+                    placeholder="Current Average Price (₹)"></div>
+              </div>
+
+              <div class="labtool mb25">
+                <div class="labtoolfield"><input type="number" id="nquantity" size="20" placeholder="New Quantity">
+                </div>
+                <div class="labtoolfield"><input type="number" id="nprice" size="20" placeholder="New Price (₹)">
+                </div>
+              </div>
+
+              <div class="labtoolfield"><input class="submit" type="button" value="Calculate Stock Average"
+                  onClick="calculator()"><input class="reset" type="reset" value="Clear Value" onClick="clearFld()"></div>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+
+    </script>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/jas.js'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116784342-1');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116784342-1"></script>
+</body>
+
+</html>
