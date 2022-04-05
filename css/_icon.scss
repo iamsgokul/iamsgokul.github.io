@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'gwicon';
-  src: url('../fonts/gwicon.eot?eus2c0');
-  src: url('../fonts/gwicon.eot?eus2c0#iefix') format('embedded-opentype'),
-    url('../fonts/gwicon.ttf?eus2c0') format('truetype'),
-    url('../fonts/gwicon.woff?eus2c0') format('woff'),
-    url('../fonts/gwicon.svg?eus2c0#gwicon') format('svg');
+  font-family: "gwicon";
+  src: url("../fonts/gwicon.eot?eus2c0");
+  src: url("../fonts/gwicon.eot?eus2c0#iefix") format("embedded-opentype"),
+    url("../fonts/gwicon.ttf?eus2c0") format("truetype"),
+    url("../fonts/gwicon.woff?eus2c0") format("woff"),
+    url("../fonts/gwicon.svg?eus2c0#gwicon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="gwicon-"],
 [class*=" gwicon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'gwicon' !important;
+  font-family: "gwicon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -24,6 +24,15 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gwicon-candlestick:before {
+  content: "\e93b";
+}
+
+.gwicon-candlestick:after {
+  content: "\e93c";
+  margin-left: -1em;
 }
 
 .gwicon-home:before {
@@ -117,7 +126,6 @@
 .gwicon-format-bold:before {
   content: "\e936";
 }
-
 
 .gwicon-menu:before {
   content: "\e923";

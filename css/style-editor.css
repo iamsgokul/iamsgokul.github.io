@@ -4326,7 +4326,7 @@ html {
   }
 }
 @font-face {
-  font-family: 'gwicon';
+  font-family: "gwicon";
   src: url("../fonts/gwicon.eot?eus2c0");
   src: url("../fonts/gwicon.eot?eus2c0#iefix") format("embedded-opentype"), url("../fonts/gwicon.ttf?eus2c0") format("truetype"), url("../fonts/gwicon.woff?eus2c0") format("woff"), url("../fonts/gwicon.svg?eus2c0#gwicon") format("svg");
   font-weight: normal;
@@ -4337,7 +4337,7 @@ html {
 [class^="gwicon-"],
 [class*=" gwicon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'gwicon' !important;
+  font-family: "gwicon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -4347,6 +4347,15 @@ html {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gwicon-candlestick:before {
+  content: "\e93b";
+}
+
+.gwicon-candlestick:after {
+  content: "\e93c";
+  margin-left: -1em;
 }
 
 .gwicon-home:before {
@@ -4982,7 +4991,7 @@ body {
 }
 
 body {
-  font-family: 'object_sans', Arial, Helvetica, sans-serif;
+  font-family: "object_sans", Arial, Helvetica, sans-serif;
   background-color: #f6f7fb;
 }
 
@@ -5065,33 +5074,33 @@ main {
 }
 
 .bnrbg {
-  background-color: #FED600;
+  background-color: #fed600;
 }
 
 .tolbg {
   background: #b92b27;
-  background: -webkit-gradient(linear, left top, right top, from(#1565C0), to(#b92b27));
-  background: linear-gradient(to right, #1565C0, #b92b27);
+  background: -webkit-gradient(linear, left top, right top, from(#1565c0), to(#b92b27));
+  background: linear-gradient(to right, #1565c0, #b92b27);
 }
 
 .htmlbg {
-  background: #16BFFD;
-  background: -webkit-gradient(linear, left top, right top, from(#CB3066), to(#16BFFD));
-  background: linear-gradient(to right, #CB3066, #16BFFD);
+  background: #16bffd;
+  background: -webkit-gradient(linear, left top, right top, from(#cb3066), to(#16bffd));
+  background: linear-gradient(to right, #cb3066, #16bffd);
 }
 
 .gentit {
-  background: #C02425;
-  background: -webkit-gradient(linear, left top, right top, from(#F0CB35), to(#C02425));
-  background: linear-gradient(to right, #F0CB35, #C02425);
+  background: #c02425;
+  background: -webkit-gradient(linear, left top, right top, from(#f0cb35), to(#c02425));
+  background: linear-gradient(to right, #f0cb35, #c02425);
 }
 
 .toltit {
-  background: #6441A5;
+  background: #6441a5;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#2a0845), to(#6441A5));
-  background: linear-gradient(to right, #2a0845, #6441A5);
+  background: -webkit-gradient(linear, left top, right top, from(#2a0845), to(#6441a5));
+  background: linear-gradient(to right, #2a0845, #6441a5);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -5136,7 +5145,7 @@ main {
   display: inline-block;
   margin: 0 auto;
   font-size: 24px;
-  background-color: #FED600;
+  background-color: #fed600;
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -5212,7 +5221,7 @@ main {
 }
 
 .tollnk i.ytube {
-  color: #FF0000;
+  color: #ff0000;
 }
 
 .tollnk i.blog {
@@ -5235,6 +5244,14 @@ main {
   display: inline;
 }
 
+.tollnk i.candlestick:before {
+  color: #00b984;
+}
+
+.tollnk i.candlestick:after {
+  color: #ff2d4b;
+}
+
 .tollnk h2 {
   font-size: 16px;
   line-height: 3;
@@ -5250,7 +5267,7 @@ main {
 }
 
 .tollnk a {
-  background-color: #FED600;
+  background-color: #fed600;
   text-decoration: none;
   color: #000000;
   display: inline-block;
@@ -5484,7 +5501,7 @@ main {
   margin: auto;
   width: 360px;
   height: 656px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -5496,7 +5513,7 @@ main {
   height: 4px;
   top: -7px;
   right: 40px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-1 {
@@ -5511,7 +5528,7 @@ main {
   position: absolute;
   width: 4px;
   height: 30px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-1 {
@@ -5526,7 +5543,7 @@ main {
   position: absolute;
   width: 4px;
   height: 20px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-1 .vol-dec-1 {
@@ -5537,14 +5554,14 @@ main {
   margin: 20px auto 15px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
 }
 
 .front-cam-1 .front-cam-inner-1 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -5554,7 +5571,7 @@ main {
   width: 55px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .iphone-viewport-1 {
@@ -5562,7 +5579,7 @@ main {
   margin: 0 auto;
   width: 324px;
   height: 507px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
 }
 
@@ -5576,13 +5593,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-1 .menu-button-inner-1 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -5600,7 +5617,7 @@ main {
   margin: auto;
   width: 725px;
   height: 300px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -5614,7 +5631,7 @@ main {
   height: 40px;
   top: 215px;
   right: -7px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-2 {
@@ -5629,7 +5646,7 @@ main {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   display: block;
   float: left;
   left: 50px;
@@ -5647,7 +5664,7 @@ main {
 .vol-btns-2 .vol-inc-2 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
   position: relative;
@@ -5657,7 +5674,7 @@ main {
 .vol-btns-2 .vol-dec-2 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
 }
@@ -5671,7 +5688,7 @@ main {
   margin: 140px 10px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
   display: block;
   float: left;
@@ -5680,7 +5697,7 @@ main {
 .front-cam-2 .front-cam-inner-2 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -5690,7 +5707,7 @@ main {
   width: 10px;
   height: 55px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   display: block;
   float: left;
 }
@@ -5700,7 +5717,7 @@ main {
   margin: 20px auto;
   width: 572px;
   height: 259px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
   display: block;
   float: left;
@@ -5723,13 +5740,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-2 .menu-button-inner-2 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -5747,7 +5764,7 @@ main {
   margin: auto;
   width: 415px;
   height: 763px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -5761,7 +5778,7 @@ main {
   height: 4px;
   top: -7px;
   right: 40px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-3 {
@@ -5776,7 +5793,7 @@ main {
   position: absolute;
   width: 4px;
   height: 30px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-3 {
@@ -5791,7 +5808,7 @@ main {
   position: absolute;
   width: 4px;
   height: 20px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-3 .vol-dec-3 {
@@ -5802,14 +5819,14 @@ main {
   margin: 20px auto 15px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
 }
 
 .front-cam-3 .front-cam-inner-3 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -5819,7 +5836,7 @@ main {
   width: 55px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .iphone-viewport-3 {
@@ -5827,7 +5844,7 @@ main {
   margin: 0 auto;
   width: 379px;
   height: 609px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
 }
 
@@ -5841,13 +5858,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-3 .menu-button-inner-3 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -5865,7 +5882,7 @@ main {
   margin: auto;
   width: 824px;
   height: 365px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -5879,7 +5896,7 @@ main {
   height: 40px;
   top: 260px;
   right: -7px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-4 {
@@ -5894,7 +5911,7 @@ main {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   display: block;
   float: left;
   left: 50px;
@@ -5912,7 +5929,7 @@ main {
 .vol-btns-4 .vol-inc-4 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
   position: relative;
@@ -5922,7 +5939,7 @@ main {
 .vol-btns-4 .vol-dec-4 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
 }
@@ -5936,7 +5953,7 @@ main {
   margin: 173px 10px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
   display: block;
   float: left;
@@ -5945,7 +5962,7 @@ main {
 .front-cam-4 .front-cam-inner-4 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -5955,7 +5972,7 @@ main {
   width: 10px;
   height: 55px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   display: block;
   float: left;
 }
@@ -5965,7 +5982,7 @@ main {
   margin: 20px auto;
   width: 670px;
   height: 311px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
   display: block;
   float: left;
@@ -5988,13 +6005,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-4 .menu-button-inner-4 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6012,7 +6029,7 @@ main {
   margin: auto;
   width: 454px;
   height: 832px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6026,7 +6043,7 @@ main {
   height: 4px;
   top: -7px;
   right: 40px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-5 {
@@ -6041,7 +6058,7 @@ main {
   position: absolute;
   width: 4px;
   height: 30px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-5 {
@@ -6056,7 +6073,7 @@ main {
   position: absolute;
   width: 4px;
   height: 20px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-5 .vol-dec-5 {
@@ -6067,14 +6084,14 @@ main {
   margin: 20px auto 15px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
 }
 
 .front-cam-5 .front-cam-inner-5 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6084,7 +6101,7 @@ main {
   width: 55px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .iphone-viewport-5 {
@@ -6092,7 +6109,7 @@ main {
   margin: 0 auto;
   width: 417px;
   height: 672px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
 }
 
@@ -6106,13 +6123,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-5 .menu-button-inner-5 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6130,7 +6147,7 @@ main {
   margin: auto;
   width: 893px;
   height: 404px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6144,7 +6161,7 @@ main {
   height: 40px;
   top: 305px;
   right: -7px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-6 {
@@ -6159,7 +6176,7 @@ main {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   display: block;
   float: left;
   left: 50px;
@@ -6177,7 +6194,7 @@ main {
 .vol-btns-6 .vol-inc-6 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
   position: relative;
@@ -6187,7 +6204,7 @@ main {
 .vol-btns-6 .vol-dec-6 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
 }
@@ -6201,7 +6218,7 @@ main {
   margin: 193px 10px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
   display: block;
   float: left;
@@ -6210,7 +6227,7 @@ main {
 .front-cam-6 .front-cam-inner-6 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6220,7 +6237,7 @@ main {
   width: 10px;
   height: 55px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   display: block;
   float: left;
 }
@@ -6230,7 +6247,7 @@ main {
   margin: 24px auto;
   width: 740px;
   height: 350px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
   display: block;
   float: left;
@@ -6253,13 +6270,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-6 .menu-button-inner-6 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6277,7 +6294,7 @@ main {
   margin: auto;
   width: 280px;
   height: 460px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6291,7 +6308,7 @@ main {
   height: 4px;
   top: -7px;
   right: 40px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-7 {
@@ -6306,7 +6323,7 @@ main {
   position: absolute;
   width: 4px;
   height: 30px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-7 {
@@ -6321,7 +6338,7 @@ main {
   position: absolute;
   width: 4px;
   height: 20px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-7 .vol-dec-7 {
@@ -6332,14 +6349,14 @@ main {
   margin: 20px auto 15px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
 }
 
 .front-cam-7 .front-cam-inner-7 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6349,7 +6366,7 @@ main {
   width: 55px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .iphone-viewport-7 {
@@ -6357,7 +6374,7 @@ main {
   margin: 0 auto;
   width: 242px;
   height: 300px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
 }
 
@@ -6371,13 +6388,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-7 .menu-button-inner-7 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6395,7 +6412,7 @@ main {
   margin: auto;
   width: 477px;
   height: 274px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6409,7 +6426,7 @@ main {
   height: 40px;
   top: 188px;
   right: -7px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-8 {
@@ -6424,7 +6441,7 @@ main {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   display: block;
   float: left;
   left: 50px;
@@ -6442,7 +6459,7 @@ main {
 .vol-btns-8 .vol-inc-8 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
   position: relative;
@@ -6452,7 +6469,7 @@ main {
 .vol-btns-8 .vol-dec-8 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
 }
@@ -6466,7 +6483,7 @@ main {
   margin: 126px 10px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
   display: block;
   float: left;
@@ -6475,7 +6492,7 @@ main {
 .front-cam-8 .front-cam-inner-8 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6485,7 +6502,7 @@ main {
   width: 10px;
   height: 55px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   display: block;
   float: left;
 }
@@ -6495,7 +6512,7 @@ main {
   margin: 20px auto;
   width: 322px;
   height: 220px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
   display: block;
   float: left;
@@ -6518,13 +6535,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-8 .menu-button-inner-8 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6542,7 +6559,7 @@ main {
   margin: auto;
   width: 430px;
   height: 760px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6556,7 +6573,7 @@ main {
   height: 4px;
   top: -7px;
   right: 40px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-9 {
@@ -6571,7 +6588,7 @@ main {
   position: absolute;
   width: 4px;
   height: 30px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-9 {
@@ -6586,7 +6603,7 @@ main {
   position: absolute;
   width: 4px;
   height: 20px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-9 .vol-dec-9 {
@@ -6597,14 +6614,14 @@ main {
   margin: 20px auto 15px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
 }
 
 .front-cam-9 .front-cam-inner-9 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6614,7 +6631,7 @@ main {
   width: 55px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .iphone-viewport-9 {
@@ -6622,7 +6639,7 @@ main {
   margin: 0 auto;
   width: 388px;
   height: 600px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
 }
 
@@ -6636,13 +6653,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-9 .menu-button-inner-9 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6660,7 +6677,7 @@ main {
   margin: auto;
   width: 760px;
   height: 410px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6674,7 +6691,7 @@ main {
   height: 40px;
   top: 300px;
   right: -7px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-10 {
@@ -6689,7 +6706,7 @@ main {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   display: block;
   float: left;
   left: 50px;
@@ -6707,7 +6724,7 @@ main {
 .vol-btns-10 .vol-inc-10 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
   position: relative;
@@ -6717,7 +6734,7 @@ main {
 .vol-btns-10 .vol-dec-10 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
 }
@@ -6731,7 +6748,7 @@ main {
   margin: 195px 10px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
   display: block;
   float: left;
@@ -6740,7 +6757,7 @@ main {
 .front-cam-10 .front-cam-inner-10 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6750,7 +6767,7 @@ main {
   width: 10px;
   height: 55px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   display: block;
   float: left;
 }
@@ -6760,7 +6777,7 @@ main {
   margin: 20px auto;
   width: 604px;
   height: 364px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
   display: block;
   float: left;
@@ -6783,13 +6800,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-10 .menu-button-inner-10 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6807,7 +6824,7 @@ main {
   margin: auto;
   width: 890px;
   height: 1090px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6821,7 +6838,7 @@ main {
   height: 4px;
   top: -7px;
   right: 90px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-11 {
@@ -6836,7 +6853,7 @@ main {
   position: absolute;
   width: 4px;
   height: 30px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-11 {
@@ -6851,7 +6868,7 @@ main {
   position: absolute;
   width: 4px;
   height: 20px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .vol-btns-11 .vol-dec-11 {
@@ -6862,14 +6879,14 @@ main {
   margin: 20px auto 15px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
 }
 
 .front-cam-11 .front-cam-inner-11 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -6879,7 +6896,7 @@ main {
   width: 55px;
   height: 10px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .iphone-viewport-11 {
@@ -6887,7 +6904,7 @@ main {
   margin: 0 auto;
   width: 770px;
   height: 929px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
 }
 
@@ -6901,13 +6918,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-11 .menu-button-inner-11 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -6925,7 +6942,7 @@ main {
   margin: auto;
   width: 1180px;
   height: 740px;
-  border: 3px solid #494B55;
+  border: 3px solid #494b55;
   border-radius: 40px;
   /* IE 9 */
   -webkit-transform: rotate(0deg);
@@ -6939,7 +6956,7 @@ main {
   height: 40px;
   top: 630px;
   right: -7px;
-  background: #494B55;
+  background: #494b55;
 }
 
 .additional-btns-12 {
@@ -6954,7 +6971,7 @@ main {
   position: relative;
   width: 30px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   display: block;
   float: left;
   left: 50px;
@@ -6972,7 +6989,7 @@ main {
 .vol-btns-12 .vol-inc-12 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
   position: relative;
@@ -6982,7 +6999,7 @@ main {
 .vol-btns-12 .vol-dec-12 {
   width: 20px;
   height: 4px;
-  background: #494B55;
+  background: #494b55;
   float: left;
   display: block;
 }
@@ -6996,7 +7013,7 @@ main {
   margin: 360px 10px;
   width: 15px;
   height: 15px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   border-radius: 50%;
   display: block;
   float: left;
@@ -7005,7 +7022,7 @@ main {
 .front-cam-12 .front-cam-inner-12 {
   width: 5px;
   height: 5px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   margin: 3px auto 0;
   border-radius: 50%;
 }
@@ -7015,7 +7032,7 @@ main {
   width: 10px;
   height: 55px;
   border-radius: 10px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   display: block;
   float: left;
 }
@@ -7025,7 +7042,7 @@ main {
   margin: 30px auto;
   width: 1024px;
   height: 675px;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
   overflow: hidden;
   display: block;
   float: left;
@@ -7048,13 +7065,13 @@ main {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #494B55;
+  border: 2px solid #494b55;
 }
 
 .menu-button-12 .menu-button-inner-12 {
   width: 20px;
   height: 20px;
-  border: 1px solid #494B55;
+  border: 1px solid #494b55;
   border-radius: 3px;
   margin: 13px auto 0;
 }
@@ -7114,7 +7131,7 @@ main {
 .separator i {
   font-size: 100px;
   margin: 15px 15px 30px;
-  color: #494B55;
+  color: #494b55;
   display: inline-block;
 }
 
@@ -7129,7 +7146,7 @@ main {
   display: block;
   font-size: 16px;
   font-weight: 600;
-  color: #494B55;
+  color: #494b55;
   text-align: center;
 }
 
@@ -7150,13 +7167,13 @@ main {
   right: 10px;
   top: 10px;
   background-color: #ffffff;
-  border: 1px solid #4E4E4E;
+  border: 1px solid #4e4e4e;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  color: #4E4E4E;
+  color: #4e4e4e;
   cursor: pointer;
 }
 
