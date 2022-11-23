@@ -48,7 +48,7 @@
         both Designing Tools
         and Coding.</p>
 
-      <p>With close to 5 years of experience as a Designer and Developer, my role is to build scalable and user friendly
+      <p>With close to <span id="exp"></span> years of experience as a Designer and Developer, my role is to build scalable and user friendly
         applications.</p>
 
       <p>Create 500+ Icon available on iconshopping.com. And write 500+ blog post about internet latest technology.</p>
@@ -180,5 +180,19 @@
     </div>
   </section>
   <div id="footerbar"></div>
+  <script>
+    function getExperYear(inputDate) {
+        var today = new Date();
+        var joinDate = new Date(inputDate);
+        var age = today.getFullYear() - joinDate.getFullYear();
+        var m = today.getMonth() - joinDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < joinDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+    const showDate = getExperYear("2013/11/18");
+    document.getElementById('exp').innerHTML = showDate;
+</script>
 </body>
 </html>
