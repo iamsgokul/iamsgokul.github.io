@@ -1,13 +1,19 @@
 <header>
-    <div class='logo'>
-      <a href='https://www.gokul.work'><img src='../images/logo.svg' /></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href='https://www.gokul.work'>Home</a></li>
-        <li><a href='https://www.gokul.work/search'>Search</a></li>
-        <li><a href='https://www.gokul.work/tools'>Tools</a></li>
-        <li><a href='https://www.gokul.work/profile'>Profile</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class='logo'>
+    <a href='https://www.gokul.work'><img src='../images/logo.svg' /></a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href='https://www.gokul.work'>Home</a></li>
+      <li><a href='https://www.gokul.work/search'>Search</a></li>
+      <li><a href='https://www.gokul.work/tools'>Tools</a></li>
+      <li><a href='https://www.gokul.work/profile'>Profile</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+  const menuopen = document.querySelector('.gwicon-menu');
+  menuopen.addEventListener('click', function () {
+    document.querySelector('.topmenu').classList.toggle('open');
+  })
+</script>
