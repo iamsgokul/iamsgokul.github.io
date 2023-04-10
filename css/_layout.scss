@@ -108,6 +108,13 @@ main {
   background: linear-gradient(to right, #cb3066, #16bffd);
 }
 
+.mnybg {
+  background: #1a2a6c;
+  background: -webkit-linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+}
+
+
 .gentit {
   background: #c02425;
   background: -webkit-linear-gradient(to right, #f0cb35, #c02425);
@@ -116,12 +123,10 @@ main {
 
 .toltit {
   background: #6441a5;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2a0845, #6441a5);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #2a0845, #6441a5);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 
 .section {
   width: 100%;

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculate the Average Stock Price - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner mnybg '>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>GST Tax Calculator</h1>
+            <p>Using our tool you can calculate how much GST Tax amount you pay for State and Central.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>GST Tax
+              Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>A GST calculator is a tool used to calculate the Goods and Services Tax (GST) for a given product or
+                service. GST is a tax that is levied on the sale of goods and services in India. The GST calculator
+                takes into account the GST rate applicable to the product or service, as well as any additional taxes or
+                fees that may be applicable.</p>
+              <p>The calculator typically requires the user to input the net price or value of the product or service,
+                and then automatically calculates the GST amount based on the GST rate. It can also calculate the total
+                price, including GST, of a product or service.</p>
+            </div>
+
+
+            <form action="" >
+              <div class="labtool mb20">
+                <div class="labtoolfield mb20">
+                  <input type="radio" id="addGst" name="calgst" checked>
+                  <label for="addGst">Add GST Amount</label>
+                  <input type="radio" id="subGst" name="calgst">
+                  <label for="subGst">Subtract GST Amount</label>
+                </div>
+
+                <div class="labtoolfield">
+                  <input type="number" id="percal" name="input" placeholder="Enter Amount">
+                </div>
+
+                <div class="labtoolfield">
+                  <input class="submit" type="button" value="3%" onclick="calPrct(3)">
+                  <input class="submit" type="button" value="5%" onclick="calPrct(5)">
+                  <input class="submit" type="button" value="12%" onclick="calPrct(12)">
+                  <input class="submit" type="button" value="18%" onclick="calPrct(18)">
+                  <input class="submit" type="button" value="28%" onclick="calPrct(28)">
+                  <input class="reset" type="reset" value="Clear Value" onClick="clearFld()">
+                </div>
+              </div>
+            </form>
+
+
+            <div class="calout mb25">
+              <div class="calfld">
+                <p>Net Amount : <span id="netAmount">246</span></p>
+              </div>
+
+              <div class="calfld">
+                <p>State Government GST Amount <span id="stateGST">246</span></p>
+              </div>
+
+              <div class="calfld">
+                <p>Union Government GST Amount <span id="centralGST">246</span></p>
+              </div>
+
+              <div class="calfld">
+                <p> GST Amount :<span id="gstAmount">246</span></p>
+              </div>
+
+              <div class="calfld">
+                <p>Total Amount :<span id="totalGst">246</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/jas.js'></script>
+  <script>
+    function calPrct(prNum) {
+
+      if (document.getElementById('addGst').checked) {
+        var getVal = document.getElementById('percal').value;
+        var calVal = parseFloat(getVal) * prNum / 100;
+        document.getElementById('netAmount').innerHTML = getVal;
+        document.getElementById('stateGST').innerHTML = calVal / 2;
+        document.getElementById('centralGST').innerHTML = calVal / 2;
+        document.getElementById('gstAmount').innerHTML = calVal;
+        document.getElementById('totalGst').innerHTML = parseFloat(getVal) + parseFloat(calVal);
+
+        var opnbtn = document.getElementsByClassName("calout")[0];
+      opnbtn.classList.add("open");
+
+      } else if (document.getElementById('subGst').checked) {
+        var getVal = document.getElementById('percal').value;
+        var calVal = parseFloat(getVal) * prNum / 100;
+        document.getElementById('netAmount').innerHTML = parseFloat(getVal) - parseFloat(calVal);
+        document.getElementById('stateGST').innerHTML = calVal / 2;
+        document.getElementById('centralGST').innerHTML = calVal / 2;
+        document.getElementById('gstAmount').innerHTML = calVal;
+        document.getElementById('totalGst').innerHTML = getVal;
+        var opnbtn = document.getElementsByClassName("calout")[0];
+      opnbtn.classList.add("open");
+      }
+    }
+  </script>
+</body>
+
+</html>
