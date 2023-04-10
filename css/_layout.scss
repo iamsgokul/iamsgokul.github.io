@@ -459,46 +459,60 @@ main {
   float: left;
   padding: 25px 20px;
 
-  h1 {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-
-  p {
-    color: #ffffff;
-    font-size: 13px;
-    line-height: 18px;
-  }
-
   &.gg {
-    background-image: -moz-linear-gradient(
-      133deg,
-      rgb(246, 0, 0) 0%,
-      rgb(169, 0, 0) 99%
-    );
-    background-image: -webkit-linear-gradient(
-      133deg,
-      rgb(246, 0, 0) 0%,
-      rgb(169, 0, 0) 99%
-    );
-    background-image: -ms-linear-gradient(
-      133deg,
-      rgb(246, 0, 0) 0%,
-      rgb(169, 0, 0) 99%
-    );
-    background-image: linear-gradient(
-      133deg,
-      rgb(246, 0, 0) 0%,
-      rgb(169, 0, 0) 99%
-    );
+    background: #f60000;
+    background: -webkit-linear-gradient( 133deg,#f60000 0%,#a90000 99%);
+    background-image: linear-gradient( 133deg,#f60000 0%,#a90000 99%);
+
+    h1 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 
   &.gp {
     background: #cc2b5e;
     background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);
     background: linear-gradient(to right, #753a88, #cc2b5e);
+
+    h1 {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: #ffffff;
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+
+  &.gs {
+    background: #cc2b5e;
+    background: -webkit-linear-gradient(to right, #fcd602, #ffde28);
+    background: linear-gradient(to right, #fcd602, #ffde28);
+    h1 {
+      color: #000000;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: #000000;
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
 
   a {

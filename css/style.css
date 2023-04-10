@@ -4730,23 +4730,51 @@ main {
   float: left;
   padding: 25px 20px;
 }
-.fotlnk h1 {
+.fotlnk.gg {
+  background: #f60000;
+  background: -webkit-linear-gradient(133deg, #f60000 0%, #a90000 99%);
+  background-image: linear-gradient(133deg, #f60000 0%, #a90000 99%);
+}
+.fotlnk.gg h1 {
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.fotlnk p {
+.fotlnk.gg p {
   color: #ffffff;
   font-size: 13px;
   line-height: 18px;
 }
-.fotlnk.gg {
-  background-image: linear-gradient(133deg, rgb(246, 0, 0) 0%, rgb(169, 0, 0) 99%);
-}
 .fotlnk.gp {
   background: #cc2b5e;
   background: linear-gradient(to right, #753a88, #cc2b5e);
+}
+.fotlnk.gp h1 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.fotlnk.gp p {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 18px;
+}
+.fotlnk.gs {
+  background: #cc2b5e;
+  background: linear-gradient(to right, #fcd602, #ffde28);
+}
+.fotlnk.gs h1 {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.fotlnk.gs p {
+  color: #000000;
+  font-size: 13px;
+  line-height: 18px;
 }
 .fotlnk a {
   display: inline-block;
