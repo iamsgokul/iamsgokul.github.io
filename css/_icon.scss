@@ -26,6 +26,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-list-status:before {
+  content: "\e93f";
+}
+
+.gwicon-lightbulb-variant-outline:before {
+  content: "\e940";
+}
+
+.gwicon-check:before {
+  content: "\e93e";
+}
+
 .gwicon-rupeee:before {
   content: "\e93d";
 }

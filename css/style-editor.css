@@ -3650,6 +3650,18 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-list-status:before {
+  content: "\e93f";
+}
+
+.gwicon-lightbulb-variant-outline:before {
+  content: "\e940";
+}
+
+.gwicon-check:before {
+  content: "\e93e";
+}
+
 .gwicon-rupeee:before {
   content: "\e93d";
 }
@@ -4649,6 +4661,15 @@ main {
   display: inline-block;
 }
 
+.txtcontent {
+  width: 100%;
+  float: left;
+}
+.txtcontent h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px 0;
+}
 .txtcontent p {
   font-size: 14px;
   margin-bottom: 15px;
@@ -4656,6 +4677,33 @@ main {
   line-height: 28px;
   color: #3e3e3e;
   width: 100%;
+}
+.txtcontent ul {
+  width: 100%;
+  list-style: disc;
+  padding-left: 35px;
+}
+.txtcontent ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #3e3e3e;
+  width: 100%;
+}
+.txtcontent table {
+  width: 100%;
+  font-size: 14px;
+}
+.txtcontent table tr th {
+  border: 2px solid #202020;
+  padding: 10px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.txtcontent table tr td {
+  border: 2px solid #202020;
+  padding: 10px;
 }
 
 .fotlnk {
@@ -6515,6 +6563,7 @@ textarea {
   background-color: #ffffff;
   border-radius: 5px;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 .labtool p {
   font-size: 14px;
@@ -6523,6 +6572,55 @@ textarea {
   line-height: 28px;
   color: #3e3e3e;
   width: 100%;
+  float: left;
+}
+.labtool p span {
+  font-weight: 600;
+  color: #ff0000;
+}
+.labtool ul {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.labtool ul li {
+  border-top: 1px solid #dddddd;
+  border-radius: 0;
+  margin: 5px 0;
+  padding: 5px 0;
+  position: relative;
+}
+.labtool ul li:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+.labtool ul li .msgbx {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 5px 5px 50px;
+  color: #3e3e3e;
+  line-height: 22px;
+}
+.labtool ul li button {
+  border: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #009200;
+  width: 25px;
+  height: 25px;
+  color: #009200;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+.labtool ul li button:hover {
+  background-color: #009200;
+  color: #ffffff;
 }
 
 .labtoolfield {

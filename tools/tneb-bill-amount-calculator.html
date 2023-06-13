@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNEB (Tamil Nadu Electricity Board) Bill Amount Calculator - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner mnybg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>TNEB (Tamil Nadu Electricity Board) Bill Amount Calculator.</h1>
+            <p>Enter your your current consume unit to get your bill amount.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>TNEB (Tamil Nadu Electricity Board) Bill Amount Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>The TNEB (Tamil Nadu Electricity Board) bill amount calculator is a tool used to estimate the
+                electricity bill amount for consumers in Tamil Nadu, India. It takes into account various factors such
+                as the consumer category, electricity consumption in units (kWh), and the tariff rates set by TNEB.</p>
+              <h1>TNEB Online Tariff Calculator 2023- Bi-monthly For Domestic Usage Only</h1>
+            </div>
+
+            <form action="" class="labtool">
+              <div class="labtoolfield">
+                <input type="number" size="20" placeholder="Enter the Units Consumed" autofocus id="getValue">
+              </div>
+              <p id="showOutput" style="display:none"></p>
+              <div class="labtoolfield">
+                <input class="submit" type="button" value="Calculate" OnClick="ebCalculator()">
+                <input class="reset" type="reset" value="Clear" onclick="clearEBcalc()">
+              </div>
+            </form>
+
+            <div class='txtcontent'>
+              <p>Here are some tips for reducing your electricity bill:</p>
+              <ul>
+                <li>Unplug appliances when you're not using them. Even when they're turned off, appliances can still
+                  draw power. This is known as "phantom load."</li>
+                <li>Use energy-efficient appliances. Energy-efficient appliances use less power, which can save you
+                  money on your electricity bill.</li>
+                <li>Upgrade your light bulbs to LED bulbs. LED bulbs use less power than traditional incandescent bulbs.
+                </li>
+                <li>Seal up any air leaks in your home. Air leaks can cause your air conditioner to work harder, which
+                  can lead to higher electricity bills.</li>
+                <li>Install a programmable thermostat. A programmable thermostat can help you save energy by
+                  automatically adjusting the temperature of your home when you're asleep or away.</li>
+              </ul>
+              <h1>TNEB Tariff Charges</h1>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">Units (<em>u</em>)</th>
+                    <th rowspan="2">Subsidy (≤ 100&nbsp;<em>u</em>)</th>
+                    <th colspan="2">Unit Range</th>
+                    <th rowspan="2">Unit Cost</th>
+                  </tr>
+                  <tr>
+                    <td>From</td>
+                    <td>To</td>
+                  </tr>
+                  <tr>
+                    <td>≤ 100</td>
+                    <td>₹ 4.50 ×&nbsp;<em>u</em></td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2">≤ 200</td>
+                    <td rowspan="2">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>200</td>
+                    <td>₹ 2.25</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">≤ 400</td>
+                    <td rowspan="3">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>200</td>
+                    <td>₹ 2.25</td>
+                  </tr>
+                  <tr>
+                    <td>201</td>
+                    <td>400</td>
+                    <td>₹ 4.50</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4">≤ 500</td>
+                    <td rowspan="4">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>200</td>
+                    <td>₹ 2.25</td>
+                  </tr>
+                  <tr>
+                    <td>201</td>
+                    <td>400</td>
+                    <td>₹ 4.50</td>
+                  </tr>
+                  <tr>
+                    <td>401</td>
+                    <td>500</td>
+                    <td>₹ 6.00</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4">≤ 600</td>
+                    <td rowspan="4">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>400</td>
+                    <td>₹ 4.50</td>
+                  </tr>
+                  <tr>
+                    <td>401</td>
+                    <td>500</td>
+                    <td>₹ 6.00</td>
+                  </tr>
+                  <tr>
+                    <td>501</td>
+                    <td>600</td>
+                    <td>₹ 8.00</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="5">≤ 800</td>
+                    <td rowspan="5">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>400</td>
+                    <td>₹ 4.50</td>
+                  </tr>
+                  <tr>
+                    <td>401</td>
+                    <td>500</td>
+                    <td>₹ 6.00</td>
+                  </tr>
+                  <tr>
+                    <td>501</td>
+                    <td>600</td>
+                    <td>₹ 8.00</td>
+                  </tr>
+                  <tr>
+                    <td>601</td>
+                    <td>800</td>
+                    <td>₹ 9.00</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="6">≤ 1000</td>
+                    <td rowspan="6">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>400</td>
+                    <td>₹ 4.50</td>
+                  </tr>
+                  <tr>
+                    <td>401</td>
+                    <td>500</td>
+                    <td>₹ 6.00</td>
+                  </tr>
+                  <tr>
+                    <td>501</td>
+                    <td>600</td>
+                    <td>₹ 8.00</td>
+                  </tr>
+                  <tr>
+                    <td>601</td>
+                    <td>800</td>
+                    <td>₹ 9.00</td>
+                  </tr>
+                  <tr>
+                    <td>801</td>
+                    <td>1000</td>
+                    <td>₹ 10.00</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="7">&gt; 1000</td>
+                    <td rowspan="7">₹ 450</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>₹ 0.00</td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>400</td>
+                    <td>₹ 4.50</td>
+                  </tr>
+                  <tr>
+                    <td>401</td>
+                    <td>500</td>
+                    <td>₹ 6.00</td>
+                  </tr>
+                  <tr>
+                    <td>501</td>
+                    <td>600</td>
+                    <td>₹ 8.00</td>
+                  </tr>
+                  <tr>
+                    <td>601</td>
+                    <td>800</td>
+                    <td>₹ 9.00</td>
+                  </tr>
+                  <tr>
+                    <td>801</td>
+                    <td>1000</td>
+                    <td>₹ 10.00</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">&gt; 1000</td>
+                    <td>₹ 11.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/jas.js'></script>
+  <script>
+    function ebCalculator() {
+      const valUs = document.getElementById('getValue').value;
+   
+      document.getElementById('showOutput').style.display = 'block';
+      if (valUs >= 101 && valUs <= 200) {
+        const minVal = valUs - 100;
+        const sumVal = minVal * 2.25
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else if (valUs >= 201 && valUs <= 400) {
+        const minVal = valUs - 200;
+        const sumVal = minVal * 4.50 + 225;
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else if (valUs >= 401 && valUs <= 500) {
+        const minVal = valUs - 400;
+        const sumVal = minVal * 6 + 1125;
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else if (valUs >= 501 && valUs <= 600) {
+        const minVal = valUs - 500;
+        const sumVal = minVal * 8 + 1950;
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else if (valUs >= 601 && valUs <= 800) {
+        const minVal = valUs - 600;
+        const sumVal = minVal * 9 + 2750;
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else if (valUs >= 801 && valUs <= 1000) {
+        const minVal = valUs - 800;
+        const sumVal = minVal * 10 + 4550;
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else if (valUs > 1000) {
+        const minVal = valUs - 1000;
+        const sumVal = minVal * 11 + 6550;
+        document.getElementById('showOutput').innerHTML = 'Your Bill Amount <span>' + sumVal + '</span>';
+      } else {
+        document.getElementById('showOutput').innerHTML = "No Charge";
+      }
+    }
+
+    function clearEBcalc() {
+      document.getElementById('showOutput').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

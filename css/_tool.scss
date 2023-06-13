@@ -6,14 +6,70 @@
   background-color: #ffffff;
   border-radius: 5px;
   box-sizing: border-box;
+  margin-bottom:10px;
 
-  p{
+  p {
     font-size: 14px;
     margin-bottom: 15px;
     font-weight: 400;
     line-height: 28px;
     color: #3e3e3e;
     width: 100%;
+    float:left;
+
+    span{
+      font-weight: 600;
+      color:#ff0000;
+    }
+  }
+
+  ul {
+    width: 100%;
+    margin-bottom: 30px;
+
+    li {
+      border-top: 1px solid #dddddd;
+      border-radius: 0;
+      margin: 5px 0;
+      padding: 5px 0;
+      position: relative;
+
+      &:last-child {
+        border-bottom: 1px solid #dddddd;
+      }
+      .msgbx {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 5px 5px 5px 50px;
+        color: #3e3e3e;
+        line-height: 22px;
+      }
+
+      button {
+        border: 0;
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 1px solid #009200;
+        width: 25px;
+        height: 25px;
+        color: #009200;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #009200;
+          color: #ffffff;
+        }
+      }
+    }
   }
 }
 
@@ -168,13 +224,12 @@
       background-image: url("data:image/svg+xml,%0A%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 30 30' width='24px' height='24px' style='enable-background:new 0 0 30 30;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%237367F0;%7D%0A%3C/style%3E%3Ccircle class='st0' cx='15' cy='15' r='9.7'/%3E%3C/svg%3E%0A");
       border-color: #7367f0;
     }
-    & + label{
-      font-size:14px;
-      margin-right:10px;
+    & + label {
+      font-size: 14px;
+      margin-right: 10px;
       cursor: pointer;
     }
   }
-
 }
 
 .infomsg {
@@ -331,28 +386,28 @@
 .calout {
   background-color: #ffffff;
   border-radius: 15px;
-  display:none;
-  padding:12px 15px;
-  float:left;
-  width:100%;
+  display: none;
+  padding: 12px 15px;
+  float: left;
+  width: 100%;
 
   &.open {
     display: block;
   }
 
-  .calfld{
-      width:100%;
-      padding: 5px 0;
-      p{
-          font-weight: 400;
-          font-size:14px;
-          color:#3e3e3e;
+  .calfld {
+    width: 100%;
+    padding: 5px 0;
+    p {
+      font-weight: 400;
+      font-size: 14px;
+      color: #3e3e3e;
 
-          span{
-              font-size:16px;
-              font-weight: 600;
-              color:#583692;
-          }
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        color: #583692;
       }
+    }
   }
 }
