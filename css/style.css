@@ -3716,6 +3716,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-code-json:before {
+  content: "\e941";
+}
+
 .gwicon-list-status:before {
   content: "\e93f";
 }
@@ -4570,6 +4574,9 @@ main {
 }
 .tollnk i.blog {
   color: #fe8100;
+}
+.tollnk i.json {
+  color: #a422e3;
 }
 .tollnk i.drive:before {
   color: #0d9660;
@@ -6840,6 +6847,48 @@ textarea {
   font-size: 14px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.jsonbx {
+  white-space: pre-wrap;
+  line-height: 25px;
+  font-size: 14px;
+  border: 1px solid #dddddd;
+  border-radius: 2px;
+  font-family: monospace;
+  height: 400px;
+  overflow: auto;
+}
+.jsonbx span {
+  display: block;
+  margin-left: -1em;
+  padding-left: 2em;
+}
+.jsonbx .line-number {
+  display: inline-block;
+  width: 5rem;
+  opacity: 0.5;
+  font-size: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: #f9f9f9;
+  color: #9f9f9f;
+  font-family: monospace;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.jsonoutput {
+  display: none;
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+}
+.jsonoutput h1 {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .infomsg {

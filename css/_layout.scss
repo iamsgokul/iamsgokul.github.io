@@ -251,6 +251,10 @@ main {
       color: #fe8100;
     }
 
+    &.json {
+      color: #a422e3;
+    }
+
     &.drive {
       &:before {
         color: #0d9660;
@@ -448,7 +452,7 @@ main {
   h1 {
     font-size: 16px;
     font-weight: 600;
-    margin:15px 0;
+    margin: 15px 0;
     line-height: 1.3;
   }
 

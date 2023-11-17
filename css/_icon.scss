@@ -26,6 +26,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-code-json:before {
+  content: "\e941";
+}
+
 .gwicon-list-status:before {
   content: "\e93f";
 }
