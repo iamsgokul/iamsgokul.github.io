@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSON Formatter - Gokulakrishnan S - UI Designer - Developer</title>
+  <title>JSON Minifier - Gokulakrishnan S - UI Designer - Developer</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
   <script src='../js/jquery.min.js'></script>
@@ -28,9 +28,8 @@
       <div class='container'>
         <div class='row'>
           <div class='col-lg-12 toptil'>
-            <h1>JSON Formatter</h1>
-            <p>JSON format: Lightweight, human-readable data interchange, key-value pairs, widely used in web
-              development.</p>
+            <h1>JSON Minifier</h1>
+            <p>A JSON minifier is a tool or program that reduces the size of a JSON.</p>
           </div>
         </div>
       </div>
@@ -41,7 +40,7 @@
           <div class='col-lg-12 mt30 breadcrum'>
             <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
               href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>JSON
-              Formatter</span>
+              Minifier</span>
           </div>
         </div>
       </div>
@@ -52,24 +51,24 @@
           <div class='col-lg-12'>
             <div class='txtcontent'>
               <p>
-                A JSON formatter is a tool or program that helps organize and visually enhance JSON (JavaScript Object
-                Notation) data for better human readability. JSON is a lightweight data interchange format commonly used
-                for data storage and communication between a server and a web application.</p>
-
-              <p>Copy your JSON code and past in the below text area and click the format button. Now you will get the
-                JSON format code.</p>
+                A JSON minifier is a tool or program that reduces the size of a JSON (JavaScript Object Notation)
+                document by removing unnecessary whitespace, indentation, and other non-essential characters. The
+                process, known as minification, results in a more compact representation of the JSON data. JSON
+                minifiers are commonly used in web development to optimize data transfer and improve application
+                performance by reducing file sizes during transmission over the network. The minified JSON remains
+                structurally valid, ensuring seamless decoding and usability while minimizing the data footprint.</p>
             </div>
             <div class="labtool">
               <div class="labtoolfield">
-                <textarea id='jsonInput' name='code' placeholder='Paste JSON code here to format...'></textarea>
+                <textarea id='jsonInput' name='code' placeholder='Paste JSON code here to Minifi...'></textarea>
               </div>
               <div class="labtoolfield">
-                <button onclick="formatJSON()" class="submit">Format</button>
+                <button onclick="minifyJSON()" class="submit">Minifi</button>
                 <button onclick="resetTextarea()" class="reset">Reset</button>
               </div>
               <div id="formatjsonoutput" style="display:none;" class="jsonoutput">
-                <h1>Formatter JSON:</h1>
-                <pre id="formattedJSON" class="jsonbx"></pre>
+                <h1>Minified JSON:</h1>
+                <pre id="minifiedJSON" class="jsonbx"></pre>
               </div>
             </div>
           </div>

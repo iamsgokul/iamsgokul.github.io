@@ -337,46 +337,52 @@ function clearFld() {
 }
 /*- Stock Avg Price End-*/
 
-
 /*-- TNEB Start --*/
 function ebCalculator() {
-  const valUs = document.getElementById('getValue').value;
+  const valUs = document.getElementById("getValue").value;
 
-  document.getElementById('showOutput').style.display = 'block';
+  document.getElementById("showOutput").style.display = "block";
   if (valUs >= 101 && valUs <= 200) {
     const minVal = valUs - 100;
-    const sumVal = minVal * 2.25
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    const sumVal = minVal * 2.25;
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else if (valUs >= 201 && valUs <= 400) {
     const minVal = valUs - 200;
-    const sumVal = minVal * 4.50 + 225;
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    const sumVal = minVal * 4.5 + 225;
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else if (valUs >= 401 && valUs <= 500) {
     const minVal = valUs - 400;
     const sumVal = minVal * 6 + 1125;
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else if (valUs >= 501 && valUs <= 600) {
     const minVal = valUs - 500;
     const sumVal = minVal * 8 + 1950;
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else if (valUs >= 601 && valUs <= 800) {
     const minVal = valUs - 600;
     const sumVal = minVal * 9 + 2750;
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else if (valUs >= 801 && valUs <= 1000) {
     const minVal = valUs - 800;
     const sumVal = minVal * 10 + 4550;
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else if (valUs > 1000) {
     const minVal = valUs - 1000;
     const sumVal = minVal * 11 + 6550;
-    document.getElementById('showOutput').innerHTML = 'Your Bill Amount: <span> Rs ' + sumVal + '</span>';
+    document.getElementById("showOutput").innerHTML =
+      "Your Bill Amount: <span> Rs " + sumVal + "</span>";
   } else {
-    document.getElementById('showOutput').innerHTML = "No Charge";
+    document.getElementById("showOutput").innerHTML = "No Charge";
   }
 }
 
 function clearEBcalc() {
-  document.getElementById('showOutput').style.display = 'none';
+  document.getElementById("showOutput").style.display = "none";
 }
 /*-- TNEB End --*/
