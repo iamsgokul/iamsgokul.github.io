@@ -243,10 +243,10 @@
               <p>Compound numbers are created by combining the single-digit numbers associated with each letter in a
                 name and reducing them to a single digit. For example, the name "John" would be calculated as follows:
               </p>
-              <p class="fw600">J = 1 | O = 7 | H = 8 | N = 5</p>
-              <p class="fw600">1 + 7 + 8 + 5 = 21</p>
-              <p class="fw600">2 + 1 = 3</p>
-              <p>So, in Chaldean numerology, the numerology number for the name "John" would be 3.</p>
+              <p class="fw600">J = 1 | O = 7 | H = 5 | N = 5</p>
+              <p class="fw600">1 + 7 + 5 + 5 = 18</p>
+              <p class="fw600">1 + 8 = 9</p>
+              <p>So, in Chaldean numerology, the numerology number for the name "John" would be 9.</p>
             </div>
           </div>
 
@@ -281,18 +281,13 @@
       var year = userdate.getFullYear();
       var totaldate = sumDigits(day) + sumDigits(month) + sumDigits(year);
       var luckyNumber = sumDigits(totaldate);
-
       document.getElementById('dateTotal').innerHTML = totaldate
       document.getElementById('luckyNum').innerHTML = luckyNumber
-
       var word = document.getElementById("word").value.toLowerCase();
       var pythagoreanTotal = calculateTotal(word, PYTHAGOREAN);
       var chaldeanTotal = calculateTotal(word, CHALDEAN);
       document.getElementById("pythagoreanResult").innerHTML = sumDigits(pythagoreanTotal);
       document.getElementById("chaldeanResult").innerHTML = sumDigits(chaldeanTotal);
-
-
-
       function sumDigits(number) {
         while (number > 9) {
           number = number.toString().split('').reduce(function (a, b) {
@@ -307,14 +302,12 @@
     function calculateTotal(word, mapping) {
       debugger
       var total = 0;
-
       for (var i = 0; i < word.length; i++) {
         var char = word[i];
         if (mapping.hasOwnProperty(char)) {
           total += mapping[char];
         }
       }
-
       return total;
     }
 
@@ -323,8 +316,6 @@
       document.getElementById('dob').value = ""
       document.getElementById('word').value = ""
     }
-
-
   </script>
 
 
