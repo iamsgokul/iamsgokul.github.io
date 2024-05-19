@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta Tag Generator - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class="banner toltit">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 toptil">
+            <h1>Blogger XML Sitemap URL Generator</h1>
+            <p>Just enter your blogger blog URL and generate XML SiteMap.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="row mt20">
+          <div class="col-lg-12 mt30 breadcrum">
+            <a href="https://www.gokul.work">Home</a> <i class="gwicon-chevron-right"></i> <a
+              href="https://www.gokul.work/tools">Tools</a> <i class="gwicon-chevron-right"></i> <span>Blogger XML Sitemap URL Generator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="row mt20">
+          <div class="col-lg-12">
+            <div class="txtcontent">
+              <p>Blogger XML Sitemap generator is a useful tool to generate the Site Map URL for your blogger blog. This
+                site map URL is useful for SEO purposes. Using this you can submit the more entire blog URL to search
+                engines like Google and Bing.</p>
+              <p>Enter your blogger url below input box and generate sitemap url for your blogger. Your URL must be like
+                <b class="fw600">https://myblogger.blogspot.com (or) https://myblogger.com</b>
+              </p>
+            </div>
+            <form onsubmit="blogSiteMap(this); return false;" class="labtool">
+              <div class="labtoolfield"><input type="url" name="siteurl" size="20"
+                  placeholder="Enter your blogger URL here https://myblogger.blogspot.com or https://myblogger.com">
+              </div>
+              <div class="labtoolfield"><textarea name="source" readonly="" placeholder="Your meta will avaliable here"
+                  class="sm" style="display: block;"></textarea>
+              </div>
+              <div class="labtoolfield">
+                <button type="submit" class="submit">Generate Site Map Link</button>
+                <input class="reset" type="reset" value="Clear Box">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/jas.js'></script>
+
+</body>
+
+</html>

@@ -189,10 +189,30 @@ function AddText(form, Action) {
 
 /*- Blogger Site Map Start-*/
 function blogSiteMap(form) {
-  var txt = "" + form.siteurl.value + "/sitemap.xml\r\n";
+  var siteUrl = form.siteurl.value;
+  var txt = `Sitemap: ${siteUrl}/sitemap.xml  // (for all Blogger blog posts).
+Sitemap: ${siteUrl}/sitemap-pages.xml  // (for all Blogger Pages)`;
   form.source.value = txt;
   form.source.display = "block";
 }
+
+function robotsTxt(form) {
+  var siteUrl = form.siteurl.value;
+
+  var txt = `User-agent: Mediapartners-Google
+Disallow: 
+
+User-agent: *
+Disallow: /search
+Allow: /
+
+Sitemap: ${siteUrl}/sitemap.xml
+Sitemap: ${siteUrl}/sitemap-pages.xml`;
+
+  form.source.value = txt;
+  form.source.style.display = "block";
+}
+
 /*- Blogger Site Map End -*/
 
 /*- Social Media Meta Tag Start-*/

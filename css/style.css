@@ -6738,6 +6738,8 @@ textarea {
 .labtoolfield input[type=text],
 .labtoolfield input[type=password],
 .labtoolfield input[type=number],
+.labtoolfield input[type=url],
+.labtoolfield input[type=email],
 .labtoolfield input[type=date] {
   width: 100%;
   height: 35px;
@@ -6774,6 +6776,9 @@ textarea {
 }
 .labtoolfield textarea.sm {
   height: 100px;
+}
+.labtoolfield textarea.md {
+  height: 300px;
 }
 .labtoolfield select {
   width: 100%;
