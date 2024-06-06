@@ -26,16 +26,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-fd:before {
+  content: "\e945";
+}
+
 .gwicon-rd:before {
   content: "\e944";
 }
+
 .gwicon-astrology::after {
   content: "\e942";
   margin-left: -1em;
 }
+
 .gwicon-astrology:before {
   content: "\e943";
 }
+
 .gwicon-code-json:before {
   content: "\e941";
 }

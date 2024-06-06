@@ -3650,6 +3650,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-fd:before {
+  content: "\e945";
+}
+
 .gwicon-rd:before {
   content: "\e944";
 }
