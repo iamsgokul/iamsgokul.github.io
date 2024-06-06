@@ -1,23 +1,3 @@
-function htmlEncode(value) {
-    return $('<div/>').text(value).html();
-}
-$(function () {
-    $("#qrgen").click(function () {
-        $('#qrcode').css('display', 'block');
-        $(".qrcode").attr("src", "https://chart.googleapis.com/chart?cht=qr&chl=" + htmlEncode($("#qrinput").val()) + "&chs=160x160&chld=L|0");
-    });
-});
-$(document).ready(function () {
-    $('#qrinput').blur(function () {
-        if ($('#qrinput').val().length <= 0) {
-            $('#qrcode').css('display', 'none');
-        }
-    })
-    $('.reset').click(function () {
-        $('#qrcode').css('display', 'none');
-        $('#qrinput').val('');
-    })
-})
 /*- Google Drive Audio Start-*/
 $(function () {
     $('#generate').click(function () {
