@@ -3724,6 +3724,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-rd:before {
+  content: "\e944";
+}
+
 .gwicon-astrology::after {
   content: "\e942";
   margin-left: -1em;
