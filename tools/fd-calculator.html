@@ -17,6 +17,7 @@
     gtag('js', new Date());
     gtag('config', 'G-SQHDPT3FW1');
   </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="../js/fd.js"></script>
 </head>
 
@@ -91,11 +92,14 @@
 
               </div>
             </form>
-            <div class="calout mb25">
+            <div class="calout mb15">
               <div class="calfld">
-                <p>Maturity Amount: ₹ <span id="result"></span></p>
+                <p>Principal Amount: ₹ <span id="principle"></span></p>
+                <p>Interest Amount: ₹ <span id="interest"></span></p>
+                <p>Maturity Amount: ₹ <span id="total"></span></p>
               </div>
             </div>
+            <div id="piechart" class="chartbox"></div>
           </div>
         </div>
       </div>

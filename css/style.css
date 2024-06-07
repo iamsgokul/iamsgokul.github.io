@@ -7093,11 +7093,24 @@ textarea {
   font-weight: 400;
   font-size: 14px;
   color: #3e3e3e;
+  margin: 10px 0;
 }
 .calout .calfld p span {
   font-size: 16px;
   font-weight: 600;
   color: #583692;
+}
+
+.chartbox {
+  width: 100%;
+  float: left;
+  border-radius: 12x;
+  background-color: #ffffff;
+}
+.chartbox.open {
+  height: 300px;
+  padding: 10px 0;
+  display: block;
 }
 
 @media (max-width: 640px) {
