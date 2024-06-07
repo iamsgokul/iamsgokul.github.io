@@ -45,10 +45,10 @@
 
       <p>I Start my Career in 2013 after completing my Degree as a Product Designer at Cavintek Inc. I have work 4 years
         in the Cavintek. 2017 Oct I switch over Zoho Corp as a Web Developer currently work there.I have knowledge of
-        both Designing Tools
-        and Coding.</p>
+        both Designing Tools and Coding.</p>
 
-      <p>With close to <span id="exp"></span> years of experience as a Designer and Developer, my role is to build scalable and user friendly
+      <p>With close to <span id="exp"></span> years of experience as a Designer and Developer, my role is to build
+        scalable and user friendly
         applications.</p>
 
       <p>Create 500+ Icon available on iconshopping.com. And write 500+ blog post about internet latest technology.</p>
@@ -80,12 +80,27 @@
           <span class="count">8</span>
         </div>
         <div class="skillbar">
+          <span class="label">ReactJS</span>
+          <span class="bar"></span>
+          <span class="count">7</span>
+        </div>
+        <div class="skillbar">
+          <span class="label">Java</span>
+          <span class="bar"></span>
+          <span class="count">5</span>
+        </div>
+        <div class="skillbar">
           <span class="label">Photoshop</span>
           <span class="bar"></span>
           <span class="count">7</span>
         </div>
         <div class="skillbar">
           <span class="label">Illustrator</span>
+          <span class="bar"></span>
+          <span class="count">7</span>
+        </div>
+        <div class="skillbar">
+          <span class="label">Premiere Pro</span>
           <span class="bar"></span>
           <span class="count">7</span>
         </div>
@@ -113,11 +128,10 @@
           <h5>Jun 2010 to May 2013</h5>
           <p>I did Undergraduate in Bachelor of Engineering in Computer Science Stream. This will be four-year course
             but I did Diploma in before it will three years for me.</p>
-          <h4>The SCSM Polytechnic College</h4>
+          <h4>The Government Polytechnic College. [Alias] The SCSM Polytechnic College </h4>
           <h5>Oct 2007 to 2010</h5>
           <p>After completed Schooling, I do Diploma in Computer Engineering. This will be three years course. In this
             will Basic of Engineering and Full of Computer Science.</p>
-
         </div>
       </div>
     </div>
@@ -159,7 +173,6 @@
       <div class="contactinfo">
         <h3>Phone</h3>
         <p>+91 99 6564 4742</p>
-        <p>gokulsky.tv (Skype ID)</p>
       </div>
 
       <div class="contactinfo">
@@ -182,17 +195,18 @@
   <div id="footerbar"></div>
   <script>
     function getExperYear(inputDate) {
-        var today = new Date();
-        var joinDate = new Date(inputDate);
-        var age = today.getFullYear() - joinDate.getFullYear();
-        var m = today.getMonth() - joinDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < joinDate.getDate())) {
-            age--;
-        }
-        return age;
+      var today = new Date();
+      var joinDate = new Date(inputDate);
+      var age = today.getFullYear() - joinDate.getFullYear();
+      var m = today.getMonth() - joinDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < joinDate.getDate())) {
+        age--;
+      }
+      return age;
     }
     const showDate = getExperYear("2013/11/18");
     document.getElementById('exp').innerHTML = showDate;
-</script>
+  </script>
 </body>
+
 </html>
