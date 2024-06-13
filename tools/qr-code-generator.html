@@ -39,7 +39,8 @@
         <div class='row mt20'>
           <div class='col-lg-12 mt30 breadcrum'>
             <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
-              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>QR Code Generator</span>
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>QR Code
+              Generator</span>
           </div>
         </div>
       </div>
@@ -49,14 +50,22 @@
         <div class='row mt20'>
           <div class='col-lg-12'>
             <div class='txtcontent'>
-              <p> A QR Code Generator is a tool that creates QR (Quick Response) codes, which are two-dimensional barcodes that can store data such as URLs, text, contact information, and more. These codes can be scanned using a smartphone or QR code reader to quickly access the encoded information.</p>
+              <p> A QR Code Generator is a tool that creates QR (Quick Response) codes, which are two-dimensional
+                barcodes that can store data such as URLs, text, contact information, and more. These codes can be
+                scanned using a smartphone or QR code reader to quickly access the encoded information.</p>
             </div>
             <div class="labtool">
               <div class="labtoolfield"><input type="text" id="text" placeholder="Type word to create qr code"
                   autofocus></div>
               <div class="labtoolfield"><button class="submit" type="button" value="Generate Link"
                   onclick="generateQRCode()">Generate
-                  QR Code</button><button class="reset" type="reset" value="Clear" onclick="clearQRCode()">Reset</button></div>
+                  QR Code</button><button class="reset" type="reset" value="Clear"
+                  onclick="clearQRCode()">Reset</button>
+              </div>
+            </div>
+            <div class="qrcode" id="qrcodeout">
+              <button class="reset" type="button" onclick="downloadQRCode()"><i
+                  class='gwicon-download'></i></button>
               <div id="qrcode"></div>
             </div>
           </div>

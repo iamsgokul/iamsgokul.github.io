@@ -3650,6 +3650,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-upload:before {
+  content: "\e947";
+}
+
+.gwicon-download:before {
+  content: "\e948";
+}
+
 .gwicon-emi:before {
   content: "\e946";
 }
@@ -7006,7 +7014,7 @@ textarea {
 
 .calout {
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 5px;
   display: none;
   padding: 12px 15px;
   float: left;

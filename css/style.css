@@ -73,6 +73,35 @@ input[type=number] {
   font-weight: 600 !important;
 }
 
+.dbnone,
+#downloadButton {
+  display: none;
+}
+
+.qrcode {
+  border-radius: 5px;
+  padding: 15px;
+  float: left;
+  background: #fff;
+  position: relative;
+  display: none;
+}
+.qrcode button {
+  border: none;
+  position: absolute;
+  background-color: #ffffff;
+  top: 10px;
+  right: 10px;
+  box-shadow: 2px 2px 6px 2px #ddd;
+  height: 30px;
+  width: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "object_sans";
   src: url("../fonts/objectsans-heavyslanted.woff2") format("woff2"), url("../fonts/objectsans-heavyslanted.woff") format("woff");
@@ -3724,6 +3753,14 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-upload:before {
+  content: "\e947";
+}
+
+.gwicon-download:before {
+  content: "\e948";
+}
+
 .gwicon-emi:before {
   content: "\e946";
 }
@@ -7080,7 +7117,7 @@ textarea {
 
 .calout {
   background-color: #ffffff;
-  border-radius: 15px;
+  border-radius: 5px;
   display: none;
   padding: 12px 15px;
   float: left;

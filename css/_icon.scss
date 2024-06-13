@@ -26,6 +26,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-upload:before {
+  content: "\e947";
+}
+
+.gwicon-download:before {
+  content: "\e948";
+}
+
 .gwicon-emi:before {
   content: "\e946";
 }
