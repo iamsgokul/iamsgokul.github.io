@@ -57,42 +57,27 @@
                 reduce the average stock price by buying more stocks but you need to calculate how many stocks you need
                 to buy to make the average closer to the current price. </p>
             </div>
-
-
-            <div class="calout mb20">
-              <div class="calfld">
-                <p>Total Investment 1st Buy <span id="oldinv"></span></p>
+            <div class="labtool mb20">
+              <div class="labtoolfield" id="inputs">
+                <div class="fieldrows">
+                  <input type="number" placeholder="Price" class="col-lg-3 col-sm-12 price">
+                  <input type="number" placeholder="Quantity" class="col-lg-3 col-sm-12 quantity">
+                  <button class="delete-btn ml10" style="display: none;" onclick="deleteInput(this)">Delete</button>
+                  <button class="btn ml10" onclick="addInput()">Add Another Buy</button>
+                </div>
               </div>
-
-              <div class="calfld">
-                <p>Total Investment 2nd Buy <span id="newinv"></span></p>
-              </div>
-              <div class="calfld">
-                <p>Your total quantity is <span id="totalQat"></span> at average price of <span id="avgPric"></span> and
-                  with total investment of <span id="totalAmt"></span></p>
+              <div class="labtoolfield">
+                <input class="submit" type="button" value="Calculate Stock Average" onclick="calculateAverage()">
+                <input class="reset" type="reset" value="Clear Value" onclick="clearAll()">
               </div>
             </div>
-
-
-            <form action="">
-              <div class="labtool mb20">
-                <div class="labtoolfield"><input type="number" id="cquantity" size="20" placeholder="Current Quantity">
-                </div>
-                <div class="labtoolfield"><input type="number" id="cprice" size="20"
-                    placeholder="Current Average Price (₹)"></div>
+            <div class="calout mb25">
+              <div class="calfld">
+                <p>Average Stock Price: ₹ <span id="avgprice"></span></p>
+                <p>Total Cost Spend: ₹ <span id="totalcost"></span></p>
+                <p>Total Stock Quantity: <span id="totalqt"></span></p>
               </div>
-
-              <div class="labtool mb25">
-                <div class="labtoolfield"><input type="number" id="nquantity" size="20" placeholder="New Quantity">
-                </div>
-                <div class="labtoolfield"><input type="number" id="nprice" size="20" placeholder="New Price (₹)">
-                </div>
-              </div>
-
-              <div class="labtoolfield"><input class="submit" type="button" value="Calculate Stock Average"
-                  onClick="calculator()"><input class="reset" type="reset" value="Clear Value" onClick="clearFld()">
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +85,7 @@
   </main>
   <div id='watchread'></div>
   <div id='footerbar'></div>
-  <script src='../js/jas.js'></script>
+  <script src='../js/avg-stock.js'></script>
 </body>
 
 </html>

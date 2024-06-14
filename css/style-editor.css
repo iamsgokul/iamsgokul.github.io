@@ -4177,11 +4177,11 @@ html {
 }
 
 .ml5 {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 
 .ml10 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .ml15 {
@@ -6760,7 +6760,7 @@ textarea {
 .labtoolfield input[type=reset],
 .labtoolfield a {
   border: 0;
-  padding: 10px 20px;
+  padding: 8.25px 20px;
   margin: 10px 10px 10px 0;
   border-radius: 2px;
   font-size: 16px;
