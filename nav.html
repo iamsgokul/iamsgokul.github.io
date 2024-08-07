@@ -5,10 +5,10 @@
   <nav>
     <a href="javascript:void(0)"><i class="gwicon-menu"></i></a>
     <ul class="topmenu">
-      <li><a href='https://www.gokul.work'>Home</a></li>
-      <li><a href='https://www.gokul.work/search'>Search</a></li>
-      <li><a href='https://www.gokul.work/tools'>Tools</a></li>
-      <li><a href='https://www.gokul.work/profile'>Profile</a></li>
+      <li id="nav-home"><a href='https://www.gokul.work'>Home</a></li>
+      <li id="nav-search"><a href='https://www.gokul.work/search'>Search</a></li>
+      <li id="nav-tools"><a href='https://www.gokul.work/tools'>Tools</a></li>
+      <li id="nav-profile"><a href='https://www.gokul.work/profile'>Profile</a></li>
     </ul>
   </nav>
 </header>
@@ -17,4 +17,27 @@
   menuopen.addEventListener('click', function () {
     document.querySelector('.topmenu').classList.toggle('open');
   })
+
+  function setActiveNavLink() {
+    const currentUrl = window.location.href;
+    const navLinks = document.querySelectorAll('.topmenu a');
+
+    navLinks.forEach(link => {
+      if (link.href === currentUrl) {
+        link.parentElement.classList.add('active');
+      } else {
+        link.parentElement.classList.remove('active');
+      }
+    });
+  }
+
+  // Call the function on page load
+  setActiveNavLink();
 </script>
+
+<style>
+  .topmenu .active {
+    font-weight: bold;
+    /* Add any other styles for the active state here */
+  }
+</style>
