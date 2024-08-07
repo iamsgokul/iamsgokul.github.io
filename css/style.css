@@ -4482,6 +4482,7 @@ header nav ul li a {
   text-decoration: none;
   font-weight: 400;
   padding: 20px 10px;
+  display: block;
 }
 header nav ul li a i {
   font-size: 18px;
