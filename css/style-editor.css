@@ -4369,10 +4369,9 @@ header nav ul {
   float: left;
 }
 header nav ul li {
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 10px;
   display: inline-block;
+  position: relative;
 }
 header nav ul li a {
   line-height: 23px;
@@ -4385,6 +4384,19 @@ header nav ul li a i {
   font-size: 18px;
   position: relative;
   top: 2px;
+}
+header nav ul li.active {
+  background-color: #f2edff;
+}
+header nav ul li.active:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  background-color: #352a52;
 }
 
 main {
