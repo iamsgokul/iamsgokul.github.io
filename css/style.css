@@ -4472,7 +4472,6 @@ header nav ul {
   float: left;
 }
 header nav ul li {
-  padding: 20px 10px;
   display: inline-block;
   position: relative;
 }
@@ -4482,6 +4481,7 @@ header nav ul li a {
   color: #000;
   text-decoration: none;
   font-weight: 400;
+  padding: 20px 10px;
 }
 header nav ul li a i {
   font-size: 18px;
