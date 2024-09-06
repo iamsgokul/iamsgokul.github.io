@@ -4319,6 +4319,23 @@ footer .fmenu li a {
   font-size: 12px;
 }
 
+.search-head {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 10px 15px;
+}
+.search-head ul {
+  display: flex;
+}
+.search-head ul a {
+  text-decoration: none;
+  padding: 15px 10px;
+  color: inherit;
+  display: block;
+  font-size: 14px;
+}
+
 html,
 body {
   height: 100%;
@@ -6576,7 +6593,7 @@ textarea {
   text-align: center;
 }
 .srchboxcnt .srchlogo img {
-  width: 100px;
+  width: 200px;
   margin: 0 auto;
 }
 .srchboxcnt .srchlogo h1 {
@@ -6590,8 +6607,8 @@ textarea {
 }
 .srchboxcnt .srchbox input {
   width: 100%;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 15px;
+  border-radius: 10px;
   border: 1px solid #dddddd;
   margin: 4% 0;
   font-size: 16px;
