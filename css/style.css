@@ -106,6 +106,10 @@ input[type=number] {
   cursor: pointer;
 }
 
+.gsc-resultsbox-visible {
+  font-family: "Poppins" system-ui;
+}
+
 /* latin-ext */
 @font-face {
   font-family: "Poppins";
@@ -6871,6 +6875,7 @@ textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  font-family: "Poppins", system-ui;
 }
 
 .srchresult {
