@@ -106,7 +106,7 @@ input[type=number] {
   cursor: pointer;
 }
 
-.gsc-resultsbox-visible {
+.gsc-resultsbox-visible, input.gsc-input {
   font-family: "Poppins" system-ui;
 }
 
