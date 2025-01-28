@@ -9,6 +9,7 @@
   <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
   <script src='../js/jquery.min.js'></script>
   <script src='../js/app.js'></script>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
   <script>
@@ -22,26 +23,6 @@
     body {
       margin: 0;
       padding: 0
-    }
-
-    .editor {
-      width: 100%;
-      height: 300px;
-      border: 1px solid #dddddd;
-      outline: none;
-      float: left;
-      overflow-y: auto;
-    }
-
-    .showHtml {
-      margin-top: 20px;
-      width: 100%;
-      height: 300px;
-      border: 1px solid #dddddd;
-      outline: none;
-      float: left;
-      display: none;
-      overflow-y: auto;
     }
 
     .toptil h1 {
@@ -89,93 +70,34 @@
                 editing you can generate the HTML raw code by clicking the button given below..</p>
               <p>You can create the HTML code by below HTML Editor Tool.</p>
             </div>
-            <script>
-              function fonthead(formatBlock) {
-                document.execCommand("formatBlock", false, formatBlock);
-              }
-
-              function fontEditor(fontName) {
-                document.execCommand("fontName", false, fontName);
-              }
-
-              function fontSize(fontSize) {
-                document.execCommand("fontSize", false, fontSize);
-              }
-
-              function link() {
-                var url = prompt("Enter the URL");
-                document.execCommand("createLink", false, url);
-              }
-            </script>
             <div class="labtool">
               <div class='toolbar'>
-                <button onclick="document.execCommand('bold', false, 'b');"><i class='gwicon-format-bold'></i></button>
-                <button onclick="document.execCommand('underline', false, 'u');"><i
-                    class='gwicon-format-underline'></i></button>
-                <button onclick="document.execCommand('italic', false, 'i');"><i
-                    class='gwicon-format-italic'></i></button>
-                <button onclick="document.execCommand('formatBlock', false, 'p')"><i
-                    class='gwicon-format-paragraph'></i></button>
-                <!-- <button onclick="document.execCommand('formatBlock', false, 'pre')"><i class=''></i></button> -->
-                <div class='select hed'>
-                  <select onchange="fonthead(this[this.selectedIndex].value)">
-                    <option selected>Heading</option>
-                    <option value="h1">H1</option>
-                    <option value="h2">H2</option>
-                    <option value="h3">H3</option>
-                    <option value="h4">H4</option>
-                    <option value="h5">H5</option>
-                    <option value="h6">H6</option>
-                  </select>
+                <button onclick="formatter.format('h1')">H1</button>
+                <button onclick="formatter.format('h2')">H2</button>
+                <button onclick="formatter.format('h3')">H3</button>
+                <button onclick="formatter.format('h4')">H4</button>
+                <button onclick="formatter.format('h5')">H5</button>
+                <button onclick="formatter.format('h6')">H6</button>
+                <button onclick="formatter.format('b')"><i class="gwicon-format-bold"></i></button>
+                <button onclick="formatter.format('u')"><i class="gwicon-format-underline"></i></button>
+                <button onclick="formatter.format('p')"><i class="gwicon-format-paragraph"></i></button>
+                <button onclick="formatter.format('ul')">ul</button>
+                <button onclick="formatter.format('ol')">ol</button>
+                <button onclick="formatter.format('li')">li</button>
+                <button onclick="formatter.format('a')"><i class="gwicon-link"></i></button>
+                <button onclick="formatter.undo()"><i class="gwicon-undo"></i></button>
+                <button onclick="formatter.redo()"><i class="gwicon-redo"></i></button>
+              </div>
+              <div class="editor-container">
+                <div class="editor-section">
+                  <h3>Editor</h3>
+                  <textarea id="editor" placeholder="Type or paste your text here..."></textarea>
                 </div>
-                <div class='select fmly'>
-                  <select onchange="fontEditor(this[this.selectedIndex].value)">
-                    <option selected>Font Family</option>
-                    <option value="Arial">Arial</option>
-                    <option value="Calibri">Calibri</option>
-                    <option value="Comic Sans MS">Comic Sans MS</option>
-                    <option value='Georgia'>Georgia</option>
-                    <option value="Monospace">monospace</option>
-                    <option value="Impact">Impact</option>
-                  </select>
-                </div>
-                <div class='select fmly'>
-                  <select onchange="fontSize(this[this.selectedIndex].value)">
-                    <option selected>Font Size</option>
-                    <option value="1">Very small</option>
-                    <option value="2">A bit small</option>
-                    <option value="3">Normal</option>
-                    <option value="4">Medium-large</option>
-                    <option value="5">Big</option>
-                    <option value="6">Very big</option>
-                    <option value="7">Maximum</option>
-                  </select>
-                </div>
-                <button onclick="document.execCommand('justifyCenter', false, '');"><i
-                    class='gwicon-format-align-center'></i></button>
-                <button onclick="document.execCommand('justifyLeft', false, '');"><i
-                    class='gwicon-format-align-left'></i></button>
-                <button onclick="document.execCommand('justifyRight', false, '');"><i
-                    class='gwicon-format-align-right'></i></button>
-                <button onclick="document.execCommand('justifyFull', false, '');"><i
-                    class='gwicon-format-align-justify'></i></button>
-                <input class="tool-items" type="file" accept="image/*" id="file" style="display: none;"
-                  onchange="getImage()">
 
-                <label for="file" class="tool-items"><i class='gwicon-image'></i></label>
-                <button onclick="link()"><i class='gwicon-link'></i></button>
-                <button onclick="document.execCommand('undo', false, '');"><i class='gwicon-undo'></i></button>
-                <button onclick="document.execCommand('redo', false, '');"><i class='gwicon-redo'></i></button>
-                <button onclick="document.execCommand('copy', false, '');"><i class='gwicon-content-copy'></i></button>
-                <button onclick="document.execCommand('cut', false, '');"><i class='gwicon-content-cut'></i></button>
-                <button onclick="document.execCommand('removeFormat', false, '');"><i
-                    class='gwicon-format-clear'></i></button>
-                <button class="gethtml"><i class='gwicon-code-tags'></i></button>
-                <button class="print" onclick="printContent()"><i class='gwicon-printer'></i></button>
-              </div>
-              <div class='editor' contenteditable>
-              </div>
-              <div class="showHtml">
+                <div class="editor-section">
+                  <h3>Preview</h3>
+                  <div id="preview"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -185,49 +107,10 @@
   </main>
   <div id='watchread'></div>
   <div id='footerbar'></div>
-  <script src='../js/jas.js'></script>
-  <script>
-    var btn = document.querySelector(".gethtml");
-    var rawhtml = document.querySelector(".showHtml");
-    var editorBox = document.querySelector(".editor");
-    btn.addEventListener("click", function () {
-      var source = editorBox.innerHTML;
-      rawhtml.style.display = "block";
-      rawhtml.textContent = source;
-    });
-    function getImage() {
-      var file = document.querySelector("input[type=file]").files[0];
-      var reader = new FileReader();
-      let dataURI;
-      reader.addEventListener(
-        "load",
-        function () {
-          dataURI = reader.result;
-          const img = document.createElement("img");
-          img.src = dataURI;
-          editorBox.appendChild(img);
-        },
-        false
-      );
-      if (file) {
-        console.log("s");
-        reader.readAsDataURL(file);
-      }
-    }
-    function printContent() {
-      if (confirm("Check your Content before print")) {
-        const body = document.body;
-        let source = body.innerHTML;
-        body.textContent = editorBox.innerHTML;
+  <!-- <script src='../js/jas.js'></script> -->
+  <script src="../js/htmlformat.js"></script>
 
-        document.execCommandShowHelp;
-        body.style.whiteSpace = "pre";
-        window.print();
-        location.reload();
-      }
-    }
-  </script>
-  
+
 </body>
 
 </html>

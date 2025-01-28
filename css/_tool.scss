@@ -438,6 +438,51 @@
   }
 }
 
+.editor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+
+  .editor-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    #preview {
+      width: 100%;
+      height: 400px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      overflow-y: auto;
+      background: #fff;
+    }
+
+    textarea {
+      width: 100%;
+      height: 400px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 14px;
+      resize: vertical;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .editor-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 .calout {
   background-color: #ffffff;
   border-radius: 5px;
