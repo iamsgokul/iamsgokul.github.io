@@ -6951,6 +6951,38 @@ textarea {
   color: #ffffff;
 }
 
+.image64show {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.image64show img {
+  width: 100%;
+}
+.image64show a {
+  border: 0;
+  padding: 8.25px 20px;
+  margin: 10px 10px 10px 0;
+  border-radius: 2px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  right: 0;
+  background: #fff;
+  color: #000000;
+  text-decoration: none;
+  box-shadow: 0px 0px 3px 2px rgba(155, 151, 151, 0.5490196078);
+}
+.image64show a:hover {
+  background-color: #f2f2f2;
+  box-shadow: none;
+}
+
 .labtoolfield {
   position: relative;
   width: 100%;

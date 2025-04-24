@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base64 to Image Decoder - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner gentit'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Base64 to Image Decoder </h1>
+            <p>Convert Base64 to PNG, Jpeg, SVG image online.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Base64 to Image
+              Decoder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>This tool allows you to decode a Base64-encoded image and display it directly in your browser. Simply
+                paste your Base64 string—either with or without the data:image/...;base64, prefix—into the input box and
+                click "Decode and Display Image".</p>
+
+              <p>If the input is valid, the image will be rendered below along with a download link so you can save the
+                image to your device. You can also use the "Clear" button to reset the input and output areas.</p>
+            </div>
+
+
+            <div class="labtool">
+              <div class="labtoolfield">
+                <textarea id="base64Input"
+                  placeholder="e.g., data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..."></textarea>
+              </div>
+              <div class="labtoolfield">
+                <button onclick="decodeImage()" class="submit">Decode and Display Image</button>
+                <button onclick="clearFields()" class="rest">Clear</button>
+              </div>
+
+              <div id="imageOutput" class="image64show"></div>
+            </div>
+
+            <div id="results"></div>
+            <script>
+              function decodeImage() {
+                const input = document.getElementById('base64Input').value.trim();
+                const output = document.getElementById('imageOutput');
+                output.innerHTML = '';
+
+                if (!input) return;
+
+                let dataURI = input;
+
+                // If it doesn't start with "data:", assume it's PNG and wrap
+                if (!dataURI.startsWith('data:')) {
+                  dataURI = 'data:image/png;base64,' + dataURI;
+                }
+
+                const match = dataURI.match(/^data:(image\/[a-zA-Z+]+);base64,/);
+                const mimeType = match ? match[1] : 'image/png';
+                const ext = mimeType.split('/')[1];
+
+                const img = document.createElement('img');
+                img.src = dataURI;
+
+                const downloadLink = document.createElement('a');
+                downloadLink.href = dataURI;
+                downloadLink.download = `decoded-image.${ext}`;
+                downloadLink.textContent = 'Download Image';
+                downloadLink.className = 'download-link';
+
+                img.onerror = () => {
+                  output.textContent = "Invalid or corrupted Base64 image string.";
+                };
+
+                output.appendChild(img);
+                output.appendChild(downloadLink);
+              }
+
+              function clearFields() {
+                document.getElementById('base64Input').value = '';
+                document.getElementById('imageOutput').innerHTML = '';
+              }
+            </script>
+            <style>
+
+            </style>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/jas.js'></script>
+
+</body>
+
+</html>
