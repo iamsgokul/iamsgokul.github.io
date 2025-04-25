@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Interest Calculator - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/sic.js"></script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner mnybg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Simple Interest Calculator</h1>
+            <p>Simple Interest Calculator quickly calculates interest and total amount</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Simple Interest
+              Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>A Simple Interest Calculator is a tool that helps you calculate the interest earned or paid on a
+                principal amount over a period of time at a fixed interest rate.</p>
+              <p> This calculator quickly determines how much interest you'll gain (or owe) and shows the total amount
+                at the end of the term.</p>
+            </div>
+
+
+            <form id="rdForm">
+              <div class="labtool mb20">
+                <div class="labtoolfield">
+                  <input type="number" id="principal" required placeholder="Enter principal amount">
+                </div>
+                <div class="labtoolfield mb10">
+                  <input type="number" id="rate" required placeholder="Enter interest rate">
+                </div>
+                <div class="labtoolfield mb20">
+                  <input type="number" id="time" placeholder="Enter time">
+                </div>
+
+                <div class="labtoolfield">
+                  <input class="submit" type="button" onclick="calculateSimpleInterest()" value="Calculate" />
+                  <input class="reset" type="reset" value="Clear" onclick="clearFld()">
+                </div>
+
+              </div>
+            </form>
+            <div class="calout mb15">
+              <div class="calfld">
+                <p>Principle Amount: ₹ <span id="principle"></span></p>
+                <p>Interest Amount: ₹ <span id="interest"></span></p>
+                <p>Total Amount: ₹ <span id="total"></span></p>
+              </div>
+            </div>
+
+            <canvas class="chartbox" id="interestChart"></canvas>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+</body>
+
+</html>

@@ -7195,6 +7195,7 @@ textarea {
   float: left;
   border-radius: 12x;
   background-color: #ffffff;
+  display: none;
 }
 .chartbox.open {
   height: 300px;
