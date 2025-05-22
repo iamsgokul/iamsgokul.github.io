@@ -49,6 +49,15 @@ input[type="number"] {
   }
 }
 
-.gsc-resultsbox-visible, input.gsc-input{
-  font-family: 'Poppins', system-ui;
+.gsc-resultsbox-visible,
+input.gsc-input {
+  font-family: "Poppins", system-ui;
+}
+
+.bgwhite {
+  background-color: #fff !important;
+}
+
+.pt {
+  padding-top: 20px;
 }

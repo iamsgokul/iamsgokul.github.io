@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutual Fund Returns Calculator - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/mf.js"></script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner mnybg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Mutual Fund Returns Calculator</h1>
+            <p>Estimates future value of mutual fund investments based on amount, duration, and expected returns.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Mutual Fund
+              Returns Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>A Mutual Fund Returns Calculator is a tool that helps investors estimate the returns on their mutual
+                fund investments over a specific period. By entering details like investment amount, duration, and
+                expected rate of return, users can calculate the future value of their investment. It’s useful for
+                comparing different funds and planning financial goals.</p>
+            </div>
+
+            <div class="col-lg-12 left bgwhite pt">
+              <div class="row">
+                <div class="col-lg-12 left" id="mfcalcform">
+                  <form id="rdForm">
+                    <div class="labtool mb20">
+                      <div class="labtoolfield mb10 select">
+                        <span>Investment Type:</span>
+                        <select id="investmentType">
+                          <option value="sip">SIP (Monthly Investment)</option>
+                          <option value="lumpSum">Lump Sum</option>
+                        </select>
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <span>Investment Amount (₹):</span>
+                        <input type="number" id="amount" min="1" required placeholder="Enter Investment amount">
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <span>Investment Period (Years):</span>
+                        <input type="number" id="years" min="1" required placeholder="Enter Investment Period (Years)">
+                      </div>
+                      <div class="labtoolfield mb20">
+                        <span>Expected Annual Return (%):</span>
+                        <input type="number" id="rate" step="0.01" min="0" required
+                          placeholder="Enter Return rate (p/a)">
+                      </div>
+
+                      <div class="labtoolfield">
+                        <input class="submit" type="button" onclick="calculateReturns()" value="Calculate" />
+                        <input class="reset" type="reset" value="Clear" onclick="clearFld()">
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="calout mb15">
+                    <div class="calfld">
+                      <p>Total Invested: ₹ <span id="totalInvested"></span></p>
+                      <p>Future Value: ₹ <span id="futureValue"></span></p>
+                      <p>Total Gain: ₹ <span id="gain"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 left" id="mfchart">
+                  <canvas id="mutualFundChart" class="chartbox"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="result"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+</body>
+
+</html>
