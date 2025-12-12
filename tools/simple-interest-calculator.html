@@ -57,37 +57,43 @@
                 at the end of the term.</p>
             </div>
 
+            <div class="col-lg-12 left bgwhite pt">
+              <div class="row">
+                <div class="col-lg-12 left" id="siccalcform">
+                  <form id="rdForm">
+                    <div class="labtool mb20">
+                      <div class="labtoolfield mb10">
+                        <input type="number" id="principal" required placeholder="Enter principal amount">
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <input type="number" id="rate" required placeholder="Enter interest rate">
+                      </div>
+                      <div class="labtoolfield mb20">
+                        <input type="number" id="time" placeholder="Enter number of year">
+                      </div>
 
-            <form id="rdForm">
-              <div class="labtool mb20">
-                <div class="labtoolfield mb10">
-                  <input type="number" id="principal" required placeholder="Enter principal amount">
-                </div>
-                <div class="labtoolfield mb10">
-                  <input type="number" id="rate" required placeholder="Enter interest rate">
-                </div>
-                <div class="labtoolfield mb20">
-                  <input type="number" id="time" placeholder="Enter number of year">
-                </div>
+                      <div class="labtoolfield">
+                        <input class="submit" type="button" onclick="calculateSimpleInterest()" value="Calculate" />
+                        <input class="reset" type="reset" value="Clear" onclick="clearFld()">
+                      </div>
 
-                <div class="labtoolfield">
-                  <input class="submit" type="button" onclick="calculateSimpleInterest()" value="Calculate" />
-                  <input class="reset" type="reset" value="Clear" onclick="clearFld()">
+                    </div>
+                  </form>
+                  <div class="calout mb15">
+                    <div class="calfld">
+                      <p>Principle Amount: ₹ <span id="resPrinciple"></span></p>
+                      <p>Interest Amount: ₹ <span id="resInterest"></span></p>
+                      <p>Total Amount: ₹ <span id="resTotal"></span></p>
+                    </div>
+                  </div>
                 </div>
-
-              </div>
-            </form>
-            <div class="calout mb15">
-              <div class="calfld">
-                <p>Principle Amount: ₹ <span id="principle"></span></p>
-                <p>Interest Amount: ₹ <span id="interest"></span></p>
-                <p>Total Amount: ₹ <span id="total"></span></p>
+                <div class="col-lg-4 left" id="sicchart">
+                  <canvas class="chartbox" id="interestChart"></canvas>
+                </div>
               </div>
             </div>
-
-            <canvas class="chartbox" id="interestChart"></canvas>
-
           </div>
+          <div id="result"></div>
         </div>
       </div>
     </section>
