@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Loan EMI Calculator - House EMI Calculator - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/home-emi.js"></script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner mnybg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Home Loan EMI Calculator</h1>
+            <p>Calculate your home loan EMI with detailed amortization schedule and total cost analysis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Home Loan EMI
+              Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>A Home Loan EMI (Equated Monthly Installment) calculator helps you determine the monthly payment for your home loan. Whether you're buying your first home or investing in real estate, this calculator provides comprehensive insights into your mortgage payments and total cost of ownership.</p>
+              <p>Home loans typically range from 10-30 years with competitive interest rates. The longer tenure helps reduce your monthly EMI but increases the total interest paid. Use this calculator to find the optimal balance between EMI amount and loan tenure for your home purchase.</p>
+            </div>
+
+            <div class="col-lg-12 left bgwhite pt">
+              <div class="row">
+                <div class="col-lg-12 left" id="homeemicalcform">
+                  <form id="homeEmiForm">
+                    <div class="labtool mb20">
+                      <div class="labtoolfield mb10">
+                        <label for="homePrice"><span>Home price (₹):</span></label>
+                        <input type="number" id="homePrice" required placeholder="Enter home price" min="500000" value="5000000">
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <label for="homeDownPayment"><span>Down payment (₹):</span></label>
+                        <input type="number" id="homeDownPayment" required placeholder="Enter down payment" min="0" value="1000000">
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <label for="homeRate"><span>Interest rate (p.a) (%):</span></label>
+                        <input type="number" id="homeRate" step="0.1" required placeholder="Enter annual interest rate (%)" value="7.5">
+                      </div>
+                      <div class="labtoolfield mb20">
+                        <label for="homeTenure"><span>Loan tenure (Years):</span></label>
+                        <input type="number" id="homeTenure" required placeholder="Enter loan tenure in years" min="5" max="30" value="20">
+                      </div>
+
+                      <div class="labtoolfield">
+                        <input class="submit" type="button" onclick="calculateHomeEMI()" value="Calculate Home EMI" />
+                        <input class="reset" type="reset" value="Clear" onclick="clearHomeFld()">
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="calout mb15">
+                    <div class="calfld">
+                      <p>Loan amount: ₹ <span id="homeLoanAmount"></span></p>
+                      <p>Monthly EMI: ₹ <span id="homeEmiAmt"></span></p>
+                      <p>Total amount payable: ₹ <span id="homeTotalAmount"></span></p>
+                      <p>Total interest payable: ₹ <span id="homeInterestAmt"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 left" id="homeemichart">
+                  <canvas class="chartbox" id="homeEmiChart"></canvas>
+                </div>
+              </div>
+              <div class="txtcontent" id="home-detail-result"></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+</body>
+
+</html>
