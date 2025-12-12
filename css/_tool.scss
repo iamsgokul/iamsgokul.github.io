@@ -335,7 +335,6 @@
   position: relative;
   width: 22px;
   height: 22px;
-  display: inline-block;
   float: left;
 }
 
@@ -393,7 +392,6 @@
   color: #333333;
   float: left;
   margin: 3px 20px 3px 5px;
-  display: inline-block;
 }
 
 .toolbar {
@@ -529,18 +527,85 @@
 
   .calfld {
     width: 100%;
-    padding: 5px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
     p {
-      font-weight: 400;
-      font-size: 14px;
-      color: #3e3e3e;
-      margin: 10px 0;
+      font-weight: 500;
+      font-size: 15px;
+      color: #495057;
+      margin: 0;
+      padding: 12px 15px;
+      background: #ffffff;
+      border-radius: 6px;
+      border-left: 4px solid #583692;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       span {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 18px;
+        font-weight: 700;
         color: #583692;
       }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding: 15px;
+      gap: 10px;
+    }
+  }
+}
+
+.purchase-summary {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e9ecef;
+
+  h3 {
+    color: #583692;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #583692;
+    padding-bottom: 8px;
+  }
+
+  p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    padding: 10px 15px;
+    background: #ffffff;
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-size: 15px;
+    color: #495057;
+
+    strong {
+      font-weight: 500;
+      color: #343a40;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;
+
+    p {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
     }
   }
 }
