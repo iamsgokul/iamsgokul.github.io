@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPS Calculator - National Pension Scheme - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/nps.js"></script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner mnybg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>NPS Calculator</h1>
+            <p>National Pension Scheme (NPS) Calculator helps calculate retirement corpus and pension amount</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>NPS
+              Calculator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>The National Pension Scheme (NPS) is a voluntary retirement savings scheme designed to enable systematic savings during the working life of subscribers. NPS provides an opportunity to invest in a diversified portfolio of government bonds, corporate bonds, and equities based on the subscriber's risk appetite.</p>
+              <p>At retirement (age 60), you can withdraw up to 60% of the corpus as a lump sum, and the remaining 40% must be used to purchase an annuity that provides regular pension payments.</p>
+            </div>
+
+            <div class="col-lg-12 left bgwhite pt">
+              <div class="row">
+                <div class="col-lg-12 left" id="npscalcform">
+                  <form id="npsForm">
+                    <div class="labtool mb20">
+                      <div class="labtoolfield mb10">
+                        <label for="monthlyInvestment"><span>Investment per month (₹):</span></label>
+                        <input type="number" id="monthlyInvestment" required placeholder="Enter monthly investment amount" min="500" value="10000">
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <label for="expectedReturn"><span>Expected return (p.a) (%):</span></label>
+                        <input type="number" id="expectedReturn" step="0.1" required placeholder="Enter expected annual return (%)" value="9">
+                      </div>
+                      <div class="labtoolfield mb20">
+                        <label for="currentAge"><span>Your age (Years):</span></label>
+                        <input type="number" id="currentAge" required placeholder="Enter your current age" min="18" max="60" value="20">
+                      </div>
+
+                      <div class="labtoolfield">
+                        <input class="submit" type="button" onclick="calculateNPS()" value="Calculate" />
+                        <input class="reset" type="reset" value="Clear" onclick="clearFld()">
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="calout mb15">
+                    <div class="calfld">
+                      <p>Total investment: ₹ <span id="resTotalInvestment"></span></p>
+                      <p>Interest earned: ₹ <span id="resInterestEarned"></span></p>
+                      <p>Maturity amount: ₹ <span id="resMaturityAmount"></span></p>
+                      <p>Min. annuity investment: ₹ <span id="resAnnuityAmount"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 left" id="npschart">
+                  <canvas class="chartbox" id="npsChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+</body>
+
+</html>
