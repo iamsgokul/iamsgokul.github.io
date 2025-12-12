@@ -17,7 +17,7 @@
     gtag('js', new Date());
     gtag('config', 'G-SQHDPT3FW1');
   </script>
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/fd.js"></script>
 </head>
 
@@ -60,46 +60,53 @@
             </div>
 
 
-            <form id="rdForm">
-              <div class="labtool mb20">
-                <div class="labtoolfield">
-                  <input type="number" id="principalAmount" name="input" placeholder="Monthly Deposit Amount">
+            <div class="col-lg-12 left bgwhite pt">
+              <div class="row">
+                <div class="col-lg-12 left" id="fdcalcform">
+                  <form id="rdForm">
+                    <div class="labtool mb20">
+                      <div class="labtoolfield mb10">
+                        <input type="number" id="principalAmount" required placeholder="Enter principal amount">
+                      </div>
+                      <div class="labtoolfield mb10">
+                        <input type="number" id="interestRate" step="0.01" required placeholder="Enter annual interest rate (%)">
+                      </div>
+
+                      <div class="labtoolfield mb20">
+                        <input type="radio" id="yearsRadio" name="durationType" value="years" checked>
+                        <label for="yearsRadio">Years</label>
+
+                        <input type="radio" id="monthsRadio" name="durationType" value="months">
+                        <label for="monthsRadio">Months</label>
+
+                        <input type="radio" id="daysRadio" name="durationType" value="days">
+                        <label for="daysRadio">Days</label>
+                      </div>
+
+                      <div class="labtoolfield mb20">
+                        <input type="number" id="duration" required placeholder="Enter duration">
+                      </div>
+
+                      <div class="labtoolfield">
+                        <input class="submit" type="button" onclick="calculateFdMaturity()" value="Calculate" />
+                        <input class="reset" type="reset" value="Clear" onclick="clearFld()">
+                      </div>
+
+                    </div>
+                  </form>
+                  <div class="calout mb15">
+                    <div class="calfld">
+                      <p>Principal Amount: ₹ <span id="resPrincipal"></span></p>
+                      <p>Interest Amount: ₹ <span id="resInterest"></span></p>
+                      <p>Maturity Amount: ₹ <span id="resTotal"></span></p>
+                    </div>
+                  </div>
                 </div>
-                <div class="labtoolfield mb10">
-                  <input type="number" id="interestRate" name="input" step="0.01"
-                    placeholder="Annual Interest Rate (%):">
+                <div class="col-lg-4 left" id="fdchart">
+                  <canvas class="chartbox" id="fdChart"></canvas>
                 </div>
-
-                <div class="labtoolfield mb20">
-                  <input type="radio" id="yearsRadio" name="durationType" value="years" checked>
-                  <label for="yearsRadio">Years</label>
-
-                  <input type="radio" id="monthsRadio" name="durationType" value="months">
-                  <label for="monthsRadio">Months</label>
-
-                  <input type="radio" id="daysRadio" name="durationType" value="days">
-                  <label for="daysRadio">Days</label>
-                </div>
-
-                <div class="labtoolfield mb20">
-                  <input type="number" id="duration" required placeholder="Duration">
-                </div>
-
-                <div class="labtoolfield">
-                  <input type="button" onclick="calculateFdMaturity()" class="submit" value="Calculate">
-                  <input class="reset" type="reset" value="Clear" onclick="clearFld()">
-                </div>
-
-              </div>
-            </form>
-            <div class="calout mb15">
-              <div class="calfld">
-                <p>Principal Amount: ₹ <span id="principle"></span></p>
-                <p>Interest Amount: ₹ <span id="interest"></span></p>
-                <p>Maturity Amount: ₹ <span id="total"></span></p>
               </div>
             </div>
-            <div id="piechart" class="chartbox"></div>
           </div>
         </div>
       </div>
