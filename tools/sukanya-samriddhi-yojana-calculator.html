@@ -2,110 +2,124 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sukanya Samriddhi Yojana Calculator - SSY Calculator - Gokulakrishnan S - UI Designer - Developer</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
-  <script src='../js/jquery.min.js'></script>
-  <script src='../js/app.js'></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-SQHDPT3FW1');
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../js/ssy.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukanya Samriddhi Yojana Calculator - SSY Calculator - Gokulakrishnan S - UI Designer - Developer</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/app.js'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SQHDPT3FW1');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/ssy.js"></script>
 </head>
 
 <body>
-  <div id="navbar">
-  </div>
-  <main>
-    <section class='banner mnybg'>
-      <div class='container'>
-        <div class='row'>
-          <div class='col-lg-12 toptil'>
-            <h1>Sukanya Samriddhi Yojana Calculator</h1>
-            <p>Calculate the maturity amount for your girl child's SSY account with tax benefits</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class='section'>
-      <div class='container'>
-        <div class='row mt20'>
-          <div class='col-lg-12 mt30 breadcrum'>
-            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
-              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>SSY
-              Calculator</span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class='section'>
-      <div class='container'>
-        <div class='row mt20'>
-          <div class='col-lg-12'>
-            <div class='txtcontent'>
-              <p>Sukanya Samriddhi Yojana (SSY) is a government savings scheme designed for the girl child. It offers high interest rates (currently 8.2% p.a.) with complete tax exemption under Section 80C. The scheme has a 21-year maturity period with deposits required for the first 14 years.</p>
-              <p>Key features: Minimum deposit ₹250, Maximum deposit ₹1.5 lakh per year, Tax-free interest and maturity amount, Account can be opened until the girl child turns 10 years old.</p>
-            </div>
-
-            <div class="col-lg-12 left bgwhite pt">
-              <div class="row">
-                <div class="col-lg-12 left" id="ssycalcform">
-                  <form id="ssyForm">
-                    <div class="labtool mb20">
-                      <div class="labtoolfield mb10">
-                        <label for="yearlyInvestment"><span>Yearly investment (₹):</span></label>
-                        <input type="number" id="yearlyInvestment" required placeholder="Enter yearly investment amount" min="250" max="150000" value="10000">
-                      </div>
-                      <div class="labtoolfield mb10">
-                        <label for="girlAge"><span>Girl's age at starting (Years):</span></label>
-                        <input type="number" id="girlAge" required placeholder="Enter girl's age at starting" min="0" max="10" value="5">
-                      </div>
-                      <div class="labtoolfield mb10">
-                        <label for="startingYear"><span>Investment starting year:</span></label>
-                        <input type="number" id="startingYear" required placeholder="Enter starting year" min="2020" max="2040" value="2024">
-                      </div>
-                      <div class="labtoolfield mb20">
-                        <label for="interestRate"><span>Interest rate (p.a) (%):</span></label>
-                        <input type="number" id="interestRate" step="0.1" required placeholder="Enter interest rate" value="8.2">
-                      </div>
-
-                      <div class="labtoolfield">
-                        <input class="submit" type="button" onclick="calculateSSY()" value="Calculate SSY" />
-                        <input class="reset" type="reset" value="Clear" onclick="clearSSYFld()">
-                      </div>
-
+    <div id="navbar">
+    </div>
+    <main>
+        <section class='banner mnybg'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-12 toptil'>
+                        <h1>Sukanya Samriddhi Yojana Calculator</h1>
+                        <p>Calculate the maturity amount for your girl child's SSY account with tax benefits</p>
                     </div>
-                  </form>
-                  <div class="calout mb15">
-                    <div class="calfld">
-                      <p>Total investment: ₹ <span id="ssyTotalInvestment"></span></p>
-                      <p>Total interest: ₹ <span id="ssyInterestEarned"></span></p>
-                      <p>Maturity year: <span id="ssyMaturityYear"></span></p>
-                      <p>Maturity value: ₹ <span id="ssyMaturityAmount"></span></p>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-lg-4 left" id="ssychart">
-                  <canvas class="chartbox" id="ssyChart"></canvas>
-                </div>
-              </div>
             </div>
-            <div class="txtcontent" id="ssy-detail-result"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <div id='watchread'></div>
-  <div id='footerbar'></div>
+        </section>
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12 mt30 breadcrum'>
+                        <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+                            href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>SSY
+                            Calculator</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12'>
+                        <div class='txtcontent'>
+                            <p>Sukanya Samriddhi Yojana (SSY) is a government savings scheme designed for the girl
+                                child. It offers high interest rates (currently 8.2% p.a.) with complete tax exemption
+                                under Section 80C. The scheme has a 21-year maturity period with deposits required for
+                                the first 14 years.</p>
+                            <p>Key features: Minimum deposit ₹250, Maximum deposit ₹1.5 lakh per year, Tax-free interest
+                                and maturity amount, Account can be opened until the girl child turns 10 years old.</p>
+                        </div>
+
+                        <div class="col-lg-12 left bgwhite pt">
+                            <div class="row">
+                                <div class="col-lg-12 left" id="ssycalcform">
+                                    <form id="ssyForm">
+                                        <div class="labtool mb20">
+                                            <div class="labtoolfield mb10">
+                                                <label for="yearlyInvestment"><span>Yearly investment
+                                                        (₹):</span></label>
+                                                <input type="number" id="yearlyInvestment" required
+                                                    placeholder="Enter yearly investment amount" min="250" max="150000"
+                                                    value="10000">
+                                            </div>
+                                            <div class="labtoolfield mb10">
+                                                <label for="girlAge"><span>Girl's age at starting
+                                                        (Years):</span></label>
+                                                <input type="number" id="girlAge" required
+                                                    placeholder="Enter girl's age at starting" min="0" max="10"
+                                                    value="5">
+                                            </div>
+                                            <div class="labtoolfield mb10">
+                                                <label for="startingYear"><span>Investment starting year:</span></label>
+                                                <input type="number" id="startingYear" required
+                                                    placeholder="Enter starting year" min="2020" max="2040"
+                                                    value="2024">
+                                            </div>
+                                            <div class="labtoolfield mb20">
+                                                <label for="interestRate"><span>Interest rate (p.a) (%):</span></label>
+                                                <input type="number" id="interestRate" step="0.1" required
+                                                    placeholder="Enter interest rate" value="8.2">
+                                            </div>
+
+                                            <div class="labtoolfield">
+                                                <input class="submit" type="button" onclick="calculateSSY()"
+                                                    value="Calculate SSY" />
+                                                <input class="reset" type="reset" value="Clear" onclick="clearSSYFld()">
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                    <div class="calout mb15">
+                                        <div class="calfld">
+                                            <p>Total investment: ₹ <span id="ssyTotalInvestment"></span></p>
+                                            <p>Total interest: ₹ <span id="ssyInterestEarned"></span></p>
+                                            <p>Maturity year: <span id="ssyMaturityYear"></span></p>
+                                            <p>Maturity value: ₹ <span id="ssyMaturityAmount"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 left" id="ssychart">
+                                    <canvas class="chartbox" id="ssyChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="txtcontent" id="ssy-detail-result"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id='watchread'></div>
+    <div id='footerbar'></div>
 </body>
 
 </html>
