@@ -60,75 +60,41 @@
             <div class="col-lg-12 left bgwhite pt">
               <div class="row">
                 <div class="col-lg-12 left" id="mfcalcform">
-                  <form id="mfForm">
+                  <form id="rdForm">
                     <div class="labtool mb20">
                       <div class="labtoolfield mb10 select">
-                        <label for="investmentType">Investment Type:</label>
-                        <select id="investmentType" onchange="updateLabels()">
+                        <span>Investment Type:</span>
+                        <select id="investmentType">
                           <option value="sip">SIP (Monthly Investment)</option>
-                          <option value="lumpSum">Lump Sum (One Time Investment)</option>
+                          <option value="lumpSum">Lump Sum</option>
                         </select>
                       </div>
                       <div class="labtoolfield mb10">
-                        <label for="amount" id="amountLabel">Monthly Investment Amount (₹):</label>
-                        <input type="number" id="amount" min="100" max="10000000" required placeholder="Enter investment amount">
+                        <span>Investment Amount (₹):</span>
+                        <input type="number" id="amount" min="1" required placeholder="Enter Investment amount">
                       </div>
                       <div class="labtoolfield mb10">
-                        <label for="years">Investment Period (Years):</label>
-                        <input type="number" id="years" min="1" max="50" required placeholder="Enter investment period (1-50 years)">
+                        <span>Investment Period (Years):</span>
+                        <input type="number" id="years" min="1" required placeholder="Enter Investment Period (Years)">
                       </div>
                       <div class="labtoolfield mb20">
-                        <label for="rate">Expected Annual Return (%):</label>
-                        <input type="number" id="rate" step="0.1" min="1" max="30" required
-                          placeholder="Enter expected return rate (8-15% typical)">
+                        <span>Expected Annual Return (%):</span>
+                        <input type="number" id="rate" step="0.01" min="0" required
+                          placeholder="Enter Return rate (p/a)">
                       </div>
-                      <div id="validationError" class="error-message"></div>
+                      <div id="result"></div>
                       <div class="labtoolfield">
-                        <input class="submit" type="button" onclick="calculateReturns()" value="Calculate Returns" />
-                        <input class="reset" type="reset" value="Clear All" onclick="clearFld()">
+                        <input class="submit" type="button" onclick="calculateReturns()" value="Calculate" />
+                        <input class="reset" type="reset" value="Clear" onclick="clearFld()">
                       </div>
+
                     </div>
                   </form>
-                  
-                  <!-- Results Section -->
                   <div class="calout mb15">
-                    <h3>Investment Summary</h3>
                     <div class="calfld">
-                      <div class="result-row">
-                        <span class="label">Total Invested Amount:</span>
-                        <span class="value">₹ <span id="totalInvested">0</span></span>
-                      </div>
-                      <div class="result-row">
-                        <span class="label">Expected Returns:</span>
-                        <span class="value">₹ <span id="gain">0</span></span>
-                      </div>
-                      <div class="result-row total">
-                        <span class="label">Total Value:</span>
-                        <span class="value">₹ <span id="futureValue">0</span></span>
-                      </div>
-                    </div>
-                    
-                    <!-- Investment Details -->
-                    <div class="investment-details" id="investmentDetails" style="display: none;">
-                      <h4>Investment Details</h4>
-                      <div class="details-grid">
-                        <div class="detail-item">
-                          <span class="detail-label">Investment Type:</span>
-                          <span class="detail-value" id="displayInvestmentType">-</span>
-                        </div>
-                        <div class="detail-item">
-                          <span class="detail-label">Investment Duration:</span>
-                          <span class="detail-value" id="displayDuration">-</span>
-                        </div>
-                        <div class="detail-item">
-                          <span class="detail-label">Expected Annual Return:</span>
-                          <span class="detail-value" id="displayReturn">-</span>
-                        </div>
-                        <div class="detail-item" id="monthlyDetail" style="display: none;">
-                          <span class="detail-label">Monthly Investment:</span>
-                          <span class="detail-value" id="displayMonthly">-</span>
-                        </div>
-                      </div>
+                      <p>Total Invested: ₹ <span id="totalInvested"></span></p>
+                      <p>Future Value: ₹ <span id="futureValue"></span></p>
+                      <p>Total Gain: ₹ <span id="gain"></span></p>
                     </div>
                   </div>
                 </div>
