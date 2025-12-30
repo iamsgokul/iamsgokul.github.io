@@ -3818,6 +3818,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-home-outline:before {
+  content: "\e94c";
+}
+
 .gwicon-car:before {
   content: "\e94b";
 }
