@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder Decoder Tool - Online Base64 Encode & Decode - Free Tool</title>
+    <meta name="description"
+        content="Free online Base64 encoder and decoder tool. Encode any text to Base64 or decode Base64 strings back to text. Fast, secure, and easy-to-use Base64 converter.">
+    <meta name="keywords"
+        content="base64 encoder, base64 decoder, base64 converter, online base64 tool, encode base64, decode base64, base64 text converter">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Base64 Encoder Decoder Tool - Online Base64 Encode & Decode">
+    <meta property="og:description"
+        content="Free online Base64 encoder and decoder tool. Encode any text to Base64 or decode Base64 strings back to text instantly.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Base64 Encoder Decoder Tool">
+    <meta name="twitter:description"
+        content="Free online Base64 encoder and decoder tool. Encode any text to Base64 or decode Base64 strings back to text.">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+    <link rel="canonical" href="https://www.gokul.work/tools/base64-encoder-decoder.html">
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/app.js'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SQHDPT3FW1');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Base64 Encoder Decoder Tool",
+        "description": "Free online Base64 encoder and decoder tool for converting text to Base64 and Base64 to text",
+        "url": "https://www.gokul.work/tools/base64-encoder-decoder.html",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Gokulakrishnan S"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+    <main>
+        <section class='banner gentit'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-12 toptil'>
+                        <h1>Base64 Encoder Decoder Tool</h1>
+                        <p>Free online Base64 encoder and decoder. Convert text to Base64 or decode Base64 strings
+                            instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12 mt30 breadcrum'>
+                        <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+                            href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i>
+                        <span>Base64 Encoder Decoder Tool</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12'>
+                        <div class='txtcontent'>
+                            <h2>What is Base64 Encoding?</h2>
+                            <p>Base64 is a binary-to-text encoding scheme that represents binary data in ASCII string
+                                format. It's commonly used to encode data for transmission over text-based protocols
+                                like email and HTTP. Our Base64 encoder and decoder tool allows you to easily convert
+                                text to Base64 format and vice versa.</p>
+
+                        </div>
+
+                        <div class="labtool">
+                            <div class="labtoolfield">
+                                <label for="inputText"><span>Input Text:</span></label>
+                                <textarea id="inputText" rows="3"
+                                    placeholder="Enter text to encode to Base64 or Base64 string to decode..."></textarea>
+                                <div class="error" id="inputError"></div>
+                            </div>
+                            <div class="labtoolfield">
+                                <label for="outputText"><span>Output Result:</span></label>
+                                <textarea id="outputText" rows="3"
+                                    placeholder="Encoded/Decoded result will appear here..." readonly></textarea>
+                                <div class="success" id="outputSuccess"></div>
+                            </div>
+                            <div class="labtoolfield">
+                                <button class="submit" onclick="encodeText()">Encode to Base64</button>
+                                <button class="submit" onclick="decodeText()">Decode from Base64</button>
+                                <button class="reset" onclick="clearAll()">Clear All</button>
+                                <button class="copy-btn" onclick="copyOutput()">Copy Output</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function encodeText() {
+            const input = document.getElementById('inputText').value;
+            const outputElement = document.getElementById('outputText');
+            const errorElement = document.getElementById('inputError');
+            const successElement = document.getElementById('outputSuccess');
+
+            // Clear previous messages
+            clearMessages();
+
+            if (!input.trim()) {
+                showError('Please enter some text to encode to Base64.');
+                return;
+            }
+
+            try {
+                // Handle UTF-8 encoding properly
+                const encoded = btoa(unescape(encodeURIComponent(input)));
+                outputElement.value = encoded;
+                showSuccess('✅ Successfully encoded to Base64!');
+
+                // Track encoding action
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'base64_encode', {
+                        event_category: 'tool_usage',
+                        event_label: 'base64_encoder'
+                    });
+                }
+            } catch (error) {
+                showError('❌ Error encoding text: ' + error.message);
+            }
+        }
+
+        function decodeText() {
+            const input = document.getElementById('inputText').value;
+            const outputElement = document.getElementById('outputText');
+
+            // Clear previous messages
+            clearMessages();
+
+            if (!input.trim()) {
+                showError('Please enter Base64 text to decode.');
+                return;
+            }
+
+            // Basic Base64 validation
+            const base64Regex = /^[A-Za-z0-9+/]*={0,2}$/;
+            if (!base64Regex.test(input.replace(/\s/g, ''))) {
+                showError('❌ Invalid Base64 format. Base64 should only contain A-Z, a-z, 0-9, +, /, and = characters.');
+                return;
+            }
+
+            try {
+                // Clean input (remove whitespace)
+                const cleanedInput = input.replace(/\s/g, '');
+                const decoded = decodeURIComponent(escape(atob(cleanedInput)));
+                outputElement.value = decoded;
+                showSuccess('✅ Successfully decoded from Base64!');
+
+                // Track decoding action
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'base64_decode', {
+                        event_category: 'tool_usage',
+                        event_label: 'base64_decoder'
+                    });
+                }
+            } catch (error) {
+                showError('❌ Invalid Base64 string. Please check your input and try again.');
+            }
+        }
+
+        function clearAll() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('outputText').value = '';
+            clearMessages();
+
+            // Focus back to input
+            document.getElementById('inputText').focus();
+        }
+
+        function copyOutput() {
+            const outputElement = document.getElementById('outputText');
+
+            if (!outputElement.value.trim()) {
+                showError('Nothing to copy. Please encode or decode first.');
+                return;
+            }
+
+            // Modern clipboard API with fallback
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(outputElement.value).then(() => {
+                    showSuccess('📋 Output copied to clipboard!');
+                }).catch(() => {
+                    fallbackCopyTextToClipboard(outputElement.value);
+                });
+            } else {
+                fallbackCopyTextToClipboard(outputElement.value);
+            }
+
+            // Track copy action
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'copy_output', {
+                    event_category: 'tool_usage',
+                    event_label: 'base64_copy'
+                });
+            }
+        }
+
+        function fallbackCopyTextToClipboard(text) {
+            const outputElement = document.getElementById('outputText');
+            outputElement.select();
+            outputElement.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    showSuccess('📋 Output copied to clipboard!');
+                } else {
+                    showError('Failed to copy. Please select and copy manually.');
+                }
+            } catch (err) {
+                showError('Copy not supported. Please select and copy manually.');
+            }
+
+            // Remove selection
+            window.getSelection().removeAllRanges();
+        }
+
+        function showError(message) {
+            const errorElement = document.getElementById('inputError');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+
+        function showSuccess(message) {
+            const successElement = document.getElementById('outputSuccess');
+            successElement.textContent = message;
+            successElement.style.display = 'block';
+
+            // Auto-hide success message after 3 seconds
+            setTimeout(() => {
+                successElement.style.display = 'none';
+            }, 3000);
+        }
+
+        function clearMessages() {
+            document.getElementById('inputError').style.display = 'none';
+            document.getElementById('outputSuccess').style.display = 'none';
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('DOMContentLoaded', function () {
+            const inputElement = document.getElementById('inputText');
+
+            inputElement.addEventListener('keydown', function (event) {
+                // Ctrl+Enter or Cmd+Enter to encode
+                if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
+                    event.preventDefault();
+                    encodeText();
+                }
+                // Ctrl+Shift+Enter or Cmd+Shift+Enter to decode
+                if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'Enter') {
+                    event.preventDefault();
+                    decodeText();
+                }
+            });
+
+            // Auto-detect if input looks like Base64 and show helpful hint
+            inputElement.addEventListener('input', function () {
+                const value = this.value.trim();
+                if (value.length > 10) {
+                    const base64Regex = /^[A-Za-z0-9+/]*={0,2}$/;
+                    if (base64Regex.test(value)) {
+                        // Looks like Base64, could suggest decode
+                        this.placeholder = "This looks like Base64! Try clicking 'Decode from Base64'";
+                    } else {
+                        this.placeholder = "Enter text to encode to Base64 or Base64 string to decode...";
+                    }
+                }
+            });
+
+            // Focus on input when page loads
+            inputElement.focus();
+        });
+
+        // Sample text for demonstration
+        function loadSample() {
+            document.getElementById('inputText').value = 'Hello World! 🌍 This is a sample text with emojis and special characters: àáâãäåæçèé';
+        }
+    </script>
+    <div id='watchread'></div>
+    <div id='footerbar'></div>
+
+</body>
+
+</html>
