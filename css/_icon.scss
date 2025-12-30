@@ -26,6 +26,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-car:before {
+  content: "\e94b";
+}
+
+.gwicon-32:before {
+  content: "\e949";
+}
+
+.gwicon-64:before {
+  content: "\e94a";
+}
+
 .gwicon-upload:before {
   content: "\e947";
 }
