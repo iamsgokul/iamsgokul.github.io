@@ -274,6 +274,20 @@
       cursor: pointer;
     }
   }
+
+  .error {
+    color: #f5576c;
+    font-size: 14px;
+    margin: 10px 0;
+    display: none;
+  }
+
+  .success {
+    color: #28a745;
+    font-size: 14px;
+    margin: 10px 0;
+    display: none;
+  }
 }
 
 .jsonbx {
@@ -540,7 +554,7 @@
       background: #ffffff;
       border-radius: 6px;
       border-left: 4px solid #583692;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
       font-weight: 500;
       font-size: 15px;
       color: #495057;
@@ -556,7 +570,7 @@
         align-items: flex-start;
         gap: 8px;
         padding: 12px 15px;
-        
+
         span {
           width: 100%;
           text-align: right;
@@ -592,7 +606,7 @@
     background: #ffffff;
     border-radius: 6px;
     border-left: 4px solid #28a745;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     font-size: 15px;
     color: #495057;
 
@@ -626,5 +640,3 @@
     display: block;
   }
 }
-
-

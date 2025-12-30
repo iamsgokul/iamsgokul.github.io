@@ -7152,6 +7152,18 @@ textarea {
   margin-right: 10px;
   cursor: pointer;
 }
+.labtoolfield .error {
+  color: #f5576c;
+  font-size: 14px;
+  margin: 10px 0;
+  display: none;
+}
+.labtoolfield .success {
+  color: #28a745;
+  font-size: 14px;
+  margin: 10px 0;
+  display: none;
+}
 
 .jsonbx {
   white-space: pre-wrap;
