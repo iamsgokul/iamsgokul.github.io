@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Editor - Gokulakrishnan S - UI Designer - Developer</title>
+  <link rel="stylesheet" href="../css/style-editor.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+  <style>
+    ul,
+    body {
+      margin: 0;
+      padding: 0
+    }
+
+    .toptil h1 {
+      margin: 0 0 10px;
+    }
+
+    .toptil p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  </div>
+  <main>
+    <section class='banner gentit'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>Markdown Editor</h1>
+            <p>Just enter your content and Generate the Markdown Code for your Text
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>Markdown
+              Editor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>Markdown Editor just selects the text to add your Markdown syntax by just click the buttons. After
+                completing the
+                editing you can generate the Markdown raw code by clicking the button given below..</p>
+              <p>You can create the Markdown code by below Markdown Editor Tool.</p>
+            </div>
+            <div class="labtool">
+              <div class='toolbar'>
+                <button tooltip-lbl="Heading H1" tooltip-pos="top" onclick="insertMarkdown('# ', '')">H1</button>
+                <button tooltip-lbl="Heading H2" tooltip-pos="top" onclick="insertMarkdown('## ', '')">H2</button>
+                <button tooltip-lbl="Heading H3" tooltip-pos="top" onclick="insertMarkdown('### ', '')">H3</button>
+                <button tooltip-lbl="Bold" tooltip-pos="top" onclick="insertMarkdown('**', '**')"><i
+                    class="gwicon-format-bold"></i></button>
+                <button tooltip-lbl="Italic" tooltip-pos="top" onclick="insertMarkdown('*', '*')"><i
+                    class="gwicon-format-italic"></i></button>
+                <button tooltip-lbl="Strikethrough" tooltip-pos="top" onclick="insertMarkdown('~~', '~~')"><i
+                    class='gwicon-strikethrough'></i></button>
+                <button tooltip-lbl="Code" tooltip-pos="top" onclick="insertMarkdown('`', '`')"><i
+                    class='gwicon-code-tags'></i></button>
+                <button tooltip-lbl="Code Block" tooltip-pos="top" onclick="insertMarkdown('```\n', '\n```')"><i
+                    class='gwicon-code-block-tags'></i></button>
+                <button tooltip-lbl="Link" tooltip-pos="top" onclick="insertMarkdown('[', '](url)')"><i
+                    class="gwicon-link"></i></button>
+                <button tooltip-lbl="Image" tooltip-pos="top" onclick="insertMarkdown('![alt](', ')')"><i
+                    class='gwicon-image-outline'></i></button>
+                <button tooltip-lbl="Quote" tooltip-pos="top" onclick="insertMarkdown('> ', '')"><i
+                    class='gwicon-format-quote-open'></i></button>
+                <button tooltip-lbl="List" tooltip-pos="top" onclick="insertMarkdown('- ', '')"><i
+                    class='gwicon-format-list-bulleted'></i></button>
+                <button tooltip-lbl="Ordered List" tooltip-pos="top" onclick="insertMarkdown('1. ', '')"><i
+                    class='gwicon-format-list-numbered'></i></button>
+                <button tooltip-lbl="Table" tooltip-pos="top" onclick="insertTable()"><i
+                    class='gwicon-table'></i></button>
+                <button tooltip-lbl="Horizontal Rule" tooltip-pos="top" onclick="insertMarkdown('---\n', '')"><i
+                    class='gwicon-minus'></i></button>
+                <button tooltip-lbl="Task List" tooltip-pos="top" onclick="insertMarkdown('- [ ] ', '')"><i
+                    class='gwicon-calendar-check-outline'></i></button>
+
+                <button tooltip-lbl="Clear" tooltip-pos="top" onclick="clearEditor()">Clear</button>
+                <button tooltip-lbl="Export to HTML" tooltip-pos="top" class="export" onclick="exportToHTML()">Export to
+                  HTML</button>
+              </div>
+              <div class="editor-container">
+                <div class="editor-section">
+                  <h3>Editor</h3>
+                  <textarea id="markdown-input" placeholder="Start typing your markdown here...
+
+# Example Heading
+## Subheading
+
+Write your **bold** and *italic* text here.
+
+- List item 1
+- List item 2
+
+> This is a quote
+
+```javascript
+// Code block example
+console.log('Hello World');
+```
+
+[Link text](https://example.com)
+
+| Column 1 | Column 2 |
+|----------|----------|
+| Data 1   | Data 2   |
+"></textarea>
+                </div>
+
+                <div class="editor-section">
+                  <h3>Preview</h3>
+                  <div id="preview"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <!-- <script src='../js/jas.js'></script> -->
+  <!-- <script src="../js/markdown.js"></script> -->
+
+  <div id="htmlModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>HTML Output</h2>
+        <button class="close" onclick="closeModal()"><i class='gwicon-close'></i></button>
+      </div>
+      <div class="modal-body">
+        <textarea id="html-output" readonly></textarea>
+      </div>
+      <div class="modal-footer">
+        <button class="copy" onclick="copyHTML()">Copy to Clipboard</button>
+        <button onclick="downloadHTML()">Download HTML File</button>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="../js/markdown.js"></script> -->
+  <script>
+    const markdownInput = document.getElementById("markdown-input");
+    const preview = document.getElementById("preview");
+    const modal = document.getElementById("htmlModal");
+    const htmlOutput = document.getElementById("html-output");
+
+    // Configure marked options
+    marked.setOptions({
+      breaks: true,
+      gfm: true,
+      headerIds: true,
+      mangle: false,
+    });
+
+    // Update preview on input
+    markdownInput.addEventListener("input", updatePreview);
+
+    function updatePreview() {
+      const markdownText = markdownInput.value;
+      const htmlContent = marked.parse(markdownText);
+      preview.innerHTML = htmlContent;
+    }
+
+    function insertMarkdown(prefix, suffix) {
+      const textarea = markdownInput;
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const selectedText = textarea.value.substring(start, end);
+      const beforeText = textarea.value.substring(0, start);
+      const afterText = textarea.value.substring(end);
+
+      const newText = beforeText + prefix + selectedText + suffix + afterText;
+      textarea.value = newText;
+
+      // Set cursor position
+      const newCursorPos = start + prefix.length + selectedText.length;
+      textarea.setSelectionRange(newCursorPos, newCursorPos);
+      textarea.focus();
+
+      updatePreview();
+    }
+
+    function insertTable() {
+      const table = `
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data 1   | Data 2   | Data 3   |
+| Data 4   | Data 5   | Data 6   |
+`;
+      const textarea = markdownInput;
+      const start = textarea.selectionStart;
+      const beforeText = textarea.value.substring(0, start);
+      const afterText = textarea.value.substring(start);
+
+      textarea.value = beforeText + table + afterText;
+      textarea.setSelectionRange(start, start);
+      textarea.focus();
+
+      updatePreview();
+    }
+
+    function clearEditor() {
+      if (confirm("Are you sure you want to clear the editor?")) {
+        markdownInput.value = "";
+        updatePreview();
+      }
+    }
+
+    function exportToHTML() {
+      const markdownText = markdownInput.value;
+      const htmlContent = marked.parse(markdownText);
+
+      // Create a complete HTML document
+      const fullHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Export</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.3em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin: 0.75em 0 0.5em 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3em;
+        }
+        h3 { font-size: 1.25em; margin: 0.83em 0 0.5em 0; }
+        h4 { font-size: 1.1em; margin: 1em 0 0.5em 0; }
+        p { margin: 1em 0; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul, ol { margin: 1em 0; padding-left: 2em; }
+        li { margin: 0.5em 0; }
+        blockquote {
+            border-left: 4px solid #ddd;
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            background: #f9f9f9;
+            color: #666;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1em 0;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1em 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background: #34495e;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 1em 0;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #eee;
+            margin: 2em 0;
+        }
+    </style>
+</head>
+<body>
+${htmlContent}
+</body>
+</html>`;
+
+      htmlOutput.value = fullHTML;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    function copyHTML() {
+      htmlOutput.select();
+      document.execCommand("copy");
+      alert("HTML code copied to clipboard!");
+    }
+
+    function downloadHTML() {
+      const htmlContent = htmlOutput.value;
+      const blob = new Blob([htmlContent], { type: "text/html" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "markdown-export.html";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        closeModal();
+      }
+    };
+
+    // Initialize preview
+    updatePreview();
+
+  </script>
+</body>
+
+</html>
