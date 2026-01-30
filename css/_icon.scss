@@ -1,7 +1,8 @@
 @font-face {
   font-family: "gwicon";
   src: url("../fonts/gwicon.eot?eus2c0");
-  src: url("../fonts/gwicon.eot?eus2c0#iefix") format("embedded-opentype"),
+  src:
+    url("../fonts/gwicon.eot?eus2c0#iefix") format("embedded-opentype"),
     url("../fonts/gwicon.ttf?eus2c0") format("truetype"),
     url("../fonts/gwicon.woff?eus2c0") format("woff"),
     url("../fonts/gwicon.svg?eus2c0#gwicon") format("svg");
@@ -24,6 +25,54 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gwicon-language-markdown-outline:before {
+  content: "\e958";
+}
+
+.gwicon-calendar-check-outline:before {
+  content: "\e957";
+}
+
+.gwicon-format-list-numbered:before {
+  content: "\e94e";
+}
+
+.gwicon-format-list-bulleted:before {
+  content: "\e94f";
+}
+
+.gwicon-format-quote-open:before {
+  content: "\e950";
+}
+
+.gwicon-strikethrough:before {
+  content: "\e951";
+}
+
+.gwicon-image-outline:before {
+  content: "\e952";
+}
+
+.gwicon-minus:before {
+  content: "\e953";
+}
+
+.gwicon-table:before {
+  content: "\e954";
+}
+
+.gwicon-code-tags:before {
+  content: "\e955";
+}
+
+.gwicon-code-block-tags:before {
+  content: "\e956";
+}
+
+.gwicon-close:before {
+  content: "\e94d";
 }
 
 .gwicon-home-outline:before {

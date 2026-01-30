@@ -500,6 +500,10 @@
       border-radius: 4px;
       overflow-y: auto;
       background: #fff;
+
+      *{
+        all:revert;
+      }
     }
 
     textarea {
