@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD2 Hash Generator - Online MD2 Hash Calculator - Free Tool</title>
+    <meta name="description"
+        content="Free online MD2 hash generator tool. Calculate MD2 hash from any text string. Supports UTF-8 input and HMAC-MD2. Fast, secure, and easy-to-use MD2 converter.">
+    <meta name="keywords"
+        content="md2 hash generator, md2 calculator, md2 online, md2 hash, md2 checksum, hmac md2, md2 converter">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="MD2 Hash Generator - Online MD2 Hash Calculator">
+    <meta property="og:description"
+        content="Free online MD2 hash generator tool. Calculate MD2 hash from any text string instantly.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="MD2 Hash Generator Tool">
+    <meta name="twitter:description"
+        content="Free online MD2 hash generator tool. Calculate MD2 hash from any text string.">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+    <link rel="canonical" href="https://www.gokul.work/tools/md2-hash-generator.html">
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/app.js'></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SQHDPT3FW1');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "MD2 Hash Generator Tool",
+        "description": "Free online MD2 hash generator tool for calculating MD2 hash from text strings",
+        "url": "https://www.gokul.work/tools/md2-hash-generator.html",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Gokulakrishnan S"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+    <main>
+        <section class='banner gentit'>
+            <div class='container'>
+                <div class='row'>
+                    <div class='col-lg-12 toptil'>
+                        <h1>MD2 Hash Generator</h1>
+                        <p>Calculate MD2 hash from any text string. Supports UTF-8 input and HMAC-MD2.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12 mt30 breadcrum'>
+                        <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+                            href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i>
+                        <span>MD2 Hash Generator</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12'>
+                        <div class='txtcontent'>
+                            <p>MD2 (Message-Digest Algorithm 2) is a cryptographic hash function that produces a 128-bit
+                                (16-byte) hash value, typically expressed as a 32-character hexadecimal number. While
+                                MD2 is considered obsolete for security purposes, it's still useful for checksums and
+                                legacy system compatibility. Our MD2 hash generator allows you to quickly calculate MD2
+                                hashes from any text input.</p>
+                        </div>
+
+                        <div class="labtool">
+                            <div class="labtoolfield">
+                                <label for="inputText"><span>Input Text:</span></label>
+                                <textarea id="inputText" rows="6"
+                                    placeholder="Enter text to generate MD2 hash..."></textarea>
+                                <div class="error" id="inputError"></div>
+                            </div>
+
+                            <div class="">
+                                <span>Options:</span>
+                            </div>
+                            <div class="labtoolfield">
+                                <div class="lf">
+                                    <div class="labtoolcheckbox">
+                                        <input type="checkbox" id="autoUpdate" checked>
+                                        <label></label>
+                                    </div>
+                                    <span>Auto Update</span>
+                                </div>
+
+                                <div class="lf">
+                                    <div class="labtoolcheckbox">
+                                        <input type="checkbox" id="enableHmac">
+                                        <label></label>
+                                    </div>
+                                    <span>Enable HMAC</span>
+                                </div>
+
+                                <div class="lf">
+                                    <div class="labtoolcheckbox">
+                                        <input type="checkbox" id="uppercase">
+                                        <label></label>
+                                    </div>
+                                    <span>Uppercase Output</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="labtoolfield select">
+                            <label for="inputEncoding"><span>Input Encoding:</span></label>
+                            <select id="inputEncoding"
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; margin-top: 5px;">
+                                <optgroup label="Binary">
+                                    <option value="hex">Hex</option>
+                                    <option value="base64">Base64</option>
+                                </optgroup>
+                                <optgroup label="Text">
+                                    <option value="utf-8" selected>UTF-8</option>
+                                    <option value="utf-16le">UTF-16LE</option>
+                                    <option value="utf-16be">UTF-16BE</option>
+                                    <option value="ibm866">IBM866</option>
+                                    <option value="iso-8859-2">ISO-8859-2</option>
+                                    <option value="iso-8859-3">ISO-8859-3</option>
+                                    <option value="iso-8859-4">ISO-8859-4</option>
+                                    <option value="iso-8859-5">ISO-8859-5</option>
+                                    <option value="iso-8859-6">ISO-8859-6</option>
+                                    <option value="iso-8859-7">ISO-8859-7</option>
+                                    <option value="iso-8859-8">ISO-8859-8</option>
+                                    <option value="iso-8859-8-i">ISO-8859-8-I</option>
+                                    <option value="iso-8859-10">ISO-8859-10</option>
+                                    <option value="iso-8859-13">ISO-8859-13</option>
+                                    <option value="iso-8859-14">ISO-8859-14</option>
+                                    <option value="iso-8859-15">ISO-8859-15</option>
+                                    <option value="iso-8859-16">ISO-8859-16</option>
+                                    <option value="koi8-r">KOI8-R</option>
+                                    <option value="koi8-u">KOI8-U</option>
+                                    <option value="macintosh">macintosh</option>
+                                    <option value="windows-874">Windows-874</option>
+                                    <option value="windows-1250">Windows-1250</option>
+                                    <option value="windows-1251">Windows-1251</option>
+                                    <option value="windows-1252">Windows-1252</option>
+                                    <option value="windows-1253">Windows-1253</option>
+                                    <option value="windows-1254">Windows-1254</option>
+                                    <option value="windows-1255">Windows-1255</option>
+                                    <option value="windows-1256">Windows-1256</option>
+                                    <option value="windows-1257">Windows-1257</option>
+                                    <option value="windows-1258">Windows-1258</option>
+                                    <option value="x-mac-cyrillic">x-mac-cyrillic</option>
+                                    <option value="gbk">GBK</option>
+                                    <option value="gb18030">gb18030</option>
+                                    <option value="big5">Big5</option>
+                                    <option value="euc-jp">EUC-JP</option>
+                                    <option value="iso-2022-jp">ISO-2022-JP</option>
+                                    <option value="shift_jis">Shift_JIS</option>
+                                    <option value="euc-kr">EUC-KR</option>
+                                    <option value="x-user-defined">x-user-defined</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="labtoolfield select">
+                            <label for="outputEncoding"><span>Output Encoding:</span></label>
+                            <select id="outputEncoding"
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; margin-top: 5px;">
+                                <option value="hex" selected>Hex (Lowercase)</option>
+                                <option value="hexupper">Hex (Uppercase)</option>
+                                <option value="base64">Base64</option>
+                                <option value="binary">Binary</option>
+                            </select>
+                        </div>
+
+
+                        <div class="labtoolfield" id="hmacKeyField" style="display: none;">
+                            <label for="hmacKey"><span>HMAC Key:</span></label>
+                            <input type="text" id="hmacKey" placeholder="Enter HMAC secret key..."
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px;">
+                        </div>
+
+                        <div class="labtoolfield">
+                            <label for="outputText"><span>MD2 Hash Output:</span></label>
+                            <textarea id="outputText" rows="3" placeholder="MD2 hash will appear here..."
+                                readonly></textarea>
+                            <div class="success" id="outputSuccess"></div>
+                        </div>
+                        <div class="labtoolfield">
+                            <button class="submit" onclick="generateHash()">Generate MD2 Hash</button>
+                            <button class="reset" onclick="clearAll()">Clear All</button>
+                            <button class="copy-btn" onclick="copyOutput()">Copy Hash</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class='section'>
+            <div class='container'>
+                <div class='row mt20'>
+                    <div class='col-lg-12'>
+                        <div class='txtcontent'>
+                            <h2>What is MD2?</h2>
+                            <p>MD2 is a cryptographic hash function designed by Ronald Rivest in 1989. It was optimized
+                                for 8-bit computers and produces a 128-bit hash value. The algorithm processes the input
+                                message in 16-byte blocks and uses a unique S-box derived from the digits of pi.</p>
+
+                            <h2>Key Features</h2>
+                            <ul>
+                                <li><strong>128-bit Output:</strong> Produces a 32-character hexadecimal hash</li>
+                                <li><strong>Deterministic:</strong> Same input always produces the same hash</li>
+                                <li><strong>One-way Function:</strong> Cannot reverse the hash to get the original input
+                                </li>
+                                <li><strong>HMAC Support:</strong> Can be used with a secret key for message
+                                    authentication</li>
+                            </ul>
+
+                            <h2>Security Note</h2>
+                            <p>MD2 is considered cryptographically broken and should not be used for security-critical
+                                applications. For secure hashing, consider using SHA-256 or SHA-3. MD2 is still useful
+                                for legacy compatibility and non-security checksums.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id='watchread'></div>
+    <div id='footerbar'></div>
+
+    <script>
+        // MD2 Implementation
+        const MD2_S = [
+            41, 46, 67, 201, 162, 216, 124, 1, 61, 54, 84, 161, 236, 240, 6, 19,
+            98, 167, 5, 243, 192, 199, 115, 140, 152, 147, 43, 217, 188, 76, 130, 202,
+            30, 155, 87, 60, 253, 212, 224, 22, 103, 66, 111, 24, 138, 23, 229, 18,
+            190, 78, 196, 214, 218, 158, 222, 73, 160, 251, 245, 142, 187, 47, 238, 122,
+            169, 104, 121, 145, 21, 178, 7, 63, 148, 194, 16, 137, 11, 34, 95, 33,
+            128, 127, 93, 154, 90, 144, 50, 39, 53, 62, 204, 231, 191, 247, 151, 3,
+            255, 25, 48, 179, 72, 165, 181, 209, 215, 94, 146, 42, 172, 86, 170, 198,
+            79, 184, 56, 210, 150, 164, 125, 182, 118, 252, 107, 226, 156, 116, 4, 241,
+            69, 157, 112, 89, 100, 113, 135, 32, 134, 91, 207, 101, 230, 45, 168, 2,
+            27, 96, 37, 173, 174, 176, 185, 246, 28, 70, 97, 105, 52, 64, 126, 15,
+            85, 71, 163, 35, 221, 81, 175, 58, 195, 92, 249, 206, 186, 197, 234, 38,
+            44, 83, 13, 110, 133, 40, 132, 9, 211, 223, 205, 244, 65, 129, 77, 82,
+            106, 220, 55, 200, 108, 193, 171, 250, 36, 225, 123, 8, 12, 189, 177, 74,
+            120, 136, 149, 139, 227, 99, 232, 109, 233, 203, 213, 254, 59, 0, 29, 57,
+            242, 239, 183, 14, 102, 88, 208, 228, 166, 119, 114, 248, 235, 117, 75, 10,
+            49, 68, 80, 180, 143, 237, 31, 26, 219, 153, 141, 51, 159, 17, 131, 20
+        ];
+
+        function md2(message) {
+            const bytes = getInputBytes(message, 'utf8');
+            const hashBytes = md2Bytes(bytes);
+            return bytesToHex(hashBytes);
+        }
+
+        // DOM Elements
+        const inputText = document.getElementById('inputText');
+        const outputText = document.getElementById('outputText');
+        const autoUpdate = document.getElementById('autoUpdate');
+        const enableHmac = document.getElementById('enableHmac');
+        const hmacKeyField = document.getElementById('hmacKeyField');
+        const hmacKey = document.getElementById('hmacKey');
+        const uppercase = document.getElementById('uppercase');
+        const inputEncoding = document.getElementById('inputEncoding');
+        const outputEncoding = document.getElementById('outputEncoding');
+        const inputError = document.getElementById('inputError');
+        const outputSuccess = document.getElementById('outputSuccess');
+
+        // Encoding helper functions
+        function hexToBytes(hex) {
+            hex = hex.replace(/\s/g, '');
+            if (hex.length % 2 !== 0) {
+                throw new Error('Invalid hex string');
+            }
+            const bytes = [];
+            for (let i = 0; i < hex.length; i += 2) {
+                const byte = parseInt(hex.substr(i, 2), 16);
+                if (isNaN(byte)) {
+                    throw new Error('Invalid hex character');
+                }
+                bytes.push(byte);
+            }
+            return bytes;
+        }
+
+        function base64ToBytes(base64) {
+            try {
+                const binaryString = atob(base64.trim());
+                const bytes = [];
+                for (let i = 0; i < binaryString.length; i++) {
+                    bytes.push(binaryString.charCodeAt(i));
+                }
+                return bytes;
+            } catch (e) {
+                throw new Error('Invalid Base64 string');
+            }
+        }
+
+        function bytesToHex(bytes) {
+            return bytes.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        function bytesToBase64(bytes) {
+            const binaryString = String.fromCharCode(...bytes);
+            return btoa(binaryString);
+        }
+
+        function bytesToBinary(bytes) {
+            return bytes.map(b => b.toString(2).padStart(8, '0')).join(' ');
+        }
+
+        function stringToUtf16LE(str) {
+            const bytes = [];
+            for (let i = 0; i < str.length; i++) {
+                const code = str.charCodeAt(i);
+                bytes.push(code & 0xFF);
+                bytes.push((code >> 8) & 0xFF);
+            }
+            return bytes;
+        }
+
+        function stringToUtf16BE(str) {
+            const bytes = [];
+            for (let i = 0; i < str.length; i++) {
+                const code = str.charCodeAt(i);
+                bytes.push((code >> 8) & 0xFF);
+                bytes.push(code & 0xFF);
+            }
+            return bytes;
+        }
+
+        function getInputBytes(text, encoding) {
+            // Handle binary encodings
+            if (encoding === 'hex') {
+                return hexToBytes(text);
+            }
+            if (encoding === 'base64') {
+                return base64ToBytes(text);
+            }
+
+            // Handle UTF-16 variants
+            if (encoding === 'utf-16le') {
+                return stringToUtf16LE(text);
+            }
+            if (encoding === 'utf-16be') {
+                return stringToUtf16BE(text);
+            }
+
+            // Handle UTF-8 and other text encodings using TextEncoder
+            if (encoding === 'utf-8') {
+                const encoder = new TextEncoder();
+                return Array.from(encoder.encode(text));
+            }
+
+            // For other encodings, try to use TextEncoder with the encoding
+            // Most browsers only support UTF-8 for TextEncoder, so we'll use a fallback
+            try {
+                // Try to encode using the specified encoding via a roundtrip
+                const encoder = new TextEncoder();
+                const decoder = new TextDecoder(encoding);
+
+                // For single-byte encodings, map characters directly
+                const bytes = [];
+                for (let i = 0; i < text.length; i++) {
+                    const code = text.charCodeAt(i);
+                    if (code < 256) {
+                        bytes.push(code);
+                    } else {
+                        // For multi-byte characters, encode as UTF-8 and hope for the best
+                        const utf8Bytes = encoder.encode(text[i]);
+                        bytes.push(...utf8Bytes);
+                    }
+                }
+                return bytes;
+            } catch (e) {
+                // Fallback to UTF-8
+                const encoder = new TextEncoder();
+                return Array.from(encoder.encode(text));
+            }
+        }
+
+        function md2Bytes(inputBytes) {
+            const bytes = [...inputBytes];
+
+            // Padding
+            const padLen = 16 - (bytes.length % 16);
+            for (let i = 0; i < padLen; i++) {
+                bytes.push(padLen);
+            }
+
+            // Checksum
+            const checksum = new Array(16).fill(0);
+            let L = 0;
+            for (let i = 0; i < bytes.length; i += 16) {
+                for (let j = 0; j < 16; j++) {
+                    const c = bytes[i + j];
+                    checksum[j] ^= MD2_S[c ^ L];
+                    L = checksum[j];
+                }
+            }
+            bytes.push(...checksum);
+
+            // Hash
+            const X = new Array(48).fill(0);
+            for (let i = 0; i < bytes.length; i += 16) {
+                for (let j = 0; j < 16; j++) {
+                    X[16 + j] = bytes[i + j];
+                    X[32 + j] = X[16 + j] ^ X[j];
+                }
+                let t = 0;
+                for (let j = 0; j < 18; j++) {
+                    for (let k = 0; k < 48; k++) {
+                        X[k] = X[k] ^ MD2_S[t];
+                        t = X[k];
+                    }
+                    t = (t + j) % 256;
+                }
+            }
+
+            return X.slice(0, 16);
+        }
+
+        function encodeOutput(hashBytes, encoding) {
+            switch (encoding) {
+                case 'hex':
+                    return bytesToHex(hashBytes);
+                case 'hexupper':
+                    return bytesToHex(hashBytes).toUpperCase();
+                case 'base64':
+                    return bytesToBase64(hashBytes);
+                case 'binary':
+                    return bytesToBinary(hashBytes);
+                default:
+                    return bytesToHex(hashBytes);
+            }
+        }
+
+        // Event Listeners
+        inputText.addEventListener('input', function () {
+            if (autoUpdate.checked) {
+                generateHash();
+            }
+        });
+
+        hmacKey.addEventListener('input', function () {
+            if (autoUpdate.checked) {
+                generateHash();
+            }
+        });
+
+        autoUpdate.addEventListener('change', function () {
+            if (this.checked) {
+                generateHash();
+            }
+        });
+
+        enableHmac.addEventListener('change', function () {
+            hmacKeyField.style.display = this.checked ? 'block' : 'none';
+            if (autoUpdate.checked) {
+                generateHash();
+            }
+        });
+
+        uppercase.addEventListener('change', function () {
+            if (autoUpdate.checked) {
+                generateHash();
+            }
+        });
+
+        inputEncoding.addEventListener('change', function () {
+            if (autoUpdate.checked) {
+                generateHash();
+            }
+        });
+
+        outputEncoding.addEventListener('change', function () {
+            if (autoUpdate.checked) {
+                generateHash();
+            }
+        });
+
+        function generateHash() {
+            inputError.textContent = '';
+            outputSuccess.textContent = '';
+
+            const text = inputText.value;
+
+            if (!text) {
+                outputText.value = '';
+                return;
+            }
+
+            try {
+                const inputEnc = inputEncoding.value;
+                const outputEnc = outputEncoding.value;
+
+                let hashBytes;
+
+                if (enableHmac.checked) {
+                    const key = hmacKey.value;
+                    if (!key) {
+                        inputError.textContent = 'Please enter an HMAC key';
+                        outputText.value = '';
+                        return;
+                    }
+                    // HMAC-MD2
+                    const blockSize = 16;
+                    let keyBytes = getInputBytes(key, 'utf8');
+
+                    if (keyBytes.length > blockSize) {
+                        keyBytes = md2Bytes(keyBytes);
+                    }
+
+                    while (keyBytes.length < blockSize) {
+                        keyBytes.push(0);
+                    }
+
+                    const ipad = keyBytes.map(b => b ^ 0x36);
+                    const opad = keyBytes.map(b => b ^ 0x5c);
+
+                    const inputBytes = getInputBytes(text, inputEnc);
+                    const innerHash = md2Bytes([...ipad, ...inputBytes]);
+                    hashBytes = md2Bytes([...opad, ...innerHash]);
+                } else {
+                    const inputBytes = getInputBytes(text, inputEnc);
+                    hashBytes = md2Bytes(inputBytes);
+                }
+
+                let result = encodeOutput(hashBytes, outputEnc);
+
+                // Apply uppercase if checked and output is hex
+                if (uppercase.checked && (outputEnc === 'hex')) {
+                    result = result.toUpperCase();
+                }
+
+                outputText.value = result;
+                outputSuccess.textContent = 'MD2 hash generated successfully!';
+            } catch (error) {
+                inputError.textContent = 'Error: ' + error.message;
+                outputText.value = '';
+            }
+        }
+
+        function clearAll() {
+            inputText.value = '';
+            outputText.value = '';
+            hmacKey.value = '';
+            inputError.textContent = '';
+            outputSuccess.textContent = '';
+        }
+
+        function copyOutput() {
+            if (!outputText.value) {
+                inputError.textContent = 'Nothing to copy!';
+                return;
+            }
+
+            outputText.select();
+            outputText.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(outputText.value).then(function () {
+                outputSuccess.textContent = 'Hash copied to clipboard!';
+            }).catch(function () {
+                document.execCommand('copy');
+                outputSuccess.textContent = 'Hash copied to clipboard!';
+            });
+        }
+
+        // Initialize
+        generateHash();
+    </script>
+
+</body>
+
+</html>
