@@ -20,6 +20,9 @@ input[type="number"] {
 .lf {
   float: left;
 }
+.fs12{
+  font-size: 12px;
+}
 .dbnone,
 #downloadButton {
   display: none;
@@ -60,4 +63,14 @@ input.gsc-input {
 
 .pt {
   padding-top: 20px;
+}
+
+.flex {
+  display: flex;
+}
+.faic {
+  align-items: center;
+}
+.fjcc {
+  justify-content: center;
 }
