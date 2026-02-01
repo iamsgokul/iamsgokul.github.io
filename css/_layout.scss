@@ -269,6 +269,10 @@ main {
       color: #a422e3;
     }
 
+    &.md {
+      color: #4549f7;
+    }
+    
     &.drive {
       &:before {
         color: #0d9660;
@@ -2412,7 +2416,7 @@ textarea {
       font-size: 16px;
       outline: none;
       appearance: none;
-      font-family: 'Poppins', system-ui;
+      font-family: "Poppins", system-ui;
     }
   }
 }

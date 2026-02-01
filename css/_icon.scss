@@ -27,6 +27,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gwicon-lock-outline:before {
+  content: "\e959";
+}
+
 .gwicon-language-markdown-outline:before {
   content: "\e958";
 }
