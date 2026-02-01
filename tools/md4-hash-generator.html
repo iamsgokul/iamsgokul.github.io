@@ -4,23 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD2 Hash Generator - Online MD2 Hash Calculator - Free Tool</title>
+    <title>MD4 Hash Generator - Online MD4 Hash Calculator - Free Tool</title>
     <meta name="description"
-        content="Free online MD2 hash generator tool. Calculate MD2 hash from any text string. Supports UTF-8 input and HMAC-MD2. Fast, secure, and easy-to-use MD2 converter.">
+        content="Free online MD4 hash generator tool. Calculate MD4 hash from any text string. Supports multiple encodings and HMAC-MD4. Fast, secure, and easy-to-use MD4 converter.">
     <meta name="keywords"
-        content="md2 hash generator, md2 calculator, md2 online, md2 hash, md2 checksum, hmac md2, md2 converter">
+        content="md4 hash generator, md4 calculator, md4 online, md4 hash, md4 checksum, hmac md4, md4 converter">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="MD2 Hash Generator - Online MD2 Hash Calculator">
+    <meta property="og:title" content="MD4 Hash Generator - Online MD4 Hash Calculator">
     <meta property="og:description"
-        content="Free online MD2 hash generator tool. Calculate MD2 hash from any text string instantly.">
+        content="Free online MD4 hash generator tool. Calculate MD4 hash from any text string instantly.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="MD2 Hash Generator Tool">
+    <meta name="twitter:title" content="MD4 Hash Generator Tool">
     <meta name="twitter:description"
-        content="Free online MD2 hash generator tool. Calculate MD2 hash from any text string.">
+        content="Free online MD4 hash generator tool. Calculate MD4 hash from any text string.">
     <link rel="stylesheet" href="../css/style.css" />
     <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
-    <link rel="canonical" href="https://www.gokul.work/tools/md2-hash-generator.html">
+    <link rel="canonical" href="https://www.gokul.work/tools/md4-hash-generator.html">
     <script src='../js/jquery.min.js'></script>
     <script src='../js/app.js'></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -36,9 +36,9 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "MD2 Hash Generator Tool",
-        "description": "Free online MD2 hash generator tool for calculating MD2 hash from text strings",
-        "url": "https://www.gokul.work/tools/md2-hash-generator.html",
+        "name": "MD4 Hash Generator Tool",
+        "description": "Free online MD4 hash generator tool for calculating MD4 hash from text strings",
+        "url": "https://www.gokul.work/tools/md4-hash-generator.html",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any",
         "offers": {
@@ -62,8 +62,8 @@
             <div class='container'>
                 <div class='row'>
                     <div class='col-lg-12 toptil'>
-                        <h1>MD2 Hash Generator</h1>
-                        <p>Calculate MD2 hash from any text string. Supports UTF-8 input and HMAC-MD2.</p>
+                        <h1>MD4 Hash Generator</h1>
+                        <p>Calculate MD4 hash from any text string. Supports multiple encodings and HMAC-MD4.</p>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                     <div class='col-lg-12 mt30 breadcrum'>
                         <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
                             href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i>
-                        <span>MD2 Hash Generator</span>
+                        <span>MD4 Hash Generator</span>
                     </div>
                 </div>
             </div>
@@ -84,20 +84,21 @@
                 <div class='row mt20'>
                     <div class='col-lg-12'>
                         <div class='txtcontent'>
-                            <p>MD2 (Message-Digest Algorithm 2) is a cryptographic hash function that produces a 128-bit
-                                (16-byte) hash value, typically expressed as a 32-character hexadecimal number. While
-                                MD2 is considered obsolete for security purposes, it's still useful for checksums and
-                                legacy system compatibility. Our MD2 hash generator allows you to quickly calculate MD2
-                                hashes from any text input.</p>
+                            <p>MD4 (Message-Digest Algorithm 4) is a cryptographic hash function designed by Ronald
+                                Rivest in 1990. It produces a 128-bit (16-byte) hash value, typically expressed as a
+                                32-character hexadecimal number. MD4 was the predecessor to MD5 and while it's
+                                considered cryptographically broken, it's still used in some legacy systems and
+                                protocols like NTLM authentication.</p>
                         </div>
 
                         <div class="labtool">
                             <div class="labtoolfield">
                                 <label for="inputText"><span>Input Text:</span></label>
                                 <textarea id="inputText" rows="6"
-                                    placeholder="Enter text to generate MD2 hash..."></textarea>
+                                    placeholder="Enter text to generate MD4 hash..."></textarea>
                                 <div class="error" id="inputError"></div>
                             </div>
+
                             <div class="mb15">
                                 <span class="fs12">Options:</span>
                             </div>
@@ -126,6 +127,8 @@
                                     <span>Uppercase Output</span>
                                 </div>
                             </div>
+
+
                             <div class="labtoolfield select mb15">
                                 <label for="inputEncoding"><span>Input Encoding:</span></label>
                                 <select id="inputEncoding">
@@ -190,17 +193,18 @@
                                 <input type="text" id="hmacKey" placeholder="Enter HMAC secret key...">
                             </div>
                             <div class="labtoolfield">
-                                <label for="outputText"><span>MD2 Hash Output:</span></label>
-                                <textarea id="outputText" rows="3" placeholder="MD2 hash will appear here..."
+                                <label for="outputText"><span>MD4 Hash Output:</span></label>
+                                <textarea id="outputText" rows="3" placeholder="MD4 hash will appear here..."
                                     readonly></textarea>
                                 <div class="success" id="outputSuccess"></div>
                             </div>
                             <div class="labtoolfield">
-                                <button class="submit" onclick="generateHash()">Generate MD2 Hash</button>
+                                <button class="submit" onclick="generateHash()">Generate MD4 Hash</button>
                                 <button class="reset" onclick="clearAll()">Clear All</button>
                                 <button class="copy-btn" onclick="copyOutput()">Copy Hash</button>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -211,34 +215,36 @@
                 <div class='row mt20'>
                     <div class='col-lg-12'>
                         <div class='txtcontent'>
-                            <h2>What is MD2?</h2>
-                            <p>MD2 is a cryptographic hash function designed by Ronald Rivest in 1989. It was optimized
-                                for 8-bit computers and produces a 128-bit hash value. The algorithm processes the input
-                                message in 16-byte blocks and uses a unique S-box derived from the digits of pi.</p>
+                            <h2>What is MD4?</h2>
+                            <p>MD4 is a cryptographic hash function designed by Ronald Rivest in 1990. It was designed
+                                to be faster than MD2 while still providing a 128-bit hash. MD4 became the basis for
+                                later hash functions including MD5, SHA-1, and RIPEMD.</p>
 
                             <h2>Key Features</h2>
                             <ul>
                                 <li><strong>128-bit Output:</strong> Produces a 32-character hexadecimal hash</li>
-                                <li><strong>Deterministic:</strong> Same input always produces the same hash</li>
-                                <li><strong>One-way Function:</strong> Cannot reverse the hash to get the original input
-                                </li>
+                                <li><strong>Fast Processing:</strong> Optimized for 32-bit processors</li>
+                                <li><strong>Three Rounds:</strong> Uses three rounds of 16 operations each</li>
                                 <li><strong>HMAC Support:</strong> Can be used with a secret key for message
                                     authentication</li>
                             </ul>
 
                             <h2>Security Note</h2>
-                            <p>MD2 is considered cryptographically broken and should not be used for security-critical
-                                applications. For secure hashing, consider using SHA-256 or SHA-3. MD2 is still useful
-                                for legacy compatibility and non-security checksums.</p>
+                            <p>MD4 is considered cryptographically broken and should not be used for security-critical
+                                applications. Collision attacks against MD4 can be performed in fractions of a second.
+                                For secure hashing, consider using SHA-256 or SHA-3. MD4 is still used in some legacy
+                                protocols like NTLM.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <div id='watchread'></div>
     <div id='footerbar'></div>
-    <script src="../js/md2.min.js"></script>
+    <script src="../js/md4.min.js"></script>
+
 </body>
 
 </html>
