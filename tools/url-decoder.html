@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Decoder / Unescape Tool - Gokulakrishnan S - UI Designer - Developer</title>
+  <meta name="description" content="Free online URL decoder tool to decode percent-encoded URLs back to their original format. Convert %20, %26, %3F and other encoded characters.">
+  <meta name="keywords" content="URL decoder, URL unescape, percent decode, URL decode, query parameter decode">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner htmlbg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>URL Decoder / Unescape Tool</h1>
+            <p>Decode percent-encoded URLs back to their original readable format safely and accurately.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>URL
+              Decoder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>URL Decoder tool helps you decode percent-encoded URLs back to their original readable format. This tool converts percent-encoded characters back to their original form, making URLs human-readable again.</p>
+
+              <p>The tool handles all standard URL encodings and is particularly useful when working with query parameters, form data, or when analyzing URLs that have been encoded by web applications or browsers.</p>
+              
+              <p><strong>Common URL decoding examples:</strong></p>
+              <ul>
+                <li><strong>%20</strong> or <strong>+</strong> becomes <strong>Space</strong></li>
+                <li><strong>%26</strong> becomes <strong>&</strong></li>
+                <li><strong>%3F</strong> becomes <strong>?</strong></li>
+                <li><strong>%23</strong> becomes <strong>#</strong></li>
+                <li><strong>%3D</strong> becomes <strong>=</strong></li>
+                <li><strong>%2F</strong> becomes <strong>/</strong></li>
+                <li><strong>%40</strong> becomes <strong>@</strong></li>
+              </ul>
+            </div>
+            <div class="labtool">
+              <div class="labtoolfield">
+                <label for="inputCode"><span>Input encoded URL to decode:</span></label>
+                <textarea id="inputCode" rows="10" placeholder="Enter your encoded URL here...&#10;Example: https%3A//example.com/search%3Fq%3Dhello%20world%26category%3Dnews"></textarea>
+              </div>
+              <div class="labtoolfield">
+                <div class="labtoolcheckbox">
+                  <input type="checkbox" class="opt1" id="decodePlus" checked>
+                  <label for="decodePlus"></label>
+                </div>
+                <span class="labtoolchspan">Decode + as spaces (for form data)</span>
+              </div>
+              <div class="labtoolfield">
+                <input type="button" value="Decode URL" id="decodeUrl" class="submit">
+                <input type="button" id="clearText" value="Reset" class="reset">
+                <input type="button" id="copyOutput" value="Copy Output" class="submit" style="display:none;">
+              </div>
+              <div class="labtoolfield">
+                <label for="outputCode" id="outputLabel" style="display:none"><span>Decoded URL output:</span></label>
+                <textarea id="outputCode" rows="10" style="display:none" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/url-decoder.js'></script>
+
+</body>
+
+</html>

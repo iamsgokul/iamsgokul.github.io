@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Encoder / Escape Tool - Gokulakrishnan S - UI Designer - Developer</title>
+  <meta name="description" content="Free online HTML encoder tool to encode HTML special characters to HTML entities. Convert < > & \" ' to their HTML entity equivalents safely.">
+  <meta name="keywords" content="HTML encoder, HTML escape, HTML entities, encode HTML, HTML special characters">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner htmlbg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>HTML Encoder / Escape Tool</h1>
+            <p>Encode HTML special characters to HTML entities for safe display in web pages and prevent XSS attacks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>HTML
+              Encoder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>HTML Encoder tool helps you encode HTML special characters to their corresponding HTML entities. This is essential for displaying HTML code as text on web pages and preventing XSS (Cross-Site Scripting) attacks.</p>
+
+              <p>The tool converts characters like &lt; &gt; &amp; " ' to their HTML entity equivalents (&amp;lt; &amp;gt; &amp;amp; &amp;quot; &amp;#x27;). Simply paste your HTML content in the input box and click "Encode HTML" to get the encoded output.</p>
+              
+              <p><strong>Common HTML entities:</strong></p>
+              <ul>
+                <li><strong>&lt;</strong> becomes <strong>&amp;lt;</strong></li>
+                <li><strong>&gt;</strong> becomes <strong>&amp;gt;</strong></li>
+                <li><strong>&amp;</strong> becomes <strong>&amp;amp;</strong></li>
+                <li><strong>"</strong> becomes <strong>&amp;quot;</strong></li>
+                <li><strong>'</strong> becomes <strong>&amp;#x27;</strong></li>
+              </ul>
+            </div>
+            <div class="labtool">
+              <div class="labtoolfield">
+                <label for="inputCode"><span>Input HTML to encode:</span></label>
+                <textarea id="inputCode" rows="10" placeholder="Enter your HTML code here..."></textarea>
+              </div>
+              <div class="labtoolfield">
+                <div class="labtoolcheckbox">
+                  <input type="checkbox" class="opt1" id="encodeAll">
+                  <label for="encodeAll"></label>
+                </div>
+                <span class="labtoolchspan">Encode all characters (including non-ASCII)</span>
+              </div>
+              <div class="labtoolfield">
+                <input type="button" value="Encode HTML" id="encodeHtml" class="submit">
+                <input type="button" id="clearText" value="Reset" class="reset">
+                <input type="button" id="copyOutput" value="Copy Output" class="submit" style="display:none;">
+              </div>
+              <div class="labtoolfield">
+                <label for="outputCode" id="outputLabel" style="display:none"><span>Encoded HTML output:</span></label>
+                <textarea id="outputCode" rows="10" style="display:none" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/html-encoder.js'></script>
+
+</body>
+
+</html>

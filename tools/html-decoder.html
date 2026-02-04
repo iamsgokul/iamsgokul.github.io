@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Decoder / Unescape Tool - Gokulakrishnan S - UI Designer - Developer</title>
+  <meta name="description" content="Free online HTML decoder tool to decode HTML entities back to their original characters. Convert &lt; &gt; &amp; &quot; &#x27; back to < > & \" '.">
+  <meta name="keywords" content="HTML decoder, HTML unescape, decode HTML entities, HTML entity decoder, unescape HTML">
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="../images/favi.png" rel="shortcut icon" type="image/png" />
+  <script src='../js/jquery.min.js'></script>
+  <script src='../js/app.js'></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SQHDPT3FW1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SQHDPT3FW1');
+  </script>
+</head>
+
+<body>
+  <div id="navbar">
+  </div>
+  <main>
+    <section class='banner htmlbg'>
+      <div class='container'>
+        <div class='row'>
+          <div class='col-lg-12 toptil'>
+            <h1>HTML Decoder / Unescape Tool</h1>
+            <p>Decode HTML entities back to their original characters for displaying encoded HTML content properly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12 mt30 breadcrum'>
+            <a href='https://www.gokul.work'>Home</a> <i class='gwicon-chevron-right'></i> <a
+              href='https://www.gokul.work/tools'>Tools</a> <i class='gwicon-chevron-right'></i> <span>HTML
+              Decoder</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class='section'>
+      <div class='container'>
+        <div class='row mt20'>
+          <div class='col-lg-12'>
+            <div class='txtcontent'>
+              <p>HTML Decoder tool helps you decode HTML entities back to their original characters. This is useful when you have HTML-encoded content that you want to display or use as regular text.</p>
+
+              <p>The tool converts HTML entities like &amp;lt; &amp;gt; &amp;amp; &amp;quot; &amp;#x27; back to their original characters (&lt; &gt; &amp; " '). Simply paste your encoded HTML content in the input box and click "Decode HTML" to get the decoded output.</p>
+              
+              <p><strong>Common HTML entity decoding:</strong></p>
+              <ul>
+                <li><strong>&amp;lt;</strong> becomes <strong>&lt;</strong></li>
+                <li><strong>&amp;gt;</strong> becomes <strong>&gt;</strong></li>
+                <li><strong>&amp;amp;</strong> becomes <strong>&amp;</strong></li>
+                <li><strong>&amp;quot;</strong> becomes <strong>"</strong></li>
+                <li><strong>&amp;#x27;</strong> becomes <strong>'</strong></li>
+                <li><strong>&amp;#39;</strong> becomes <strong>'</strong></li>
+                <li><strong>&amp;nbsp;</strong> becomes <strong> </strong> (non-breaking space)</li>
+              </ul>
+            </div>
+            <div class="labtool">
+              <div class="labtoolfield">
+                <label for="inputCode"><span>Input HTML entities to decode:</span></label>
+                <textarea id="inputCode" rows="10" placeholder="Enter your HTML entities here...&#10;Example: &lt;div class=&quot;example&quot;&gt;Hello &amp; Welcome!&lt;/div&gt;"></textarea>
+              </div>
+              <div class="labtoolfield">
+                <div class="labtoolcheckbox">
+                  <input type="checkbox" class="opt1" id="decodeNumeric" checked>
+                  <label for="decodeNumeric"></label>
+                </div>
+                <span class="labtoolchspan">Decode numeric entities (&#39; &#60; etc.)</span>
+              </div>
+              <div class="labtoolfield">
+                <input type="button" value="Decode HTML" id="decodeHtml" class="submit">
+                <input type="button" id="clearText" value="Reset" class="reset">
+                <input type="button" id="copyOutput" value="Copy Output" class="submit" style="display:none;">
+              </div>
+              <div class="labtoolfield">
+                <label for="outputCode" id="outputLabel" style="display:none"><span>Decoded HTML output:</span></label>
+                <textarea id="outputCode" rows="10" style="display:none" readonly></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id='watchread'></div>
+  <div id='footerbar'></div>
+  <script src='../js/html-decoder.js'></script>
+
+</body>
+
+</html>
