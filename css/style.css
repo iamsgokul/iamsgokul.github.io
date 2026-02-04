@@ -4588,6 +4588,27 @@ footer .fmenu li a {
   font-size: 14px;
 }
 
+.message-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+.message-notification.success {
+  background-color: #4CAF50;
+}
+.message-notification.error {
+  background-color: #f44336;
+}
+.message-notification.info {
+  background-color: #2196F3;
+}
+
 .homcrd {
   margin: 0 0 30px;
   background-color: #fff;
