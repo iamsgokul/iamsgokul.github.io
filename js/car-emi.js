@@ -1,5 +1,15 @@
 let carChart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateCarEMI() {
     const carPrice = parseFloat(document.getElementById('carPrice').value);
     const downPayment = parseFloat(document.getElementById('downPayment').value);
@@ -47,10 +57,10 @@ function calculateCarEMI() {
     const totalInterest = totalAmount - loanAmount;
 
     // Update values in the DOM
-    document.getElementById("carLoanAmount").textContent = Math.round(loanAmount).toLocaleString('en-IN');
-    document.getElementById("carEmiAmt").textContent = Math.round(emi).toLocaleString('en-IN');
-    document.getElementById("carTotalAmount").textContent = Math.round(totalAmount).toLocaleString('en-IN');
-    document.getElementById("carInterestAmt").textContent = Math.round(totalInterest).toLocaleString('en-IN');
+    document.getElementById("carLoanAmount").textContent = formatIndianCurrency(loanAmount);
+    document.getElementById("carEmiAmt").textContent = formatIndianCurrency(emi);
+    document.getElementById("carTotalAmount").textContent = formatIndianCurrency(totalAmount);
+    document.getElementById("carInterestAmt").textContent = formatIndianCurrency(totalInterest);
 
     // Show output section
     const outputBox = document.getElementsByClassName("calout")[0];
@@ -67,7 +77,7 @@ function calculateCarEMI() {
     chartContainer.classList.add("col-lg-4");
 
     // Generate detailed payment schedule with Car Purchase Summary at top
-    let detailResult = `<div class="purchase-summary"><h3>Car Purchase Summary</h3><p><strong>Car Price:</strong> <span>₹${Math.round(carPrice).toLocaleString('en-IN')}</span></p><p><strong>Down Payment:</strong> <span>₹${Math.round(downPayment).toLocaleString('en-IN')}</span></p><p><strong>Total Cost of Car:</strong> <span>₹${Math.round(carPrice + totalInterest).toLocaleString('en-IN')}</span></p></div>`;
+    let detailResult = `<div class="purchase-summary"><h3>Car Purchase Summary</h3><p><strong>Car Price:</strong> <span>₹${formatIndianCurrency(carPrice)}</span></p><p><strong>Down Payment:</strong> <span>₹${formatIndianCurrency(downPayment)}</span></p><p><strong>Total Cost of Car:</strong> <span>₹${formatIndianCurrency(carPrice + totalInterest)}</span></p></div>`;
     detailResult += '<h3>Car Loan Payment Schedule</h3><table><tr><th>Month</th><th>Principal Paid</th><th>Interest Paid</th><th>Remaining Balance</th></tr>';
     let remainingBalance = loanAmount;
     
@@ -78,7 +88,7 @@ function calculateCarEMI() {
         
         // Show only first 12 months, then every 12th month, and last month for better readability
         if (i <= 12 || i % 12 === 0 || i === numberOfMonths) {
-            detailResult += `<tr><td>${i}</td><td>₹${Math.round(principalPaid).toLocaleString('en-IN')}</td><td>₹${Math.round(interestPaid).toLocaleString('en-IN')}</td><td>₹${Math.round(remainingBalance).toLocaleString('en-IN')}</td></tr>`;
+            detailResult += `<tr><td>${i}</td><td>₹${formatIndianCurrency(principalPaid)}</td><td>₹${formatIndianCurrency(interestPaid)}</td><td>₹${formatIndianCurrency(remainingBalance < 0 ? 0 : remainingBalance)}</td></tr>`;
         }
     }
     detailResult += '</table>';

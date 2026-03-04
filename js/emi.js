@@ -35,10 +35,10 @@ function calculateEMI() {
     let totalInterestPaid = totalAmount - principal;
 
     // Update values in the DOM
-    document.getElementById('principalAmt').innerText = principal.toLocaleString('en-IN');
-    document.getElementById('emiAmt').innerText = Math.round(emi).toLocaleString('en-IN');
-    document.getElementById('totalAmount').innerText = Math.round(totalAmount).toLocaleString('en-IN');
-    document.getElementById('interestAmt').innerText = Math.round(totalInterestPaid).toLocaleString('en-IN');
+    document.getElementById('principalAmt').innerText = formatIndianCurrency(principal);
+    document.getElementById('emiAmt').innerText = formatIndianCurrency(emi);
+    document.getElementById('totalAmount').innerText = formatIndianCurrency(totalAmount);
+    document.getElementById('interestAmt').innerText = formatIndianCurrency(totalInterestPaid);
 
     // Show output section
     const outputBox = document.getElementsByClassName("calout")[0];

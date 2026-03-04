@@ -1,5 +1,15 @@
 let homeChart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateHomeEMI() {
     const homePrice = parseFloat(document.getElementById('homePrice').value);
     const downPayment = parseFloat(document.getElementById('homeDownPayment').value);
@@ -47,10 +57,10 @@ function calculateHomeEMI() {
     const totalInterest = totalAmount - loanAmount;
 
     // Update values in the DOM
-    document.getElementById("homeLoanAmount").textContent = Math.round(loanAmount).toLocaleString('en-IN');
-    document.getElementById("homeEmiAmt").textContent = Math.round(emi).toLocaleString('en-IN');
-    document.getElementById("homeTotalAmount").textContent = Math.round(totalAmount).toLocaleString('en-IN');
-    document.getElementById("homeInterestAmt").textContent = Math.round(totalInterest).toLocaleString('en-IN');
+    document.getElementById("homeLoanAmount").textContent = formatIndianCurrency(loanAmount);
+    document.getElementById("homeEmiAmt").textContent = formatIndianCurrency(emi);
+    document.getElementById("homeTotalAmount").textContent = formatIndianCurrency(totalAmount);
+    document.getElementById("homeInterestAmt").textContent = formatIndianCurrency(totalInterest);
 
     // Show output section
     const outputBox = document.getElementsByClassName("calout")[0];
@@ -67,7 +77,7 @@ function calculateHomeEMI() {
     chartContainer.classList.add("col-lg-4");
 
     // Generate detailed payment schedule with Home Purchase Summary at top
-    let detailResult = `<div class="purchase-summary"><h3>Home Purchase Summary</h3><p><strong>Home Price:</strong> <span>₹${Math.round(homePrice).toLocaleString('en-IN')}</span></p><p><strong>Down Payment:</strong> <span>₹${Math.round(downPayment).toLocaleString('en-IN')}</span></p><p><strong>Total Cost of Home:</strong> <span>₹${Math.round(homePrice + totalInterest).toLocaleString('en-IN')}</span></p><p><strong>Interest as % of Home Price:</strong> <span>${((totalInterest / homePrice) * 100).toFixed(1)}%</span></p></div>`;
+    let detailResult = `<div class="purchase-summary"><h3>Home Purchase Summary</h3><p><strong>Home Price:</strong> <span>₹${formatIndianCurrency(homePrice)}</span></p><p><strong>Down Payment:</strong> <span>₹${formatIndianCurrency(downPayment)}</span></p><p><strong>Total Cost of Home:</strong> <span>₹${formatIndianCurrency(homePrice + totalInterest)}</span></p><p><strong>Interest as % of Home Price:</strong> <span>${((totalInterest / homePrice) * 100).toFixed(1)}%</span></p></div>`;
     detailResult += '<h3>Home Loan Amortization Schedule (Yearly Summary)</h3><table><tr><th>Year</th><th>Principal Paid</th><th>Interest Paid</th><th>Remaining Balance</th></tr>';
     let remainingBalance = loanAmount;
     
@@ -84,7 +94,7 @@ function calculateHomeEMI() {
             yearlyInterest += interestPaid;
         }
         
-        detailResult += `<tr><td>${year}</td><td>₹${Math.round(yearlyPrincipal).toLocaleString('en-IN')}</td><td>₹${Math.round(yearlyInterest).toLocaleString('en-IN')}</td><td>₹${Math.round(remainingBalance).toLocaleString('en-IN')}</td></tr>`;
+        detailResult += `<tr><td>${year}</td><td>₹${formatIndianCurrency(yearlyPrincipal)}</td><td>₹${formatIndianCurrency(yearlyInterest)}</td><td>₹${formatIndianCurrency(remainingBalance < 0 ? 0 : remainingBalance)}</td></tr>`;
     }
     detailResult += '</table>';
     document.getElementById('home-detail-result').innerHTML = detailResult;
