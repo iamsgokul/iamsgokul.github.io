@@ -1,5 +1,15 @@
 let chart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateNPS() {
     const monthlyInvestment = parseFloat(document.getElementById("monthlyInvestment").value);
     const currentAge = parseFloat(document.getElementById("currentAge").value);
@@ -43,10 +53,10 @@ function calculateNPS() {
     const annuityAmount = maturityAmount * 0.4;
 
     // Update values in the DOM (rounded to match Groww format)
-    document.getElementById("resTotalInvestment").textContent = Math.round(totalInvestment).toLocaleString('en-IN');
-    document.getElementById("resInterestEarned").textContent = Math.round(interestEarned).toLocaleString('en-IN');
-    document.getElementById("resMaturityAmount").textContent = Math.round(maturityAmount).toLocaleString('en-IN');
-    document.getElementById("resAnnuityAmount").textContent = Math.round(annuityAmount).toLocaleString('en-IN');
+    document.getElementById("resTotalInvestment").textContent = formatIndianCurrency(totalInvestment);
+    document.getElementById("resInterestEarned").textContent = formatIndianCurrency(interestEarned);
+    document.getElementById("resMaturityAmount").textContent = formatIndianCurrency(maturityAmount);
+    document.getElementById("resAnnuityAmount").textContent = formatIndianCurrency(annuityAmount);
 
     // Show output section
     const outputBox = document.getElementsByClassName("calout")[0];

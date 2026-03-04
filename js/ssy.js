@@ -1,5 +1,15 @@
 let ssyChart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateSSY() {
     const yearlyInvestment = parseFloat(document.getElementById('yearlyInvestment').value);
     const girlAge = parseFloat(document.getElementById('girlAge').value);
@@ -61,10 +71,10 @@ function calculateSSY() {
     const interestEarned = maturityAmount - totalInvestment;
 
     // Update values in the DOM
-    document.getElementById("ssyTotalInvestment").textContent = Math.round(totalInvestment).toLocaleString('en-IN');
-    document.getElementById("ssyInterestEarned").textContent = Math.round(interestEarned).toLocaleString('en-IN');
+    document.getElementById("ssyTotalInvestment").textContent = formatIndianCurrency(totalInvestment);
+    document.getElementById("ssyInterestEarned").textContent = formatIndianCurrency(interestEarned);
     document.getElementById("ssyMaturityYear").textContent = Math.round(maturityYear);
-    document.getElementById("ssyMaturityAmount").textContent = Math.round(maturityAmount).toLocaleString('en-IN');
+    document.getElementById("ssyMaturityAmount").textContent = formatIndianCurrency(maturityAmount);
 
     // Show output section
     const outputBox = document.getElementsByClassName("calout")[0];
@@ -97,7 +107,7 @@ function calculateSSY() {
         const yearlyGrowth = yearlyInvestment * Math.pow(1 + annualRate, yearsToMaturity - year + 1);
         accumulatedValue += yearlyGrowth;
         
-        detailResult += `<tr><td>${startingYear + year - 1}</td><td>${ageAtYear}</td><td>₹${yearlyInvestment.toLocaleString('en-IN')}</td><td>₹${Math.round(accumulatedValue).toLocaleString('en-IN')}</td></tr>`;
+        detailResult += `<tr><td>${startingYear + year - 1}</td><td>${ageAtYear}</td><td>₹${formatIndianCurrency(yearlyInvestment)}</td><td>₹${formatIndianCurrency(accumulatedValue)}</td></tr>`;
     }
     
     if (actualDepositYears > 10) {

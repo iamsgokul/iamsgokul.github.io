@@ -1,12 +1,13 @@
 let chart; // Chart instance
 
-// Format number in Indian currency style (1,00,000)
+// Format number in Indian currency style (1,00,000.00)
 function formatIndianCurrency(num) {
-    const fixed = Math.round(num).toString();
-    const lastThree = fixed.slice(-3);
-    const otherNumbers = fixed.slice(0, -3);
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
     const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
-    return formatted;
+    return formatted + '.' + decPart;
 }
 
 function calculatePPF() {
