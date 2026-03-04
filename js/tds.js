@@ -1,5 +1,15 @@
 let chart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 // TDS rates and thresholds for different types of payments (FY 2024-25)
 const tdsRates = {
     "194A": { 
@@ -175,11 +185,11 @@ function calculateTDS() {
     const netAmount = grossAmount - tdsAmount;
 
     // Update values in the DOM
-    document.getElementById("resGrossAmount").textContent = grossAmount.toFixed(2);
+    document.getElementById("resGrossAmount").textContent = formatIndianCurrency(grossAmount);
     document.getElementById("resSection").textContent = sectionInfo;
     document.getElementById("resTDSRate").textContent = tdsRate.toFixed(2);
-    document.getElementById("resTDSAmount").textContent = tdsAmount.toFixed(2);
-    document.getElementById("resNetAmount").textContent = netAmount.toFixed(2);
+    document.getElementById("resTDSAmount").textContent = formatIndianCurrency(tdsAmount);
+    document.getElementById("resNetAmount").textContent = formatIndianCurrency(netAmount);
     document.getElementById("thresholdMessage").textContent = thresholdMessage;
 
     // Show output section
