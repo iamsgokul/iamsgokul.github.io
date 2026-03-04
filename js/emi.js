@@ -1,5 +1,15 @@
 let chart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateEMI() {
     // Get the input values
     let principal = parseFloat(document.getElementById('principal').value);
@@ -51,7 +61,7 @@ function calculateEMI() {
       let interestPaid = remainingBalance * monthlyRate;
       let principalPaid = emi - interestPaid;
       remainingBalance -= principalPaid;
-      detailResult += `<tr><td>${i}</td><td>₹${principalPaid.toFixed(2)}</td><td>₹${interestPaid.toFixed(2)}</td><td>₹${remainingBalance.toFixed(2)}</td></tr>`;
+      detailResult += `<tr><td>${i}</td><td>₹${formatIndianCurrency(principalPaid)}</td><td>₹${formatIndianCurrency(interestPaid)}</td><td>₹${formatIndianCurrency(remainingBalance < 0 ? 0 : remainingBalance)}</td></tr>`;
     }
     detailResult += '</table>';
     document.getElementById('detail-result').innerHTML = detailResult;

@@ -1,3 +1,13 @@
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function addInput() {
   const inputsDiv = document.getElementById("inputs");
   const newInput = document.createElement("div");
@@ -53,9 +63,9 @@ function calculateAverage() {
   const average = totalValue / totalQuantity;
   document.getElementById("avgprice").innerText = isNaN(average)
     ? "Please enter valid values."
-    : average.toFixed(2);
-  document.getElementById("totalqt").innerText = totalQuantity;
-  document.getElementById("totalcost").innerText = totalValue;
+    : formatIndianCurrency(average);
+  document.getElementById("totalqt").innerText = totalQuantity.toLocaleString('en-IN');
+  document.getElementById("totalcost").innerText = formatIndianCurrency(totalValue);
 
   var opnbtn = document.getElementsByClassName("calout")[0];
   opnbtn.classList.add("open");
