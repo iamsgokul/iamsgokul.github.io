@@ -1,5 +1,15 @@
 let chart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateSimpleInterest() {
   const principalInput = parseFloat(document.getElementById("principal").value);
   const rate = parseFloat(document.getElementById("rate").value);
@@ -16,9 +26,9 @@ function calculateSimpleInterest() {
   const total = principal + interest;
 
   // Update values in the DOM
-  document.getElementById("resPrinciple").textContent = principal.toFixed(2);
-  document.getElementById("resInterest").textContent = interest.toFixed(2);
-  document.getElementById("resTotal").textContent = total.toFixed(2);
+  document.getElementById("resPrinciple").textContent = formatIndianCurrency(principal);
+  document.getElementById("resInterest").textContent = formatIndianCurrency(interest);
+  document.getElementById("resTotal").textContent = formatIndianCurrency(total);
 
   // Show output section
   const outputBox = document.getElementsByClassName("calout")[0];

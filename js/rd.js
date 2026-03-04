@@ -1,5 +1,15 @@
 let chart; // Chart instance
 
+// Format number in Indian currency style (1,00,000.00)
+function formatIndianCurrency(num) {
+    const fixed = num.toFixed(2);
+    const [intPart, decPart] = fixed.split('.');
+    const lastThree = intPart.slice(-3);
+    const otherNumbers = intPart.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted + '.' + decPart;
+}
+
 function calculateMaturity() {
     const monthlyDeposit = parseFloat(document.getElementById('monthlyDeposit').value);
     const annualInterestRate = parseFloat(document.getElementById('interestRate').value);
@@ -24,9 +34,9 @@ function calculateMaturity() {
     const interestEarned = maturityAmount - totalDeposited;
 
     // Update values in the DOM
-    document.getElementById("resDeposited").textContent = totalDeposited.toFixed(2);
-    document.getElementById("resInterest").textContent = interestEarned.toFixed(2);
-    document.getElementById("resTotal").textContent = maturityAmount.toFixed(2);
+    document.getElementById("resDeposited").textContent = formatIndianCurrency(totalDeposited);
+    document.getElementById("resInterest").textContent = formatIndianCurrency(interestEarned);
+    document.getElementById("resTotal").textContent = formatIndianCurrency(maturityAmount);
 
     // Show output section
     const outputBox = document.getElementsByClassName("calout")[0];

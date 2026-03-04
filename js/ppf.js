@@ -1,5 +1,14 @@
 let chart; // Chart instance
 
+// Format number in Indian currency style (1,00,000)
+function formatIndianCurrency(num) {
+    const fixed = Math.round(num).toString();
+    const lastThree = fixed.slice(-3);
+    const otherNumbers = fixed.slice(0, -3);
+    const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+    return formatted;
+}
+
 function calculatePPF() {
     const yearlyInvestment = parseFloat(document.getElementById("yearlyInvestment").value);
     const timePeriod = parseFloat(document.getElementById("timePeriod").value);
@@ -37,9 +46,9 @@ function calculatePPF() {
     const interestEarned = maturityAmount - totalInvestment;
 
     // Update values in the DOM
-    document.getElementById("resTotalInvestment").textContent = totalInvestment.toFixed(0);
-    document.getElementById("resInterestEarned").textContent = interestEarned.toFixed(0);
-    document.getElementById("resMaturityAmount").textContent = maturityAmount.toFixed(0);
+    document.getElementById("resTotalInvestment").textContent = formatIndianCurrency(totalInvestment);
+    document.getElementById("resInterestEarned").textContent = formatIndianCurrency(interestEarned);
+    document.getElementById("resMaturityAmount").textContent = formatIndianCurrency(maturityAmount);
     document.getElementById("resTimePeriod").textContent = timePeriod;
 
     // Show output section

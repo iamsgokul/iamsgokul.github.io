@@ -1,5 +1,15 @@
 let chart; // Global chart variable
 
+// Format number in Indian currency style (1,00,000)
+function formatIndianCurrency(num) {
+  const fixed = num.toFixed(2);
+  const [intPart, decPart] = fixed.split('.');
+  const lastThree = intPart.slice(-3);
+  const otherNumbers = intPart.slice(0, -3);
+  const formatted = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + (otherNumbers ? ',' : '') + lastThree;
+  return formatted + '.' + decPart;
+}
+
 function calculateReturns() {
   const type = document.getElementById("investmentType").value;
   const amount = parseFloat(document.getElementById("amount").value);
@@ -29,9 +39,9 @@ function calculateReturns() {
   drawChart(totalInvested, gain);
 
   // Display results
-  document.getElementById("totalInvested").textContent = totalInvested.toFixed(2);
-  document.getElementById("futureValue").textContent = futureValue.toFixed(2);
-  document.getElementById("gain").textContent = gain.toFixed(2);
+  document.getElementById("totalInvested").textContent = formatIndianCurrency(totalInvested);
+  document.getElementById("futureValue").textContent = formatIndianCurrency(futureValue);
+  document.getElementById("gain").textContent = formatIndianCurrency(gain);
 
   // Show output section
   const outputBox = document.querySelector(".calout");
