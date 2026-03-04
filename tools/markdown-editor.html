@@ -72,17 +72,18 @@
                 completing the
                 editing you can generate the Markdown raw code by clicking the button given below..</p>
               <p>You can create the Markdown code by below Markdown Editor Tool.</p>
+              <p><strong>Keyboard Shortcuts:</strong> Bold (Ctrl+B / Cmd+B), Italic (Ctrl+I / Cmd+I), Strikethrough (Alt+Shift+5 / Cmd+Shift+X)</p>
             </div>
             <div class="labtool">
               <div class='toolbar'>
                 <button tooltip-lbl="Heading H1" tooltip-pos="top" onclick="insertMarkdown('# ', '')">H1</button>
                 <button tooltip-lbl="Heading H2" tooltip-pos="top" onclick="insertMarkdown('## ', '')">H2</button>
                 <button tooltip-lbl="Heading H3" tooltip-pos="top" onclick="insertMarkdown('### ', '')">H3</button>
-                <button tooltip-lbl="Bold" tooltip-pos="top" onclick="insertMarkdown('**', '**')"><i
+                <button tooltip-lbl="Bold (Ctrl+B / Cmd+B)" tooltip-pos="top" onclick="insertMarkdown('**', '**')"><i
                     class="gwicon-format-bold"></i></button>
-                <button tooltip-lbl="Italic" tooltip-pos="top" onclick="insertMarkdown('*', '*')"><i
+                <button tooltip-lbl="Italic (Ctrl+I / Cmd+I)" tooltip-pos="top" onclick="insertMarkdown('*', '*')"><i
                     class="gwicon-format-italic"></i></button>
-                <button tooltip-lbl="Strikethrough" tooltip-pos="top" onclick="insertMarkdown('~~', '~~')"><i
+                <button tooltip-lbl="Strikethrough (Alt+Shift+5 / Cmd+Shift+X)" tooltip-pos="top" onclick="insertMarkdown('~~', '~~')"><i
                     class='gwicon-strikethrough'></i></button>
                 <button tooltip-lbl="Code" tooltip-pos="top" onclick="insertMarkdown('`', '`')"><i
                     class='gwicon-code-tags'></i></button>
@@ -372,6 +373,37 @@ ${htmlContent}
         closeModal();
       }
     };
+
+    // Keyboard shortcuts for formatting
+    markdownInput.addEventListener("keydown", function (e) {
+      const isMac = navigator.platform.toUpperCase().indexOf("MAC") >= 0;
+      const ctrlOrCmd = isMac ? e.metaKey : e.ctrlKey;
+
+      // Bold: Ctrl+B (Win) / Cmd+B (Mac)
+      if (ctrlOrCmd && e.key.toLowerCase() === "b") {
+        e.preventDefault();
+        insertMarkdown("**", "**");
+      }
+
+      // Italic: Ctrl+I (Win) / Cmd+I (Mac)
+      if (ctrlOrCmd && e.key.toLowerCase() === "i") {
+        e.preventDefault();
+        insertMarkdown("*", "*");
+      }
+
+      // Strikethrough: Alt+Shift+5 (Win) / Cmd+Shift+X (Mac)
+      if (isMac) {
+        if (e.metaKey && e.shiftKey && e.key.toLowerCase() === "x") {
+          e.preventDefault();
+          insertMarkdown("~~", "~~");
+        }
+      } else {
+        if (e.altKey && e.shiftKey && e.key === "5") {
+          e.preventDefault();
+          insertMarkdown("~~", "~~");
+        }
+      }
+    });
 
     // Initialize preview
     updatePreview();
