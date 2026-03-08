@@ -14,8 +14,9 @@
   </nav>
 </header>
 <script>
-  const menuopen = document.querySelector('.gwicon-menu');
-  menuopen.addEventListener('click', function () {
+  const menuopen = document.querySelector('header nav > a');
+  menuopen.addEventListener('click', function (e) {
+    e.preventDefault();
     document.querySelector('.topmenu').classList.toggle('open');
   })
 
