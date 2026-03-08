@@ -53,11 +53,11 @@
               class='gwicon-cellphone-iphone'></i><i class='gwicon-monitor'></i>
           </div>
           <div class="url-cont">
-            <form id="uriForm"><input type="url" id="url" placeholder="https://www.domain.como" class="url-inp"> <input
-                type="button" value="Go" onclick="loadUrl()" class="inp-btn"> </form>
+            <form id="uriForm" onsubmit="loadUrl(); return false;"><input type="text" id="url" placeholder="google.com or www.google.com" class="url-inp"> <input
+                type="submit" value="Go" class="inp-btn"> </form>
 
             <span>Enter your Web Site URL in the Above URl Box and Click the GO Button. Eg:
-              https://www.gokul.work</span>
+              google.com, www.gokul.work, https://gokul.work</span>
           </div>
           <div class='device-cont'>
             <div class="iphone-wrap-1">
