@@ -7700,4 +7700,25 @@ textarea {
 [tooltip-lbl][tooltip-size=fit]:after {
   white-space: normal;
   width: 100%;
+}
+
+@media (max-width: 640px) {
+  header nav > a {
+    display: block;
+  }
+  header nav ul {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 99;
+  }
+  header nav ul.open {
+    display: block;
+  }
+  header nav ul li {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style-editor.css.map */
